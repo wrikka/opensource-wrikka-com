@@ -1,4 +1,4 @@
-# @wrikka/rust-parser
+# wrikka-parser-engine
 
 ## Overview
 
@@ -8,12 +8,12 @@ Advanced parser utilities with multiple language support and Clean Architecture
 
 | Field | Value |
 | --- | --- |
-| Type | NPM |
+| Type | RUST |
 | Category | Tools |
-| Path | `packages/lib/tools/parser-engine/package.json` |
+| Path | `packages/tools/parser-engine/Cargo.toml` |
 | Version | `0.1.0` |
+| Edition | `2021` |
 | License | `MIT` |
-| Repository | <https://github.com/wrikka/wpackages> |
 
 ## Directory Structure
 
@@ -76,56 +76,41 @@ Advanced parser utilities with multiple language support and Clean Architecture
 
 ## Quick Start
 
-### Install
-
-```bash
-bun install
-```
-
 ### Build
 
 ```bash
-bun run build
-```
-
-### Develop
-
-```bash
-bun run dev
+cargo build -p wrikka-parser-engine
 ```
 
 ### Test
 
 ```bash
-bun run test
+cargo test -p wrikka-parser-engine
+```
+
+### Run
+
+```bash
+cargo run -p wrikka-parser-engine
 ```
 
 ### Lint
 
 ```bash
-bun run lint
+cargo clippy -p wrikka-parser-engine
 ```
 
-## Scripts
+### Documentation
 
-| Script | Command |
+```bash
+cargo doc -p wrikka-parser-engine --no-deps
+```
+
+## Environment
+
+| Field | Value |
 | --- | --- |
-| dev | `bun run src/index.ts` |
-| build | `bun build` |
-| typecheck | `tsc --noEmit` |
-| lint | `biome lint` |
-| lint:fix | `biome lint --write` |
-| format | `biome format --write` |
-| test | `vitest run` |
-| verify | `bun run lint && bun run typecheck && bun run test` |
-| ci | `bun run verify && bun run build` |
-| clean | `cargo clean` |
-| format:check | `cargo fmt -- --check` |
-| clippy:fix | `cargo clippy --fix` |
-| test:unit | `cargo test --lib` |
-| test:integration | `cargo test --test integration` |
-| test:e2e | `cargo test --features e2e` |
-| verify:full | `cargo check && cargo clippy && cargo test --lib && cargo test --test integration && cargo test --features e2e && cargo build --release` |
+| Edition | `2021` |
 
 ## README
 
@@ -272,8 +257,3 @@ async fn main() -> anyhow::Result<()> {
     Ok(())
 }
 ```
-
-## Links
-
-- Repository: <https://github.com/wrikka/wpackages>
-- Source: <https://github.com/wrikka/wpackages/blob/main/packages/lib/tools/parser-engine/package.json>

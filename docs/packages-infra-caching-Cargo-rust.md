@@ -15,8 +15,8 @@ High-performance concurrent caching with KV cache compression
 | Edition | `2021` |
 | Rust Version | `>= 1.70` |
 | License | `MIT` |
-| Repository | <https://github.com/wrikka/wpackages> |
-| Homepage | <https://github.com/wrikka/wpackages> |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
+| Homepage | <https://github.com/wrikka/opensource-wrikka-com> |
 | Authors | Wrikka Team |
 | Keywords | caching, concurrent, quantization, compression |
 
@@ -89,6 +89,6 @@ cargo doc -p wrikka-caching --no-deps
 
 ## Links
 
-- Repository: <https://github.com/wrikka/wpackages>
-- Homepage: <https://github.com/wrikka/wpackages>
-- Source: <https://github.com/wrikka/wpackages/blob/main/packages/infra/caching/Cargo.toml>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Homepage: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/infra/caching/Cargo.toml>

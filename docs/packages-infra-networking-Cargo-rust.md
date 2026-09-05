@@ -15,7 +15,7 @@ Network communication utilities with Clean Architecture
 | Edition | `2021` |
 | Rust Version | `>= 1.70` |
 | License | `MIT` |
-| Repository | <https://github.com/wrikka/wpackages> |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
 | Homepage | <https://github.com/wrikka/wpackages> |
 | Authors | Wrikka Team |
 | Keywords | networking, http, tcp, udp |
@@ -117,6 +117,6 @@ cargo doc -p wrikka-networking --no-deps
 
 ## Links
 
-- Repository: <https://github.com/wrikka/wpackages>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
 - Homepage: <https://github.com/wrikka/wpackages>
-- Source: <https://github.com/wrikka/wpackages/blob/main/packages/infra/networking/Cargo.toml>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/infra/networking/Cargo.toml>

@@ -9,7 +9,7 @@ app npm workspace at packages/lib/tauri-plugin-wrikka-fs/examples/vanilla/packag
 | Field | Value |
 | --- | --- |
 | Type | NPM |
-| Category | Libraries |
+| Category | Tauri Plugin |
 | Path | `packages/lib/tauri-plugin-wrikka-fs/examples/vanilla/package.json` |
 | Version | `1.0.0` |
 | License | `MIT` |

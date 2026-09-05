@@ -1,4 +1,4 @@
-# wrikka-foundation-utils
+# wrikka-utils
 
 ## Overview
 
@@ -10,12 +10,12 @@ Utility library with Clean Architecture and functional programming principles
 | --- | --- |
 | Type | RUST |
 | Category | Foundation |
-| Path | `packages/lib/foundation/utils/Cargo.toml` |
+| Path | `packages/lib/utils/Cargo.toml` |
 | Version | `0.1.0` |
 | Edition | `2021` |
 | Rust Version | `>= 1.75` |
 | License | `MIT OR Apache-2.0` |
-| Repository | <https://github.com/wrikka/rust-packages> |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
 | Authors | Wrikka Team <team@wrikka.dev> |
 | Keywords | utils, utilities, clean-architecture, functional, helpers |
 
@@ -67,6 +67,11 @@ Utility library with Clean Architecture and functional programming principles
 - `src/presentation/mod.rs`
 - `src/shared/constants.rs`
 - `src/shared/errors.rs`
+- `src/shared/integration/constants/mod.rs`
+- `src/shared/integration/errors/mod.rs`
+- `src/shared/integration/mod.rs`
+- `src/shared/integration/types/mod.rs`
+- `src/shared/integration/utils/mod.rs`
 - `src/shared/mod.rs`
 - `src/shared/types.rs`
 - `src/shared/utils.rs`
@@ -76,31 +81,31 @@ Utility library with Clean Architecture and functional programming principles
 ### Build
 
 ```bash
-cargo build -p wrikka-foundation-utils
+cargo build -p wrikka-utils
 ```
 
 ### Test
 
 ```bash
-cargo test -p wrikka-foundation-utils
+cargo test -p wrikka-utils
 ```
 
 ### Run
 
 ```bash
-cargo run -p wrikka-foundation-utils
+cargo run -p wrikka-utils
 ```
 
 ### Lint
 
 ```bash
-cargo clippy -p wrikka-foundation-utils
+cargo clippy -p wrikka-utils
 ```
 
 ### Documentation
 
 ```bash
-cargo doc -p wrikka-foundation-utils --no-deps
+cargo doc -p wrikka-utils --no-deps
 ```
 
 ## Environment
@@ -253,5 +258,5 @@ wrikka-foundation-utils = { version = "0.1.0", features = ["full"] }
 
 ## Links
 
-- Repository: <https://github.com/wrikka/rust-packages>
-- Source: <https://github.com/wrikka/rust-packages/blob/main/packages/lib/foundation/utils/Cargo.toml>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/lib/utils/Cargo.toml>

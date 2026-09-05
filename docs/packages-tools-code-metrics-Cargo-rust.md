@@ -10,7 +10,7 @@ Code analysis metrics and quality measures
 | --- | --- |
 | Type | RUST |
 | Category | Tools |
-| Path | `packages/lib/tools/code-metrics/Cargo.toml` |
+| Path | `packages/tools/code-metrics/Cargo.toml` |
 | Version | `0.1.0` |
 | Edition | `2021` |
 

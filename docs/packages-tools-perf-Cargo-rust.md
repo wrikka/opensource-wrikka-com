@@ -10,7 +10,7 @@ Performance monitoring and benchmarking tools
 | --- | --- |
 | Type | RUST |
 | Category | Tools |
-| Path | `packages/lib/tools/perf/Cargo.toml` |
+| Path | `packages/tools/perf/Cargo.toml` |
 | Keywords | performance, benchmarking, monitoring, profiling, metrics |
 
 ## Directory Structure

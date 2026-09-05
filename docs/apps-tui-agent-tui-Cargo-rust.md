@@ -58,10 +58,22 @@ Terminal-based AI assistant interface with clean architecture
 - `src/adapters/config/loader.rs`
 - `src/adapters/config/mod.rs`
 - `src/adapters/config/settings.rs`
+- `src/adapters/db/audit_repository.rs`
+- `src/adapters/db/automation_workflow_repository.rs`
+- `src/adapters/db/collaboration_repository.rs`
 - `src/adapters/db/encrypted_sqlite_repository.rs`
+- `src/adapters/db/guardrail_repository.rs`
+- `src/adapters/db/headless_session_repository.rs`
+- `src/adapters/db/macro_repository.rs`
+- `src/adapters/db/migrations.rs`
 - `src/adapters/db/mod.rs`
+- `src/adapters/db/performance_repository.rs`
+- `src/adapters/db/session_repository.rs`
 - `src/adapters/db/share_link_repository.rs`
 - `src/adapters/db/share_repository.rs`
+- `src/adapters/db/subagent_repository.rs`
+- `src/adapters/db/subagent_task_repository.rs`
+- `src/adapters/db/ui_content_repository.rs`
 - `src/adapters/external/dependency_parser.rs`
 - `src/adapters/external/file_scanner.rs`
 - `src/adapters/external/github_client.rs`
@@ -71,6 +83,8 @@ Terminal-based AI assistant interface with clean architecture
 - `src/adapters/external/guardrail_manager.rs`
 - `src/adapters/external/headless_command_executor.rs`
 - `src/adapters/external/headless_session_manager.rs`
+- `src/adapters/external/http_retry.rs`
+- `src/adapters/external/macro_executor.rs`
 - `src/adapters/external/metrics_collector.rs`
 - `src/adapters/external/mod.rs`
 - `src/adapters/external/optimization_manager.rs`
@@ -81,20 +95,6 @@ Terminal-based AI assistant interface with clean architecture
 - `src/adapters/external/subagent_manager.rs`
 - `src/adapters/external/subagent_task_executor/mod.rs`
 - `src/adapters/external/subagent_task_executor/prompts.rs`
-- `src/adapters/external/subagent_task_executor/tests.rs`
-- `src/adapters/external/subagent_task_queue.rs`
-- `src/adapters/input/crossterm_handler.rs`
-- `src/adapters/input/mod.rs`
-- `src/adapters/mod.rs`
-- `src/adapters/ui/mod.rs`
-- `src/adapters/ui/ratatui_adapter/adapter.rs`
-- `src/adapters/ui/ratatui_adapter/mod.rs`
-- `src/adapters/ui/ratatui_adapter/tests.rs`
-- `src/adapters/ui/ratatui_adapter/types.rs`
-- `src/adapters/ui/renderer.rs`
-- `src/adapters/ui/screen_reader.rs`
-- `src/lib.rs`
-- `src/main.rs`
 
 ## Binaries
 

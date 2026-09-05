@@ -1,8 +1,8 @@
-# wpackages
+# opensource-wrikka-com
 
 ## Overview
 
-wpackages npm workspace at apps/web/wpackages/package.json
+opensource-wrikka-com npm workspace at opensource-wrikka-com/package.json
 
 ## Metadata
 
@@ -10,7 +10,7 @@ wpackages npm workspace at apps/web/wpackages/package.json
 | --- | --- |
 | Type | NPM |
 | Category | Web Apps |
-| Path | `apps/web/wpackages/package.json` |
+| Path | `opensource-wrikka-com/package.json` |
 | Version | `0.2.0` |
 
 ## Directory Structure
@@ -23,6 +23,7 @@ wpackages npm workspace at apps/web/wpackages/package.json
 - 📄 `docs/apps-cli-agent-computer-package-npm.md`
 - 📄 `docs/apps-cli-convert-web-to-desktop-Cargo-rust.md`
 - 📄 `docs/apps-cli-convert-web-to-desktop-package-npm.md`
+- 📄 `docs/apps-cli-file-ops-Cargo-rust.md`
 - 📄 `docs/apps-cli-monorepo-Cargo-rust.md`
 - 📄 `docs/apps-cli-monorepo-package-npm.md`
 - 📄 `docs/apps-desktop-files-desktop-package-npm.md`
@@ -41,7 +42,6 @@ wpackages npm workspace at apps/web/wpackages/package.json
 - 📄 `docs/apps-wasm-canvas-native-rust-Cargo-rust.md`
 - 📄 `docs/apps-wasm-canvas-package-npm.md`
 - 📄 `docs/apps-wasm-canvas-web-package-npm.md`
-- 📄 `docs/apps-web-wpackages-package-npm.md`
 - 📄 `docs/packages-domain-agent-sdk-channels-Cargo-rust.md`
 - 📄 `docs/packages-domain-agent-sdk-core-Cargo-rust.md`
 - 📄 `docs/packages-domain-agent-sdk-integrations-Cargo-rust.md`

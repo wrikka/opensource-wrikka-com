@@ -15,8 +15,8 @@ Filesystem utilities and operations with Clean Architecture
 | Edition | `2021` |
 | Rust Version | `>= 1.70` |
 | License | `MIT` |
-| Repository | <https://github.com/wrikka/wpackages> |
-| Homepage | <https://github.com/wrikka/wpackages> |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
+| Homepage | <https://github.com/wrikka/opensource-wrikka-com> |
 | Authors | Wrikka Team |
 | Keywords | filesystem, file, directory, path |
 
@@ -48,6 +48,12 @@ Filesystem utilities and operations with Clean Architecture
 - `src/domain/validators/mod.rs`
 - `src/infrastructure/adapters/mod.rs`
 - `src/infrastructure/mod.rs`
+- `src/infrastructure/utils/directory.rs`
+- `src/infrastructure/utils/file_ops.rs`
+- `src/infrastructure/utils/mod.rs`
+- `src/infrastructure/utils/walker.rs`
+- `src/infrastructure/utils/walker_config.rs`
+- `src/infrastructure/utils/walker_functions.rs`
 - `src/lib.rs`
 
 ## Quick Start
@@ -95,6 +101,6 @@ cargo doc -p wrikka-filesystem --no-deps
 
 ## Links
 
-- Repository: <https://github.com/wrikka/wpackages>
-- Homepage: <https://github.com/wrikka/wpackages>
-- Source: <https://github.com/wrikka/wpackages/blob/main/packages/infra/filesystem/Cargo.toml>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Homepage: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/infra/filesystem/Cargo.toml>

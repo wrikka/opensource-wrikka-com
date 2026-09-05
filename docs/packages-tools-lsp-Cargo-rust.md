@@ -10,7 +10,7 @@ LSP integration - completion, diagnostics, and go-to-definition
 | --- | --- |
 | Type | RUST |
 | Category | Tools |
-| Path | `packages/lib/tools/lsp/Cargo.toml` |
+| Path | `packages/tools/lsp/Cargo.toml` |
 | Keywords | lsp, language-server, completion, diagnostics, ide |
 
 ## Directory Structure

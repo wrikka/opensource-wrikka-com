@@ -1,19 +1,21 @@
-# @wrikka/rust-cli-builder
+# wrikka-create-cli
 
 ## Overview
 
-CLI builder utilities with Clean Architecture
+A clean architecture CLI builder library
 
 ## Metadata
 
 | Field | Value |
 | --- | --- |
-| Type | NPM |
+| Type | RUST |
 | Category | Tools |
-| Path | `packages/lib/tools/cli-builder/package.json` |
+| Path | `packages/tools/create-cli/Cargo.toml` |
 | Version | `0.1.0` |
+| Edition | `2021` |
 | License | `MIT` |
-| Repository | <https://github.com/wrikka/wpackages> |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
+| Authors | Wrikka Team |
 
 ## Directory Structure
 
@@ -79,56 +81,47 @@ CLI builder utilities with Clean Architecture
 - `src/application/cli_commands/subcommand.rs`
 - `src/application/cli_interactive/menu.rs`
 
+## Binaries
+
+- `wrikka-create-cli`
+
 ## Quick Start
-
-### Install
-
-```bash
-bun install
-```
 
 ### Build
 
 ```bash
-bun run build
-```
-
-### Develop
-
-```bash
-bun run dev
+cargo build -p wrikka-create-cli
 ```
 
 ### Test
 
 ```bash
-bun run test
+cargo test -p wrikka-create-cli
+```
+
+### Run
+
+```bash
+cargo run -p wrikka-create-cli
 ```
 
 ### Lint
 
 ```bash
-bun run lint
+cargo clippy -p wrikka-create-cli
 ```
 
-## Scripts
+### Documentation
 
-| Script | Command |
+```bash
+cargo doc -p wrikka-create-cli --no-deps
+```
+
+## Environment
+
+| Field | Value |
 | --- | --- |
-| build | `cargo build --release` |
-| dev | `cargo run` |
-| test | `cargo test` |
-| typecheck | `cargo check` |
-| format | `cargo fmt` |
-| lint | `cargo clippy -- -D warnings` |
-| clean | `cargo clean` |
-| format:check | `cargo fmt -- --check` |
-| lint:fix | `cargo clippy --fix` |
-| test:unit | `cargo test --lib` |
-| test:integration | `cargo test --test integration` |
-| test:e2e | `cargo test --features e2e` |
-| verify | `cargo check && cargo clippy && cargo test --lib` |
-| verify:full | `cargo check && cargo clippy && cargo test --lib && cargo test --test integration && cargo test --features e2e && cargo build --release` |
+| Edition | `2021` |
 
 ## README
 
@@ -169,8 +162,8 @@ A Clean Architecture CLI application builder library for Rust with code generati
 2. Use the library — `Rust`
 
    ```rust
-   use cli_builder::infrastructure::di::DiContainer;
-   use cli_builder::application::dto::CreateApplicationRequest;
+   use create_cli::infrastructure::di::DiContainer;
+   use create_cli::application::dto::CreateApplicationRequest;
 
    #[tokio::main]
    async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -244,8 +237,8 @@ cli-builder show my-app
 ### Usage via SDK — Generate Rust CLI Code
 
 ```rust
-use cli_builder::infrastructure::di::DiContainer;
-use cli_builder::application::dto::GenerateCodeRequest;
+use create_cli::infrastructure::di::DiContainer;
+use create_cli::application::dto::GenerateCodeRequest;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -269,8 +262,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 ### Usage via SDK — Shell Completions
 
 ```rust
-use cli_builder::infrastructure::di::DiContainer;
-use cli_builder::application::dto::{GenerateCompletionRequest, ShellType};
+use create_cli::infrastructure::di::DiContainer;
+use create_cli::application::dto::{GenerateCompletionRequest, ShellType};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -292,7 +285,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 ### Usage via SDK — File-Based Persistence
 
 ```rust
-use cli_builder::infrastructure::di::DiContainer;
+use create_cli::infrastructure::di::DiContainer;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -309,5 +302,5 @@ MIT License - See [LICENSE](./LICENSE)
 
 ## Links
 
-- Repository: <https://github.com/wrikka/wpackages>
-- Source: <https://github.com/wrikka/wpackages/blob/main/packages/lib/tools/cli-builder/package.json>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/tools/create-cli/Cargo.toml>

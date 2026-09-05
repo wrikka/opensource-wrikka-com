@@ -9,7 +9,7 @@ A Tauri App
 | Field | Value |
 | --- | --- |
 | Type | RUST |
-| Category | Libraries |
+| Category | Tauri Plugin |
 | Path | `packages/lib/tauri-plugin-wrikka-fs/examples/vanilla/src-tauri/Cargo.toml` |
 | Version | `0.1.0` |
 | Edition | `2021` |

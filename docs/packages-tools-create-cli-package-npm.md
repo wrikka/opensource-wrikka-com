@@ -1,21 +1,19 @@
-# wrikka-cli-builder
+# @wrikka/create-cli
 
 ## Overview
 
-A clean architecture CLI builder library
+CLI builder utilities with Clean Architecture
 
 ## Metadata
 
 | Field | Value |
 | --- | --- |
-| Type | RUST |
+| Type | NPM |
 | Category | Tools |
-| Path | `packages/lib/tools/cli-builder/Cargo.toml` |
+| Path | `packages/tools/create-cli/package.json` |
 | Version | `0.1.0` |
-| Edition | `2021` |
 | License | `MIT` |
-| Repository | <https://github.com/wrikka/wpackages> |
-| Authors | Wrikka Team |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
 
 ## Directory Structure
 
@@ -81,47 +79,56 @@ A clean architecture CLI builder library
 - `src/application/cli_commands/subcommand.rs`
 - `src/application/cli_interactive/menu.rs`
 
-## Binaries
-
-- `wrikka-cli-builder`
-
 ## Quick Start
+
+### Install
+
+```bash
+bun install
+```
 
 ### Build
 
 ```bash
-cargo build -p wrikka-cli-builder
+bun run build
+```
+
+### Develop
+
+```bash
+bun run dev
 ```
 
 ### Test
 
 ```bash
-cargo test -p wrikka-cli-builder
-```
-
-### Run
-
-```bash
-cargo run -p wrikka-cli-builder
+bun run test
 ```
 
 ### Lint
 
 ```bash
-cargo clippy -p wrikka-cli-builder
+bun run lint
 ```
 
-### Documentation
+## Scripts
 
-```bash
-cargo doc -p wrikka-cli-builder --no-deps
-```
-
-## Environment
-
-| Field | Value |
+| Script | Command |
 | --- | --- |
-| Edition | `2021` |
+| build | `cargo build --release` |
+| dev | `cargo run` |
+| test | `cargo test` |
+| typecheck | `cargo check` |
+| format | `cargo fmt` |
+| lint | `cargo clippy -- -D warnings` |
+| clean | `cargo clean` |
+| format:check | `cargo fmt -- --check` |
+| lint:fix | `cargo clippy --fix` |
+| test:unit | `cargo test --lib` |
+| test:integration | `cargo test --test integration` |
+| test:e2e | `cargo test --features e2e` |
+| verify | `cargo check && cargo clippy && cargo test --lib` |
+| verify:full | `cargo check && cargo clippy && cargo test --lib && cargo test --test integration && cargo test --features e2e && cargo build --release` |
 
 ## README
 
@@ -162,8 +169,8 @@ A Clean Architecture CLI application builder library for Rust with code generati
 2. Use the library — `Rust`
 
    ```rust
-   use cli_builder::infrastructure::di::DiContainer;
-   use cli_builder::application::dto::CreateApplicationRequest;
+   use create_cli::infrastructure::di::DiContainer;
+   use create_cli::application::dto::CreateApplicationRequest;
 
    #[tokio::main]
    async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -237,8 +244,8 @@ cli-builder show my-app
 ### Usage via SDK — Generate Rust CLI Code
 
 ```rust
-use cli_builder::infrastructure::di::DiContainer;
-use cli_builder::application::dto::GenerateCodeRequest;
+use create_cli::infrastructure::di::DiContainer;
+use create_cli::application::dto::GenerateCodeRequest;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -262,8 +269,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 ### Usage via SDK — Shell Completions
 
 ```rust
-use cli_builder::infrastructure::di::DiContainer;
-use cli_builder::application::dto::{GenerateCompletionRequest, ShellType};
+use create_cli::infrastructure::di::DiContainer;
+use create_cli::application::dto::{GenerateCompletionRequest, ShellType};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -285,7 +292,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 ### Usage via SDK — File-Based Persistence
 
 ```rust
-use cli_builder::infrastructure::di::DiContainer;
+use create_cli::infrastructure::di::DiContainer;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -302,5 +309,5 @@ MIT License - See [LICENSE](./LICENSE)
 
 ## Links
 
-- Repository: <https://github.com/wrikka/wpackages>
-- Source: <https://github.com/wrikka/wpackages/blob/main/packages/lib/tools/cli-builder/Cargo.toml>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/tools/create-cli/package.json>

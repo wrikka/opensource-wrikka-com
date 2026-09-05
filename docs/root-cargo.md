@@ -15,8 +15,8 @@ Cargo workspace root for rust-packages
 | Edition | `2021` |
 | Rust Version | `>= 1.70` |
 | License | `MIT` |
-| Repository | <https://github.com/wrikka/rust-packages> |
-| Homepage | <https://github.com/wrikka/rust-packages> |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
+| Homepage | <https://github.com/wrikka/opensource-wrikka-com> |
 | Authors | Wrikka Team |
 
 ## Directory Structure
@@ -33,34 +33,32 @@ Cargo workspace root for rust-packages
 - 📄 `Cargo.lock`
 - 📄 `Cargo.toml`
 - 📄 `clippy.toml`
+- 📁 `opensource-wrikka-com`
+- 📁 `opensource-wrikka-com/docs`
+- 📄 `opensource-wrikka-com/index.html`
+- 📄 `opensource-wrikka-com/package.json`
+- 📁 `opensource-wrikka-com/scripts`
+- 📁 `opensource-wrikka-com/src`
+- 📄 `opensource-wrikka-com/tsconfig.json`
+- 📄 `opensource-wrikka-com/vite.config.ts`
+- 📄 `opensource-wrikka-com/wrangler.toml`
 - 📄 `package.json`
 - 📁 `packages`
 - 📁 `packages/domain`
 - 📁 `packages/infra`
 - 📁 `packages/lib`
+- 📁 `packages/tools`
 - 📄 `README.md`
 - 📁 `scripts`
 - 📄 `scripts/analyze-project.ts`
-- 📄 `scripts/analyze-rust-files.ps1`
-- 📄 `scripts/analyze-srp-bun.ts`
-- 📄 `scripts/analyze-srp.ps1`
-- 📄 `scripts/check-file-sizes.ps1`
-- 📄 `scripts/check-long-files.ps1`
-- 📄 `scripts/count-lines.ps1`
-- 📄 `scripts/count_lines.ps1`
-- 📄 `scripts/count_lines2.ps1`
-- 📄 `scripts/filter-srp.ts`
-- 📄 `scripts/find-long-files.ps1`
 
 ## Workspace Members
 
-- `packages/lib/tools/code-metrics`
-- `packages/lib/tools/repo-mapping`
-- `packages/lib/tools/code-translation`
-- `packages/lib/foundation/effect-cli`
-- `packages/lib/foundation/effect-http`
-- `packages/lib/foundation/effect-core`
-- `packages/lib/tools/search-engine`
+- `packages/tools/code-metrics`
+- `packages/tools/repo-mapping`
+- `packages/tools/code-translation`
+- `packages/lib/effect`
+- `packages/tools/search-engine`
 - `apps/cli/agent-browser`
 - `apps/cli/agent-computer`
 - `apps/cli/agent-capture`
@@ -68,20 +66,19 @@ Cargo workspace root for rust-packages
 - `# git submodule
     # "packages/ui`
 - `# TODO: Add UI package
-    "packages/lib/tools/reporter`
-- `packages/lib/tools/rules-engine`
-- `packages/lib/foundation/fp`
-- `packages/lib/foundation/error`
-- `packages/lib/foundation/utils`
-- `packages/infra/core`
+    "packages/tools/reporter`
+- `packages/tools/rules-engine`
+- `packages/lib/fp`
+- `packages/lib/error`
+- `packages/lib/utils`
 - `packages/infra/caching`
 - `packages/infra/filesystem`
 - `packages/infra/networking`
 - `packages/infra/observability`
 - `packages/infra/storage`
-- `packages/lib/tools/parser-engine`
-- `packages/lib/tools/template-engine`
-- `packages/lib/file-ops`
+- `packages/tools/parser-engine`
+- `packages/tools/template-engine`
+- `apps/cli/file-ops`
 - `packages/lib/ratatui-ui`
 - `packages/domain/terminal-sdk`
 - `# Agent SDK packages
@@ -180,6 +177,6 @@ Rust packages monorepo for Wrikka — Agent SDK, TUI apps, CLI tools, infrastruc
 
 ## Links
 
-- Repository: <https://github.com/wrikka/rust-packages>
-- Homepage: <https://github.com/wrikka/rust-packages>
-- Source: <https://github.com/wrikka/rust-packages/blob/main/Cargo.toml>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Homepage: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/Cargo.toml>

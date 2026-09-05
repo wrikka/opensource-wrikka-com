@@ -10,7 +10,7 @@ Template engine with Clean Architecture
 | --- | --- |
 | Type | NPM |
 | Category | Tools |
-| Path | `packages/lib/tools/template-engine/package.json` |
+| Path | `packages/tools/template-engine/package.json` |
 | Version | `0.1.0` |
 | License | `MIT` |
 | Repository | <https://github.com/wrikka/wpackages> |
@@ -26,6 +26,7 @@ Template engine with Clean Architecture
 - 📁 `src/application`
 - 📁 `src/domain`
 - 📁 `src/infrastructure`
+- 📄 `src/interface.rs`
 - 📄 `src/lib.rs`
 - 📄 `TODO.md`
 
@@ -64,8 +65,8 @@ Template engine with Clean Architecture
 - `src/infrastructure/in_memory_repository/types.rs`
 - `src/infrastructure/mod.rs`
 - `src/infrastructure/repositories.rs`
-- `src/infrastructure/repository_types.rs`
 - `src/infrastructure/template_engines.rs`
+- `src/interface.rs`
 - `src/lib.rs`
 
 ## Quick Start
@@ -312,4 +313,4 @@ Contributions are welcome! Please read our contributing guidelines before submit
 ## Links
 
 - Repository: <https://github.com/wrikka/wpackages>
-- Source: <https://github.com/wrikka/wpackages/blob/main/packages/lib/tools/template-engine/package.json>
+- Source: <https://github.com/wrikka/wpackages/blob/main/packages/tools/template-engine/package.json>

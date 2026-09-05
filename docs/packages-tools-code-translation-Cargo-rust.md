@@ -10,7 +10,7 @@ AI-powered code translation
 | --- | --- |
 | Type | RUST |
 | Category | Tools |
-| Path | `packages/lib/tools/code-translation/Cargo.toml` |
+| Path | `packages/tools/code-translation/Cargo.toml` |
 | Version | `0.1.0` |
 | Edition | `2021` |
 

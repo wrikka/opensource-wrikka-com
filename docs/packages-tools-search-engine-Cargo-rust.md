@@ -10,7 +10,7 @@ AI-friendly semantic search engine with AST parsing, following Clean Architectur
 | --- | --- |
 | Type | RUST |
 | Category | Tools |
-| Path | `packages/lib/tools/search-engine/Cargo.toml` |
+| Path | `packages/tools/search-engine/Cargo.toml` |
 | Version | `0.1.0` |
 | Edition | `2021` |
 | License | `MIT` |
@@ -273,4 +273,4 @@ Contributions are welcome! Please read our contributing guidelines before submit
 ## Links
 
 - Repository: <https://github.com/wrikka/wpackages>
-- Source: <https://github.com/wrikka/wpackages/blob/main/packages/lib/tools/search-engine/Cargo.toml>
+- Source: <https://github.com/wrikka/wpackages/blob/main/packages/tools/search-engine/Cargo.toml>

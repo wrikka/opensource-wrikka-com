@@ -10,7 +10,7 @@ General-purpose template engine for project generation
 | --- | --- |
 | Type | RUST |
 | Category | Tools |
-| Path | `packages/lib/tools/template-engine/Cargo.toml` |
+| Path | `packages/tools/template-engine/Cargo.toml` |
 | Version | `0.1.0` |
 | Edition | `2024` |
 | License | `MIT OR Apache-2.0` |
@@ -29,6 +29,7 @@ General-purpose template engine for project generation
 - 📁 `src/application`
 - 📁 `src/domain`
 - 📁 `src/infrastructure`
+- 📄 `src/interface.rs`
 - 📄 `src/lib.rs`
 - 📄 `TODO.md`
 
@@ -67,8 +68,8 @@ General-purpose template engine for project generation
 - `src/infrastructure/in_memory_repository/types.rs`
 - `src/infrastructure/mod.rs`
 - `src/infrastructure/repositories.rs`
-- `src/infrastructure/repository_types.rs`
 - `src/infrastructure/template_engines.rs`
+- `src/interface.rs`
 - `src/lib.rs`
 
 ## Quick Start
@@ -306,4 +307,4 @@ Contributions are welcome! Please read our contributing guidelines before submit
 ## Links
 
 - Repository: <https://github.com/wrikka/wpackages>
-- Source: <https://github.com/wrikka/wpackages/blob/main/packages/lib/tools/template-engine/Cargo.toml>
+- Source: <https://github.com/wrikka/wpackages/blob/main/packages/tools/template-engine/Cargo.toml>

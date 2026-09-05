@@ -1,8 +1,8 @@
 import { mkdir, readdir, readFile, stat, writeFile } from "node:fs/promises";
 import { basename, dirname, extname, join, relative } from "node:path";
 
-const repoRoot = "../../..";
-const scanRoots = ["apps", "packages"];
+const repoRoot = "..";
+const scanRoots = ["apps", "packages", "opensource-wrikka-com"];
 const outFile = "src/workspaces.ts";
 const docsDir = "docs";
 const docsOutFile = "src/docs.ts";
@@ -103,16 +103,19 @@ function inferCategory(relDir: string): string {
 		const domain = parts[1];
 		if (domain === "domain") return "Domain";
 		if (domain === "infra") return "Infra";
+		if (domain === "tools") return "Tools";
 		if (domain === "lib" && parts.length >= 3) {
 			const lib = parts[2];
-			if (lib === "foundation") return "Foundation";
+			if (lib === "effect" || lib === "error" || lib === "fp" || lib === "utils") return "Foundation";
 			if (lib === "tools") return "Tools";
 			if (lib === "tui") return "TUI Lib";
 			if (lib === "ratatui-ui") return "TUI Lib";
+			if (lib === "tauri-plugin-wrikka-fs") return "Tauri Plugin";
 			return "Libraries";
 		}
 		return domain[0].toUpperCase() + domain.slice(1);
 	}
+	if (parts[0] === "opensource-wrikka-com") return "Web Apps";
 	return "Other";
 }
 

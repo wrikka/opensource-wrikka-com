@@ -22,6 +22,7 @@ Database explorer TUI app with clean architecture
 
 ## Directory Structure
 
+- 📄 `Cargo.lock`
 - 📄 `Cargo.toml`
 - 📄 `moon.yml`
 - 📁 `src`
@@ -31,6 +32,8 @@ Database explorer TUI app with clean architecture
 - 📁 `src/modules`
 - 📁 `src/presentation`
 - 📁 `src/shared`
+- 📁 `tests`
+- 📄 `tests/db_integration.rs`
 
 ## Source Files
 
@@ -45,6 +48,7 @@ Database explorer TUI app with clean architecture
 - `src/modules/database/domain/models/query.rs`
 - `src/modules/database/domain/operations/mod.rs`
 - `src/modules/database/domain/operations/query.rs`
+- `src/modules/database/domain/ports.rs`
 - `src/modules/database/mod.rs`
 - `src/modules/mod.rs`
 - `src/presentation/mod.rs`

@@ -10,7 +10,7 @@ Generic reporting library with multiple formats, exporters, and Clean Architectu
 | --- | --- |
 | Type | RUST |
 | Category | Tools |
-| Path | `packages/lib/tools/reporter/Cargo.toml` |
+| Path | `packages/tools/reporter/Cargo.toml` |
 | Keywords | reporting, benchmark, metrics, export, visualization, clean-architecture |
 
 ## Directory Structure

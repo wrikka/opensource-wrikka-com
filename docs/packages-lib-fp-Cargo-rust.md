@@ -1,4 +1,4 @@
-# wrikka-foundation-fp
+# wrikka-fp
 
 ## Overview
 
@@ -10,12 +10,12 @@ Functional Programming library with Clean Architecture
 | --- | --- |
 | Type | RUST |
 | Category | Foundation |
-| Path | `packages/lib/foundation/fp/Cargo.toml` |
+| Path | `packages/lib/fp/Cargo.toml` |
 | Version | `0.1.0` |
 | Edition | `2021` |
 | Rust Version | `>= 1.75` |
 | License | `MIT OR Apache-2.0` |
-| Repository | <https://github.com/wrikka/rust-packages> |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
 | Authors | Wrikka Team <team@wrikka.dev> |
 | Keywords | functional, programming, fp, monad, functor |
 
@@ -82,31 +82,31 @@ Functional Programming library with Clean Architecture
 ### Build
 
 ```bash
-cargo build -p wrikka-foundation-fp
+cargo build -p wrikka-fp
 ```
 
 ### Test
 
 ```bash
-cargo test -p wrikka-foundation-fp
+cargo test -p wrikka-fp
 ```
 
 ### Run
 
 ```bash
-cargo run -p wrikka-foundation-fp
+cargo run -p wrikka-fp
 ```
 
 ### Lint
 
 ```bash
-cargo clippy -p wrikka-foundation-fp
+cargo clippy -p wrikka-fp
 ```
 
 ### Documentation
 
 ```bash
-cargo doc -p wrikka-foundation-fp --no-deps
+cargo doc -p wrikka-fp --no-deps
 ```
 
 ## Environment
@@ -259,5 +259,5 @@ wrikka-foundation-fp = { version = "0.1.0", features = ["serde"] }
 
 ## Links
 
-- Repository: <https://github.com/wrikka/rust-packages>
-- Source: <https://github.com/wrikka/rust-packages/blob/main/packages/lib/foundation/fp/Cargo.toml>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/lib/fp/Cargo.toml>

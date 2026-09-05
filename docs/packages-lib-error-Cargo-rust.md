@@ -1,4 +1,4 @@
-# wrikka-foundation-error
+# wrikka-error
 
 ## Overview
 
@@ -10,12 +10,12 @@ Error handling library with Clean Architecture and functional programming princi
 | --- | --- |
 | Type | RUST |
 | Category | Foundation |
-| Path | `packages/lib/foundation/error/Cargo.toml` |
+| Path | `packages/lib/error/Cargo.toml` |
 | Version | `0.1.0` |
 | Edition | `2021` |
 | Rust Version | `>= 1.75` |
 | License | `MIT OR Apache-2.0` |
-| Repository | <https://github.com/wrikka/rust-packages> |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
 | Authors | Wrikka Team <team@wrikka.dev> |
 | Keywords | error, error-handling, clean-architecture, functional, monad |
 
@@ -54,6 +54,13 @@ Error handling library with Clean Architecture and functional programming princi
 - `src/modules/core/ports/mod.rs`
 - `src/modules/core/types/mod.rs`
 - `src/modules/core/types/models.rs`
+- `src/modules/infrastructure/directory_errors.rs`
+- `src/modules/infrastructure/errors.rs`
+- `src/modules/infrastructure/file_errors.rs`
+- `src/modules/infrastructure/integration/mod.rs`
+- `src/modules/infrastructure/io_errors.rs`
+- `src/modules/infrastructure/mod.rs`
+- `src/modules/infrastructure/path_errors.rs`
 - `src/modules/mod.rs`
 - `src/presentation/mod.rs`
 - `src/shared/mod.rs`
@@ -66,31 +73,31 @@ Error handling library with Clean Architecture and functional programming princi
 ### Build
 
 ```bash
-cargo build -p wrikka-foundation-error
+cargo build -p wrikka-error
 ```
 
 ### Test
 
 ```bash
-cargo test -p wrikka-foundation-error
+cargo test -p wrikka-error
 ```
 
 ### Run
 
 ```bash
-cargo run -p wrikka-foundation-error
+cargo run -p wrikka-error
 ```
 
 ### Lint
 
 ```bash
-cargo clippy -p wrikka-foundation-error
+cargo clippy -p wrikka-error
 ```
 
 ### Documentation
 
 ```bash
-cargo doc -p wrikka-foundation-error --no-deps
+cargo doc -p wrikka-error --no-deps
 ```
 
 ## Environment
@@ -239,5 +246,5 @@ wrikka-foundation-error = { version = "0.1.0", features = ["full"] }
 
 ## Links
 
-- Repository: <https://github.com/wrikka/rust-packages>
-- Source: <https://github.com/wrikka/rust-packages/blob/main/packages/lib/foundation/error/Cargo.toml>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/lib/error/Cargo.toml>

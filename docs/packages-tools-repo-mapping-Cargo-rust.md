@@ -10,7 +10,7 @@ Repository map generation and analysis
 | --- | --- |
 | Type | RUST |
 | Category | Tools |
-| Path | `packages/lib/tools/repo-mapping/Cargo.toml` |
+| Path | `packages/tools/repo-mapping/Cargo.toml` |
 | Version | `0.1.0` |
 | Edition | `2021` |
 
@@ -18,12 +18,15 @@ Repository map generation and analysis
 
 - 📄 `Cargo.toml`
 - 📁 `src`
+- 📁 `src/git`
 - 📁 `src/infrastructure`
 - 📄 `src/lib.rs`
 - 📁 `src/modules`
 
 ## Source Files
 
+- `src/git/git/mod.rs`
+- `src/git/mod.rs`
 - `src/infrastructure/entities/mod.rs`
 - `src/infrastructure/entities/repo_map_entity.rs`
 - `src/infrastructure/mod.rs`

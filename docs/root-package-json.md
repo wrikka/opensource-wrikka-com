@@ -1,4 +1,4 @@
-# @wrikka/rust-packages
+# @wrikka/opensource-wrikka-com
 
 ## Overview
 
@@ -27,29 +27,31 @@ No description available.
 - 📄 `Cargo.lock`
 - 📄 `Cargo.toml`
 - 📄 `clippy.toml`
+- 📁 `opensource-wrikka-com`
+- 📁 `opensource-wrikka-com/docs`
+- 📄 `opensource-wrikka-com/index.html`
+- 📄 `opensource-wrikka-com/package.json`
+- 📁 `opensource-wrikka-com/scripts`
+- 📁 `opensource-wrikka-com/src`
+- 📄 `opensource-wrikka-com/tsconfig.json`
+- 📄 `opensource-wrikka-com/vite.config.ts`
+- 📄 `opensource-wrikka-com/wrangler.toml`
 - 📄 `package.json`
 - 📁 `packages`
 - 📁 `packages/domain`
 - 📁 `packages/infra`
 - 📁 `packages/lib`
+- 📁 `packages/tools`
 - 📄 `README.md`
 - 📁 `scripts`
 - 📄 `scripts/analyze-project.ts`
-- 📄 `scripts/analyze-rust-files.ps1`
-- 📄 `scripts/analyze-srp-bun.ts`
-- 📄 `scripts/analyze-srp.ps1`
-- 📄 `scripts/check-file-sizes.ps1`
-- 📄 `scripts/check-long-files.ps1`
-- 📄 `scripts/count-lines.ps1`
-- 📄 `scripts/count_lines.ps1`
-- 📄 `scripts/count_lines2.ps1`
-- 📄 `scripts/filter-srp.ts`
-- 📄 `scripts/find-long-files.ps1`
 
 ## Workspace Members
 
+- `opensource-wrikka-com`
 - `apps/*/*`
 - `apps/wasm/canvas/web`
+- `packages/*/*`
 - `packages/*/*/*`
 
 ## Quick Start

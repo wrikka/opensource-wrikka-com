@@ -2,19 +2,19 @@
 
 ## Overview
 
-wrikka-file-ops Rust workspace at packages/lib/file-ops/Cargo.toml
+wrikka-file-ops Rust workspace at apps/cli/file-ops/Cargo.toml
 
 ## Metadata
 
 | Field | Value |
 | --- | --- |
 | Type | RUST |
-| Category | Libraries |
-| Path | `packages/lib/file-ops/Cargo.toml` |
+| Category | CLI Apps |
+| Path | `apps/cli/file-ops/Cargo.toml` |
 | Version | `0.1.0` |
 | Edition | `2021` |
 | License | `MIT` |
-| Repository | <https://github.com/veerapong/file-ops> |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
 | Authors | Veerapong |
 
 ## Directory Structure
@@ -257,5 +257,5 @@ let path = FilePath::new("notes.md")?;
 
 ## Links
 
-- Repository: <https://github.com/veerapong/file-ops>
-- Source: <https://github.com/veerapong/file-ops/blob/main/packages/lib/file-ops/Cargo.toml>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/apps/cli/file-ops/Cargo.toml>
