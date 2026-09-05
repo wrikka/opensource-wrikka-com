@@ -14,7 +14,7 @@ Communication channels for agent-sdk: Slack, WhatsApp, Email, reconnection
 | Version | `0.1.0` |
 | Edition | `2021` |
 | License | `MIT` |
-| Repository | <https://github.com/newkub/wpackages> |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
 | Keywords | channels, slack, whatsapp, email, messaging |
 
 ## Directory Structure
@@ -114,5 +114,5 @@ cargo doc -p agent-sdk-channels --no-deps
 
 ## Links
 
-- Repository: <https://github.com/newkub/wpackages>
-- Source: <https://github.com/newkub/wpackages/blob/main/packages/domain/agent-sdk/channels/Cargo.toml>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/domain/agent-sdk/channels/Cargo.toml>

@@ -14,7 +14,7 @@ Security module for agent-sdk: audit log, crypto, RBAC, rate limiting
 | Version | `0.1.0` |
 | Edition | `2021` |
 | License | `MIT` |
-| Repository | <https://github.com/newkub/wpackages> |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
 | Keywords | security, rbac, audit, crypto, rate-limiting |
 
 ## Directory Structure
@@ -98,5 +98,5 @@ cargo doc -p agent-sdk-security --no-deps
 
 ## Links
 
-- Repository: <https://github.com/newkub/wpackages>
-- Source: <https://github.com/newkub/wpackages/blob/main/packages/domain/agent-sdk/security/Cargo.toml>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/domain/agent-sdk/security/Cargo.toml>

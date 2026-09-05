@@ -14,7 +14,7 @@ AI agent core runtime - conversation, provider, memory, workspace
 | Version | `0.1.0` |
 | Edition | `2021` |
 | License | `MIT` |
-| Repository | <https://github.com/newkub/wpackages> |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
 | Keywords | ai, agent, llm, sdk, runtime |
 
 ## Directory Structure
@@ -287,5 +287,5 @@ cargo run -p wrikka-agent-core -- mcp serve
 
 ## Links
 
-- Repository: <https://github.com/newkub/wpackages>
-- Source: <https://github.com/newkub/wpackages/blob/main/packages/domain/agent-sdk/core/Cargo.toml>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/domain/agent-sdk/core/Cargo.toml>

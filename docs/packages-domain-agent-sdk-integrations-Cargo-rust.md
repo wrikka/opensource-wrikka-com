@@ -14,7 +14,7 @@ Integrations for agent-sdk: MCP OAuth, computer-use, web search/fetch
 | Version | `0.1.0` |
 | Edition | `2021` |
 | License | `MIT` |
-| Repository | <https://github.com/newkub/wpackages> |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
 | Keywords | integrations, mcp, oauth, web-search, computer-use |
 
 ## Directory Structure
@@ -118,5 +118,5 @@ cargo doc -p agent-sdk-integrations --no-deps
 
 ## Links
 
-- Repository: <https://github.com/newkub/wpackages>
-- Source: <https://github.com/newkub/wpackages/blob/main/packages/domain/agent-sdk/integrations/Cargo.toml>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/domain/agent-sdk/integrations/Cargo.toml>
