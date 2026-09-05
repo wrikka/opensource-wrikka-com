@@ -42,9 +42,9 @@ opensource-wrikka-com npm workspace at opensource-wrikka-com/package.json
 - 📄 `docs/apps-wasm-canvas-native-rust-Cargo-rust.md`
 - 📄 `docs/apps-wasm-canvas-package-npm.md`
 - 📄 `docs/apps-wasm-canvas-web-package-npm.md`
+- 📄 `docs/opensource-wrikka-com-package-npm.md`
 - 📄 `docs/packages-domain-agent-sdk-channels-Cargo-rust.md`
 - 📄 `docs/packages-domain-agent-sdk-core-Cargo-rust.md`
-- 📄 `docs/packages-domain-agent-sdk-integrations-Cargo-rust.md`
 
 ## Source Files
 

@@ -13,7 +13,7 @@ Convert web apps to desktop with Clean Architecture
 | Path | `apps/cli/convert-web-to-desktop/package.json` |
 | Version | `0.1.0` |
 | License | `MIT` |
-| Repository | <https://github.com/wrikka/wpackages> |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
 
 ## Directory Structure
 
@@ -246,5 +246,5 @@ wrikka-convert-web interactive
 
 ## Links
 
-- Repository: <https://github.com/wrikka/wpackages>
-- Source: <https://github.com/wrikka/wpackages/blob/main/apps/cli/convert-web-to-desktop/package.json>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/apps/cli/convert-web-to-desktop/package.json>

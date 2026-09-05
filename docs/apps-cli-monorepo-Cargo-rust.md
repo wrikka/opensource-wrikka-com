@@ -14,7 +14,7 @@ Advanced monorepo management tool - Better than Moonrepo and Turborepo
 | Version | `0.1.0` |
 | Edition | `2024` |
 | License | `MIT OR Apache-2.0` |
-| Repository | <https://github.com/wrikka/wpackages> |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
 | Authors | Wrikka Team |
 | Keywords | monorepo, build-system, task-runner, workspace |
 
@@ -265,5 +265,5 @@ async fn main() -> anyhow::Result<()> {
 
 ## Links
 
-- Repository: <https://github.com/wrikka/wpackages>
-- Source: <https://github.com/wrikka/wpackages/blob/main/apps/cli/monorepo/Cargo.toml>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/apps/cli/monorepo/Cargo.toml>

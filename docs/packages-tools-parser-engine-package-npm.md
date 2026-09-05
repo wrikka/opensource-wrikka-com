@@ -13,7 +13,7 @@ Advanced parser utilities with multiple language support and Clean Architecture
 | Path | `packages/tools/parser-engine/package.json` |
 | Version | `0.1.0` |
 | License | `MIT` |
-| Repository | <https://github.com/wrikka/wpackages> |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
 
 ## Directory Structure
 
@@ -275,5 +275,5 @@ async fn main() -> anyhow::Result<()> {
 
 ## Links
 
-- Repository: <https://github.com/wrikka/wpackages>
-- Source: <https://github.com/wrikka/wpackages/blob/main/packages/tools/parser-engine/package.json>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/tools/parser-engine/package.json>

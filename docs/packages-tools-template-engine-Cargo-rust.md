@@ -14,7 +14,7 @@ General-purpose template engine for project generation
 | Version | `0.1.0` |
 | Edition | `2024` |
 | License | `MIT OR Apache-2.0` |
-| Repository | <https://github.com/wrikka/wpackages> |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
 | Authors | Wrikka Team |
 | Keywords | template, code-generation, scaffolding |
 
@@ -306,5 +306,5 @@ Contributions are welcome! Please read our contributing guidelines before submit
 
 ## Links
 
-- Repository: <https://github.com/wrikka/wpackages>
-- Source: <https://github.com/wrikka/wpackages/blob/main/packages/tools/template-engine/Cargo.toml>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/tools/template-engine/Cargo.toml>

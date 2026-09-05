@@ -13,7 +13,7 @@ Template engine with Clean Architecture
 | Path | `packages/tools/template-engine/package.json` |
 | Version | `0.1.0` |
 | License | `MIT` |
-| Repository | <https://github.com/wrikka/wpackages> |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
 
 ## Directory Structure
 
@@ -312,5 +312,5 @@ Contributions are welcome! Please read our contributing guidelines before submit
 
 ## Links
 
-- Repository: <https://github.com/wrikka/wpackages>
-- Source: <https://github.com/wrikka/wpackages/blob/main/packages/tools/template-engine/package.json>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/tools/template-engine/package.json>

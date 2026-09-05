@@ -13,7 +13,7 @@ Computer automation agent with Clean Architecture
 | Path | `apps/cli/agent-computer/package.json` |
 | Version | `0.1.0` |
 | License | `MIT` |
-| Repository | <https://github.com/wrikka/wpackages> |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
 
 ## Directory Structure
 
@@ -252,5 +252,5 @@ async fn main() -> anyhow::Result<()> {
 
 ## Links
 
-- Repository: <https://github.com/wrikka/wpackages>
-- Source: <https://github.com/wrikka/wpackages/blob/main/apps/cli/agent-computer/package.json>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/apps/cli/agent-computer/package.json>

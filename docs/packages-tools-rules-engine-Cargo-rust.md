@@ -14,8 +14,8 @@ Flexible and customizable rules engine for code analysis, linting, and rewriting
 | Version | `0.1.0` |
 | Edition | `2021` |
 | License | `MIT` |
-| Repository | <https://github.com/wrikka/wpackages> |
-| Homepage | <https://github.com/wrikka/wpackages> |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
+| Homepage | <https://github.com/wrikka/opensource-wrikka-com> |
 | Authors | wrikka contributors |
 | Keywords | rules, linter, code-analysis, ast, clean-architecture |
 
@@ -279,6 +279,6 @@ MIT License - see [LICENSE](../../../LICENSE) for details.
 
 ## Links
 
-- Repository: <https://github.com/wrikka/wpackages>
-- Homepage: <https://github.com/wrikka/wpackages>
-- Source: <https://github.com/wrikka/wpackages/blob/main/packages/tools/rules-engine/Cargo.toml>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Homepage: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/tools/rules-engine/Cargo.toml>

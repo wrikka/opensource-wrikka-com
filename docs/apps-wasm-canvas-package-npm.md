@@ -13,7 +13,7 @@ Whiteboard application with Rust WASM and SolidJS
 | Path | `apps/wasm/canvas/package.json` |
 | Version | `0.1.0` |
 | License | `MIT` |
-| Repository | <https://github.com/wrikka/wpackages> |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
 
 ## Directory Structure
 
@@ -298,5 +298,5 @@ Contributions are welcome! Please read our contributing guidelines before submit
 
 ## Links
 
-- Repository: <https://github.com/wrikka/wpackages>
-- Source: <https://github.com/wrikka/wpackages/blob/main/apps/wasm/canvas/package.json>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/apps/wasm/canvas/package.json>

@@ -15,8 +15,8 @@ Shared terminal SDK - core domain logic, ports, and adapters for terminal applic
 | Edition | `2021` |
 | Rust Version | `>= 1.70` |
 | License | `MIT` |
-| Repository | <https://github.com/wrikka/wpackages> |
-| Homepage | <https://github.com/wrikka/wpackages> |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
+| Homepage | <https://github.com/wrikka/opensource-wrikka-com> |
 | Authors | Wrikka Team |
 | Keywords | terminal, sdk, pty, tui, cross-platform |
 
@@ -118,6 +118,6 @@ cargo doc -p wrikka-terminal-sdk --no-deps
 
 ## Links
 
-- Repository: <https://github.com/wrikka/wpackages>
-- Homepage: <https://github.com/wrikka/wpackages>
-- Source: <https://github.com/wrikka/wpackages/blob/main/packages/domain/terminal-sdk/Cargo.toml>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Homepage: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/domain/terminal-sdk/Cargo.toml>

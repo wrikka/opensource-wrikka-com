@@ -14,7 +14,7 @@ CLI tool to convert web applications to desktop using Tauri + WebView
 | Version | `0.1.0` |
 | Edition | `2021` |
 | License | `MIT` |
-| Repository | <https://github.com/wrikka/wpackages> |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
 | Authors | Veerapong <veerapong@example.com> |
 
 ## Directory Structure
@@ -242,5 +242,5 @@ wrikka-convert-web interactive
 
 ## Links
 
-- Repository: <https://github.com/wrikka/wpackages>
-- Source: <https://github.com/wrikka/wpackages/blob/main/apps/cli/convert-web-to-desktop/Cargo.toml>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/apps/cli/convert-web-to-desktop/Cargo.toml>

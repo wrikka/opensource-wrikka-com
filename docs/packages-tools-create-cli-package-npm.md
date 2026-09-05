@@ -163,7 +163,7 @@ A Clean Architecture CLI application builder library for Rust with code generati
 
    ```toml
    [dependencies]
-   cli-builder = { git = "https://github.com/wrikka/wpackages", path = "packages/cli-builder" }
+   cli-builder = { git = "https://github.com/wrikka/opensource-wrikka-com", path = "packages/cli-builder" }
    ```
 
 2. Use the library — `Rust`

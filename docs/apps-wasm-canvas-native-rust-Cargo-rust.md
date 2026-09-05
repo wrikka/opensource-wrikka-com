@@ -15,8 +15,8 @@ Native Rust implementation for wcanvas with storage, AI, and canvas core feature
 | Edition | `2021` |
 | Rust Version | `>= 1.80` |
 | License | `MIT` |
-| Repository | <https://github.com/wrikka/wpackages> |
-| Homepage | <https://github.com/wrikka/wpackages> |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
+| Homepage | <https://github.com/wrikka/opensource-wrikka-com> |
 | Authors | Wrikka Team |
 | Keywords | canvas, storage, ai, native, graphics |
 
@@ -326,6 +326,6 @@ MIT License - see LICENSE.md for details
 
 ## Links
 
-- Repository: <https://github.com/wrikka/wpackages>
-- Homepage: <https://github.com/wrikka/wpackages>
-- Source: <https://github.com/wrikka/wpackages/blob/main/apps/wasm/canvas/native-rust/Cargo.toml>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Homepage: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/apps/wasm/canvas/native-rust/Cargo.toml>

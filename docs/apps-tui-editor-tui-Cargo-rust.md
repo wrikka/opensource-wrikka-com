@@ -15,8 +15,8 @@ Modal TUI text editor with clean architecture
 | Edition | `2021` |
 | Rust Version | `>= 1.70` |
 | License | `MIT` |
-| Repository | <https://github.com/wrikka/wpackages> |
-| Homepage | <https://github.com/wrikka/wpackages> |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
+| Homepage | <https://github.com/wrikka/opensource-wrikka-com> |
 | Authors | Wrikka Team |
 | Keywords | tui, terminal, editor, vim, modal |
 
@@ -384,6 +384,6 @@ MIT License - see [LICENSE](../../LICENSE) for details.
 
 ## Links
 
-- Repository: <https://github.com/wrikka/wpackages>
-- Homepage: <https://github.com/wrikka/wpackages>
-- Source: <https://github.com/wrikka/wpackages/blob/main/apps/tui/editor-tui/Cargo.toml>
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Homepage: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/apps/tui/editor-tui/Cargo.toml>
