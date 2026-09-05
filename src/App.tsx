@@ -105,8 +105,8 @@ export function App() {
 	return (
 		<div class="rt-app">
 			<Header
-				title="wpackages"
-				subtitle="Explore every workspace in the rust-packages monorepo"
+				title="opensource-wrikka-com"
+				subtitle="Explore every workspace in the opensource-wrikka-com monorepo"
 			/>
 			<StatusBar left="v0.2.0" center="SolidJS" right={activeLabel()} />
 			<button
