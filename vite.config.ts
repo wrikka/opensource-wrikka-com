@@ -127,5 +127,16 @@ export default defineConfig({
 		target: "esnext",
 		outDir: "dist",
 		sourcemap: true,
+		chunkSizeWarningLimit: 2000,
+		rollupOptions: {
+			output: {
+				manualChunks(id) {
+					if (id.includes("mermaid")) return "mermaid";
+					if (id.includes("katex")) return "katex";
+					if (id.includes("node_modules")) return "vendor";
+					return null;
+				},
+			},
+		},
 	},
 });

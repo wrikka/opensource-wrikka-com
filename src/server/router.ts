@@ -107,7 +107,12 @@ export const router = {
 						message: `Doc asset missing: ${res.status}`,
 					});
 				}
-				return { content: await res.text() };
+				const entry = entries.find((d) => d.id === input.id)!;
+				return {
+					id: entry.id,
+					label: entry.label,
+					content: await res.text(),
+				};
 			}),
 
 		search: pub
