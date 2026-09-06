@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+		<title>opensource.wrikka.com</title>
+		<link>https://opensource-wrikka-com.newkubise.workers.dev</link>
+		<description>Documentation hub for all wrikka collections</description>
+		<language>en</language>
+				<item>
+			<title>@wrikka/opensource-wrikka-com</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/root-package-json</link>
+			<description>@wrikka/opensource-wrikka-com</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/root-package-json</guid>
+		</item>
+		<item>
+			<title>rust-packages</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/root-cargo</link>
+			<description>Cargo workspace root for rust-packages</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/root-cargo</guid>
+		</item>
+		<item>
+			<title>agent-browser</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-cli-agent-browser-Cargo-rust</link>
+			<description>Browser automation agent with Clean Architecture - supports Chrome, Firefox, Safari, Edge</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-cli-agent-browser-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>agent-capture</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-cli-agent-capture-Cargo-rust</link>
+			<description>Multi-platform agent capture CLI for browser, terminal, code snippets, and component previews</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-cli-agent-capture-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>@wrikka/agent-capture</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-cli-agent-capture-package-npm</link>
+			<description>Multi-platform agent capture CLI for browser, terminal, code snippets, and component previews</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-cli-agent-capture-package-npm</guid>
+		</item>
+		<item>
+			<title>agent-computer</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-cli-agent-computer-Cargo-rust</link>
+			<description>Main orchestration for computer automation with Clean Architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-cli-agent-computer-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>@wrikka/rust-agent-computer</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-cli-agent-computer-package-npm</link>
+			<description>Computer automation agent with Clean Architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-cli-agent-computer-package-npm</guid>
+		</item>
+		<item>
+			<title>wrikka-convert-web-to-desktop</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-cli-convert-web-to-desktop-Cargo-rust</link>
+			<description>CLI tool to convert web applications to desktop using Tauri + WebView</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-cli-convert-web-to-desktop-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>@wrikka/rust-convert-web-to-desktop</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-cli-convert-web-to-desktop-package-npm</link>
+			<description>Convert web apps to desktop with Clean Architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-cli-convert-web-to-desktop-package-npm</guid>
+		</item>
+		<item>
+			<title>wrikka-file-ops</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-cli-file-ops-Cargo-rust</link>
+			<description>wrikka-file-ops Rust workspace at apps/cli/file-ops/Cargo.toml</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-cli-file-ops-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>wmonorepo</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-cli-monorepo-Cargo-rust</link>
+			<description>Advanced monorepo management tool - Better than Moonrepo and Turborepo</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-cli-monorepo-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>@wrikka/rust-wmonorepo</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-cli-monorepo-package-npm</link>
+			<description>Monorepo management tool with Clean Architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-cli-monorepo-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/files-desktop</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-desktop-files-desktop-package-npm</link>
+			<description>Wrikka Desktop Explorer — custom-column, agent-driven file explorer</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-desktop-files-desktop-package-npm</guid>
+		</item>
+		<item>
+			<title>wrikka-files-desktop</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-desktop-files-desktop-src-tauri-Cargo-rust</link>
+			<description>Wrikka Desktop Explorer — custom-column, agent-driven file explorer</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-desktop-files-desktop-src-tauri-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>@wrikka/terminal</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-desktop-terminal-desktop-package-npm</link>
+			<description>Wrikka Terminal - GPU-accelerated terminal emulator</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-desktop-terminal-desktop-package-npm</guid>
+		</item>
+		<item>
+			<title>wrikka-terminal</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-desktop-terminal-desktop-src-tauri-Cargo-rust</link>
+			<description>Wrikka Terminal - GUI Terminal Emulator with GPU-accelerated Rendering</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-desktop-terminal-desktop-src-tauri-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>agent-tui</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-tui-agent-tui-Cargo-rust</link>
+			<description>Terminal-based AI assistant interface with clean architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-tui-agent-tui-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>api-tui</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-tui-api-tui-Cargo-rust</link>
+			<description>API client TUI app with clean architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-tui-api-tui-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>database-tui</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-tui-database-tui-Cargo-rust</link>
+			<description>Database explorer TUI app with clean architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-tui-database-tui-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>wrikka-editor-tui</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-tui-editor-tui-Cargo-rust</link>
+			<description>Modal TUI text editor with clean architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-tui-editor-tui-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>files-tui</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-tui-files-tui-Cargo-rust</link>
+			<description>File explorer TUI app with clean architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-tui-files-tui-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>git-tui</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-tui-git-tui-Cargo-rust</link>
+			<description>Git manager TUI app with clean architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-tui-git-tui-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>system-tui</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-tui-system-tui-Cargo-rust</link>
+			<description>System monitor TUI app with clean architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-tui-system-tui-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>task-tui</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-tui-task-tui-Cargo-rust</link>
+			<description>Tasks manager TUI app with clean architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-tui-task-tui-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>terminal-tui</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-tui-terminal-tui-Cargo-rust</link>
+			<description>Terminal emulator TUI app with clean architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-tui-terminal-tui-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>wcanvas-native-rust</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-wasm-canvas-native-rust-Cargo-rust</link>
+			<description>Native Rust implementation for wcanvas with storage, AI, and canvas core features</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-wasm-canvas-native-rust-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>@wrikka/wwhiteboard</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-wasm-canvas-package-npm</link>
+			<description>Whiteboard application with Rust WASM and SolidJS</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-wasm-canvas-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/wwhiteboard-web</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-wasm-canvas-web-package-npm</link>
+			<description>@wrikka/wwhiteboard-web npm workspace at apps/wasm/canvas/web/package.json</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/apps-wasm-canvas-web-package-npm</guid>
+		</item>
+		<item>
+			<title>agent-sdk-channels</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-domain-agent-sdk-channels-Cargo-rust</link>
+			<description>Communication channels for agent-sdk: Slack, WhatsApp, Email, reconnection</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-domain-agent-sdk-channels-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>wrikka-agent-core</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-domain-agent-sdk-core-Cargo-rust</link>
+			<description>AI agent core runtime - conversation, provider, memory, workspace</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-domain-agent-sdk-core-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>agent-sdk-integrations</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-domain-agent-sdk-integrations-Cargo-rust</link>
+			<description>Integrations for agent-sdk: MCP OAuth, computer-use, web search/fetch</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-domain-agent-sdk-integrations-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>agent-sdk-security</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-domain-agent-sdk-security-Cargo-rust</link>
+			<description>Security module for agent-sdk: audit log, crypto, RBAC, rate limiting</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-domain-agent-sdk-security-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>wrikka-agent-tools</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-domain-agent-sdk-tools-Cargo-rust</link>
+			<description>Agent tools - shell, browser, review, git</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-domain-agent-sdk-tools-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>wrikka-terminal-sdk</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-domain-terminal-sdk-Cargo-rust</link>
+			<description>Shared terminal SDK - core domain logic, ports, and adapters for terminal applications</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-domain-terminal-sdk-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>wrikka-caching</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-infra-caching-Cargo-rust</link>
+			<description>High-performance concurrent caching with KV cache compression</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-infra-caching-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>wrikka-filesystem</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-infra-filesystem-Cargo-rust</link>
+			<description>Filesystem utilities and operations with Clean Architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-infra-filesystem-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>wrikka-networking</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-infra-networking-Cargo-rust</link>
+			<description>Network communication utilities with Clean Architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-infra-networking-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>wrikka-observability</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-infra-observability-Cargo-rust</link>
+			<description>Monitoring and telemetry tools with Clean Architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-infra-observability-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>wrikka-storage</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-infra-storage-Cargo-rust</link>
+			<description>Storage abstractions with Clean Architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-infra-storage-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>wrikka-effect</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-lib-effect-Cargo-rust</link>
+			<description>Merged effect system - core, HTTP and CLI bindings</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-lib-effect-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>wrikka-error</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-lib-error-Cargo-rust</link>
+			<description>Error handling library with Clean Architecture and functional programming principles</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-lib-error-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>wrikka-fp</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-lib-fp-Cargo-rust</link>
+			<description>Functional Programming library with Clean Architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-lib-fp-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>ratatui-ui</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-lib-ratatui-ui-Cargo-rust</link>
+			<description>A shadcn/ui-style design system for ratatui TUI apps</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-lib-ratatui-ui-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>tauri-plugin-wrikka-fs</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-lib-tauri-plugin-wrikka-fs-Cargo-rust</link>
+			<description>High-performance file system plugin for Wrikka Desktop Explorer</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-lib-tauri-plugin-wrikka-fs-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>app</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-lib-tauri-plugin-wrikka-fs-examples-vanilla-package-npm</link>
+			<description>app npm workspace at packages/lib/tauri-plugin-wrikka-fs/examples/vanilla/package.json</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-lib-tauri-plugin-wrikka-fs-examples-vanilla-package-npm</guid>
+		</item>
+		<item>
+			<title>tauri-app</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-lib-tauri-plugin-wrikka-fs-examples-vanilla-src-tauri-Cargo-rust</link>
+			<description>A Tauri App</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-lib-tauri-plugin-wrikka-fs-examples-vanilla-src-tauri-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>wrikka-utils</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-lib-utils-Cargo-rust</link>
+			<description>Utility library with Clean Architecture and functional programming principles</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-lib-utils-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>wrikka-code-metrics</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-code-metrics-Cargo-rust</link>
+			<description>Code analysis metrics and quality measures</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-code-metrics-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>wrikka-code-translation</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-code-translation-Cargo-rust</link>
+			<description>AI-powered code translation</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-code-translation-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>wrikka-create-cli</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-create-cli-Cargo-rust</link>
+			<description>A clean architecture CLI builder library</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-create-cli-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>@wrikka/create-cli</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-create-cli-package-npm</link>
+			<description>CLI builder utilities with Clean Architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-create-cli-package-npm</guid>
+		</item>
+		<item>
+			<title>wrikka-lsp</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-lsp-Cargo-rust</link>
+			<description>LSP integration - completion, diagnostics, and go-to-definition</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-lsp-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>wrikka-parser-engine</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-parser-engine-Cargo-rust</link>
+			<description>Advanced parser utilities with multiple language support and Clean Architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-parser-engine-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>@wrikka/rust-parser</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-parser-engine-package-npm</link>
+			<description>Advanced parser utilities with multiple language support and Clean Architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-parser-engine-package-npm</guid>
+		</item>
+		<item>
+			<title>wrikka-perf</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-perf-Cargo-rust</link>
+			<description>Performance monitoring and benchmarking tools</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-perf-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>wrikka-repo-mapping</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-repo-mapping-Cargo-rust</link>
+			<description>Repository map generation and analysis</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-repo-mapping-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>wrikka-reporting</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-reporter-Cargo-rust</link>
+			<description>Generic reporting library with multiple formats, exporters, and Clean Architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-reporter-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>wrikka-rules-engine</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-rules-engine-Cargo-rust</link>
+			<description>Flexible and customizable rules engine for code analysis, linting, and rewriting - Clean Architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-rules-engine-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>wrikka-search-engine</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-search-engine-Cargo-rust</link>
+			<description>AI-friendly semantic search engine with AST parsing, following Clean Architecture principles</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-search-engine-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>wrikka-template-engine</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-template-engine-Cargo-rust</link>
+			<description>General-purpose template engine for project generation</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-template-engine-Cargo-rust</guid>
+		</item>
+		<item>
+			<title>@wrikka/rust-template-engine</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-template-engine-package-npm</link>
+			<description>Template engine with Clean Architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-template-engine-package-npm</guid>
+		</item>
+		<item>
+			<title>opensource-wrikka-com</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/opensource-wrikka-com-package-npm</link>
+			<description>opensource-wrikka-com npm workspace at opensource-wrikka-com/package.json</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/opensource-wrikka-com-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/bun-packages</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/root-package-json</link>
+			<description>Bun packages monorepo for Wrikka</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/root-package-json</guid>
+		</item>
+		<item>
+			<title>@wrikka/bench-deps</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-cli-bench-deps-package-npm</link>
+			<description>Benchmark and compare dependencies with detailed metrics</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-cli-bench-deps-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/check-quality</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-cli-check-quality-package-npm</link>
+			<description>Comprehensive code quality toolkit - linting, formatting, analysis, and unused file detection</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-cli-check-quality-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/create-skills</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-cli-create-skills-package-npm</link>
+			<description>Devin skill orchestration CLI - run, call, spawn, delegate, and invoke</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-cli-create-skills-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/dotfile-manager</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-cli-dotfile-manager-package-npm</link>
+			<description>A simple dotfiles manager inspired by chezmoi</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-cli-dotfile-manager-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/generate</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-cli-generate-package-npm</link>
+			<description>Generate and improve features — template generator and improve tools</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-cli-generate-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/release</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-cli-release-package-npm</link>
+			<description>Modern release automation tool with integrated changelog generation</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-cli-release-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/report-cli</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-cli-report-cli-package-npm</link>
+			<description>Universal report generator CLI with pluggable templates and output formats</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-cli-report-cli-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/task-manager</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-cli-task-manager-package-npm</link>
+			<description>Task management tool for development workflows</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-cli-task-manager-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/template-generator</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-cli-template-generator-package-npm</link>
+			<description>Fast, type-safe template generator with Bun native template engine</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-cli-template-generator-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/test</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-cli-test-package-npm</link>
+			<description>Fast test framework with Bun native performance and Clean Architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-cli-test-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/use-scripts</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-cli-use-scripts-package-npm</link>
+			<description>Functional script generation library with AST manipulation and beautiful reporting</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-cli-use-scripts-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/github-bot</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-services-github-bot-package-npm</link>
+			<description>GitHub App bot for dependency/version review - extracted from wgithub-bot app</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-services-github-bot-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/bench</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-toolkits-bench-package-npm</link>
+			<description>High-performance benchmarking library - extracted from wbench app</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-toolkits-bench-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/create-cli</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-toolkits-create-cli-package-npm</link>
+			<description>Create CLI - Unified terminal prompt, UI, TUI framework, CLI framework, and data display utilities</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-toolkits-create-cli-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/cloud</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-web-cloud-package-npm</link>
+			<description>Wrikka cloud platform dashboard</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-web-cloud-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/create-docs</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-web-create-docs-package-npm</link>
+			<description>Vite plugin for documentation sites built on Functional Clean Architecture with SolidJS support</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-web-create-docs-package-npm</guid>
+		</item>
+		<item>
+			<title>web-inspector-example</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-web-web-inspector-examples-vite-package-npm</link>
+			<description>web-inspector-example npm workspace at apps/web/web-inspector/examples/vite/package.json</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-web-web-inspector-examples-vite-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/web-inspector</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-web-web-inspector-package-npm</link>
+			<description>@wrikka/web-inspector npm workspace at apps/web/web-inspector/package.json</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/apps-web-web-inspector-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/analytics</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-analytics-package-npm</link>
+			<description>Product and usage analytics</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-analytics-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/animation</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-animation-package-npm</link>
+			<description>Fast, lightweight JavaScript animation library with Clean Architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-animation-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/app-router</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-app-router-package-npm</link>
+			<description>@wrikka/app-router npm workspace at packages/app-router/package.json</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-app-router-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/chart</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-chart-package-npm</link>
+			<description>Modern visualization library for SolidJS with Clean Architecture - Production-ready chart components</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-chart-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/composables</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-composables-package-npm</link>
+			<description>Wrikka Composables - SolidJS composables with Clean Architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-composables-package-npm</guid>
+		</item>
+		<item>
+			<title>@solidjs/devtools</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-devtools-package-npm</link>
+			<description>@solidjs/devtools npm workspace at packages/devtools/package.json</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-devtools-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/graph</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-graph-package-npm</link>
+			<description>A graph visualization module with Clean Architecture for SolidJS</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-graph-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/integrations</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-integrations-package-npm</link>
+			<description>Integration adapters for Wrikka (Stripe, GitHub, Supabase, Cloudflare)</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-integrations-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/notification</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-notification-package-npm</link>
+			<description>Notification infrastructure inspired by Novu</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-notification-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/query</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-query-package-npm</link>
+			<description>Fine-grained reactive data fetching and cache management for SolidJS with Clean Architecture</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-query-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/stores</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-stores-package-npm</link>
+			<description>Clean Architecture state management for SolidJS with time-travel, persistence, and validation</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-stores-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/utils</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-utils-package-npm</link>
+			<description>Consolidated utility packages for Wrikka projects</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-utils-package-npm</guid>
+		</item>
+		<item>
+			<title>@wrikka/web-server</title>
+			<link>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-web-server-package-npm</link>
+			<description>Production-ready web server library with file-system routing, AOT compilation, and universal runtime support built on Bun and Web Standards</description>
+			<guid>https://opensource-wrikka-com.newkubise.workers.dev/bun-packages/packages-web-server-package-npm</guid>
+		</item>
+	</channel>
+</rss>

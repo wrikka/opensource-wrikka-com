@@ -5,9 +5,15 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
+		"prebuild": "bun scripts/generate-seo.ts",
 		"build": "vite build",
 		"preview": "vite preview",
 		"typecheck": "tsc --noEmit",
+		"verify": "bun run typecheck && bun run build",
+		"gen": "bun scripts/generate-workspaces.ts && bun scripts/generate-seo.ts && bun scripts/generate-og-image.ts",
+		"gen:workspaces": "bun scripts/generate-workspaces.ts",
+		"gen:seo": "bun scripts/generate-seo.ts",
+		"gen:og": "bun scripts/generate-og-image.ts",
 		"deploy": "wrangler deploy"
 	},
 	"dependencies": {

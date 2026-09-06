@@ -1,5 +1,6 @@
 import type { ApiCollection, DocsAppConfig } from "@wrikka/create-docs/solid";
 import { orpcDataSource } from "./data-source";
+import { site } from "./site";
 
 const siteRpc: ApiCollection = {
 	id: "api",
@@ -120,15 +121,11 @@ const siteRpc: ApiCollection = {
 };
 
 export const docsAppConfig: DocsAppConfig = {
-	site: {
-		title: "opensource.wrikka.com",
-		description: "Documentation hub for all wrikka collections",
-		repoUrl: "https://github.com/wrikka/opensource-wrikka-com",
-		url: "https://opensource-wrikka-com.newkubise.workers.dev",
-	},
+	site,
 	github: {
 		owner: "wrikka",
 		repo: "opensource-wrikka-com",
+		branch: "main",
 		stats: true,
 		releases: true,
 		contributors: true,
@@ -172,6 +169,24 @@ export const docsAppConfig: DocsAppConfig = {
 				details: "Try the site's oRPC endpoints interactively.",
 				link: "/api/rpc-collections",
 			},
+			{
+				icon: "i-mdi:history",
+				title: "Changelog",
+				details: "GitHub releases rendered as a changelog.",
+				link: "/changelog",
+			},
+			{
+				icon: "i-mdi:account-group-outline",
+				title: "Community",
+				details: "Contributors, recent commits, and milestones.",
+				link: "/community",
+			},
+			{
+				icon: "i-mdi:puzzle-outline",
+				title: "Plugins",
+				details: "Integrations powering this site.",
+				link: "/plugins",
+			},
 		],
 	},
 	apiCollections: [siteRpc],
@@ -203,6 +218,11 @@ export const docsAppConfig: DocsAppConfig = {
 			install: "bun add @wrikka/create-docs",
 		},
 	],
+	i18n: {
+		current: "en",
+		list: [{ id: "en", label: "English" }],
+	},
+	theme: { defaultMode: "dark" },
 	features: {
 		search: true,
 		askAi: true,
@@ -211,6 +231,9 @@ export const docsAppConfig: DocsAppConfig = {
 		themeToggle: true,
 		breadcrumbs: true,
 		reportIssue: true,
+		openPR: true,
+		rss: true,
+		sitemap: true,
 		pwa: true,
 		analytics: true,
 	},

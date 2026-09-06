@@ -4,7 +4,7 @@ import "@wrikka/create-docs/markdown-content.css";
 import "virtual:uno.css";
 import { docsAppConfig } from "./app-config";
 
-initTheme();
+initTheme(docsAppConfig.theme?.defaultMode ?? "dark");
 
 const rootEl = document.getElementById("root");
 if (!rootEl) throw new Error("root element not found");
