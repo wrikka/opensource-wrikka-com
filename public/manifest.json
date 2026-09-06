@@ -4,25 +4,29 @@
       "id": "rust-packages",
       "label": "Rust Packages",
       "icon": "i-mdi:language-rust",
-      "description": "Rust crates, CLIs, TUIs, desktop and WASM apps in the wrikka monorepo"
+      "description": "Rust crates, CLIs, TUIs, desktop and WASM apps in the wrikka monorepo",
+      "repoUrl": "https://github.com/wrikka/rust-packages"
     },
     {
       "id": "bun-packages",
       "label": "Bun Packages",
       "icon": "i-mdi:nodejs",
-      "description": "TypeScript/Bun CLIs, services, toolkits and web apps"
+      "description": "TypeScript/Bun CLIs, services, toolkits and web apps",
+      "repoUrl": "https://github.com/wrikka/bun-packages"
     },
     {
       "id": "wframework",
       "label": "wframework",
       "icon": "i-mdi:hexagon-outline",
-      "description": "wframework documentation (coming soon)"
+      "description": "wframework documentation (coming soon)",
+      "repoUrl": "https://github.com/wrikka/wframework"
     },
     {
       "id": "content",
       "label": "Content",
       "icon": "i-mdi:text-box-multiple-outline",
-      "description": "Content collection (coming soon)"
+      "description": "Content collection (coming soon)",
+      "repoUrl": "https://github.com/wrikka/content"
     }
   ],
   "docs": {

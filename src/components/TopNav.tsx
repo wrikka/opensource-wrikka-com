@@ -1,5 +1,6 @@
 import { Link, useParams } from "@tanstack/solid-router";
 import { CollectionDropdown } from "./CollectionDropdown";
+import { setSearchOpen } from "./SearchPalette";
 import { ThemeToggle } from "./ThemeToggle";
 
 export function TopNav(props: { onMenuToggle: () => void }) {
@@ -25,6 +26,18 @@ export function TopNav(props: { onMenuToggle: () => void }) {
 			<div class="w-px h-6 bg-border hidden sm:block" aria-hidden="true" />
 			<CollectionDropdown current={params().collection} />
 			<div class="flex-1" />
+			<button
+				type="button"
+				onClick={() => setSearchOpen(true)}
+				aria-label="Search documentation"
+				class="inline-flex items-center gap-2 px-3 h-9 rounded-md border border-border bg-surface text-sm text-muted hover:text-foreground hover:border-focus transition-colors cursor-pointer"
+			>
+				<span class="i-mdi:magnify" aria-hidden="true" />
+				<span class="hidden sm:inline">Search…</span>
+				<kbd class="hidden sm:inline text-[10px] px-1.5 py-0.5 rounded border border-border">
+					Ctrl K
+				</kbd>
+			</button>
 			<a
 				href="https://github.com/wrikka/opensource-wrikka-com"
 				target="_blank"

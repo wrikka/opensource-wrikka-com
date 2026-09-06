@@ -1,10 +1,21 @@
 import { Outlet } from "@tanstack/solid-router";
-import { createSignal, Show } from "solid-js";
+import { createSignal, onCleanup, onMount, Show } from "solid-js";
+import { SearchPalette, setSearchOpen } from "../components/SearchPalette";
 import { SidebarNav } from "../components/SidebarNav";
 import { TopNav } from "../components/TopNav";
 
 export function DocsLayout() {
 	const [navOpen, setNavOpen] = createSignal(false);
+
+	const onKey = (e: KeyboardEvent) => {
+		if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+			e.preventDefault();
+			setSearchOpen((v) => !v);
+		}
+	};
+
+	onMount(() => document.addEventListener("keydown", onKey));
+	onCleanup(() => document.removeEventListener("keydown", onKey));
 
 	return (
 		<div class="min-h-screen flex flex-col bg-background text-foreground">
@@ -23,6 +34,7 @@ export function DocsLayout() {
 					<Outlet />
 				</main>
 			</div>
+			<SearchPalette />
 		</div>
 	);
 }

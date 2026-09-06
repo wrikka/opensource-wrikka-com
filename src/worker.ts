@@ -1,9 +1,10 @@
 import { onError } from "@orpc/server";
 import { RPCHandler } from "@orpc/server/fetch";
-import { type AssetsBinding, router } from "./server/router";
+import { type AiBinding, type AssetsBinding, router } from "./server/router";
 
 interface Env {
 	ASSETS: AssetsBinding;
+	AI?: AiBinding;
 }
 
 const handler = new RPCHandler(router, {
@@ -42,6 +43,7 @@ export default {
 					headers: request.headers,
 					assets: env.ASSETS,
 					origin: url.origin,
+					ai: env.AI,
 				},
 			});
 			if (matched) return corsHeaders(response);

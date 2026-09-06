@@ -38,6 +38,18 @@ function enhanceMarkdown(el: HTMLDivElement) {
 	}
 }
 
+function applyAlerts(html: string): string {
+	return html.replace(
+		/<blockquote>\s*<p>\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION|DANGER)\]([\s\S]*?)<\/blockquote>/gi,
+		(_, type: string, inner: string) => {
+			const t = type.toLowerCase();
+			const title = t.charAt(0).toUpperCase() + t.slice(1);
+			const body = inner.trim().replace(/<\/p>\s*$/, "");
+			return `<div class="rt-alert rt-alert--${t}"><p class="rt-alert__title">${title}</p><p>${body}</p></div>`;
+		},
+	);
+}
+
 export function DocMarkdown(props: { source: string }) {
 	let el: HTMLDivElement | undefined;
 
@@ -45,7 +57,7 @@ export function DocMarkdown(props: { source: string }) {
 		if (!el) return;
 		try {
 			const { marked } = await import("marked");
-			const str = marked.parse(props.source) as string;
+			const str = applyAlerts(marked.parse(props.source) as string);
 			el.innerHTML = str;
 			queueMicrotask(() => enhanceMarkdown(el as HTMLDivElement));
 		} catch (err) {

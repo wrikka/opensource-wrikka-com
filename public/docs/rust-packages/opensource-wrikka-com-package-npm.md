@@ -20,11 +20,14 @@ opensource-wrikka-com npm workspace at opensource-wrikka-com/package.json
 - 📄 `package.json`
 - 📁 `public`
 - 📁 `public/docs`
+- 📄 `public/llms-full.txt`
+- 📄 `public/llms.txt`
+- 📄 `public/manifest.json`
+- 📄 `public/search-index.json`
 - 📁 `scripts`
 - 📄 `scripts/generate-workspaces.ts`
 - 📁 `src`
 - 📁 `src/components`
-- 📄 `src/demo-data.ts`
 - 📄 `src/index.tsx`
 - 📁 `src/layouts`
 - 📁 `src/lib`
@@ -41,46 +44,27 @@ opensource-wrikka-com npm workspace at opensource-wrikka-com/package.json
 
 ## Source Files
 
-- `src/components/Autocomplete.tsx`
-- `src/components/Badge.tsx`
-- `src/components/Breadcrumbs.tsx`
+- `src/components/AskAiDialog.tsx`
 - `src/components/CollectionDropdown.tsx`
-- `src/components/CommandPalette.tsx`
-- `src/components/ComponentDemo.tsx`
-- `src/components/ConfirmDialog.tsx`
-- `src/components/DiffView.tsx`
 - `src/components/DocMarkdown.tsx`
+- `src/components/DocPrevNext.tsx`
 - `src/components/DocToc.tsx`
-- `src/components/EmptyState.tsx`
-- `src/components/FileListItem.tsx`
-- `src/components/FileTree.tsx`
-- `src/components/Footer.tsx`
-- `src/components/FuzzyFinder.tsx`
-- `src/components/Gauge.tsx`
-- `src/components/Header.tsx`
-- `src/components/HelpModal.tsx`
-- `src/components/HoverTooltip.tsx`
-- `src/components/Input.tsx`
-- `src/components/List.tsx`
-- `src/components/LoadingState.tsx`
-- `src/components/MarkdownBlock.tsx`
-- `src/components/MultiColumnLayout.tsx`
-- `src/components/Panel.tsx`
-- `src/components/Peek.tsx`
-- `src/components/Placeholder.tsx`
-- `src/components/Popup.tsx`
-- `src/components/ProgressBar.tsx`
-- `src/components/ScrollableText.tsx`
-- `src/components/SearchInput.tsx`
-- `src/components/Sidebar.tsx`
+- `src/components/PageActions.tsx`
+- `src/components/SearchPalette.tsx`
 - `src/components/SidebarNav.tsx`
-- `src/components/Spinner.tsx`
-- `src/components/StatusBar.tsx`
-- `src/components/StatusLine.tsx`
-- `src/components/TabBar.tsx`
-- `src/components/Table.tsx`
-- `src/components/Tabs.tsx`
-- `src/components/Tag.tsx`
+- `src/components/ThemeToggle.tsx`
+- `src/components/TopNav.tsx`
+- `src/index.tsx`
+- `src/layouts/DocsLayout.tsx`
+- `src/lib/data.ts`
+- `src/lib/icons.ts`
+- `src/lib/orpc.ts`
+- `src/lib/theme.ts`
+- `src/pages/CollectionPage.tsx`
+- `src/pages/DocPage.tsx`
+- `src/router.tsx`
+- `src/server/router.ts`
+- `src/worker.ts`
 
 ## Quick Start
 

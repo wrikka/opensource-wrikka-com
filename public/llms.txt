@@ -1,0 +1,103 @@
+# opensource.wrikka.com
+
+> Documentation hub for all wrikka collections.
+
+## Rust Packages
+
+- [@wrikka/opensource-wrikka-com](/docs/rust-packages/root-package-json.md): 
+- [rust-packages](/docs/rust-packages/root-cargo.md): Cargo workspace root for rust-packages
+- [agent-browser](/docs/rust-packages/apps-cli-agent-browser-Cargo-rust.md): Browser automation agent with Clean Architecture - supports Chrome, Firefox, Safari, Edge
+- [agent-capture](/docs/rust-packages/apps-cli-agent-capture-Cargo-rust.md): Multi-platform agent capture CLI for browser, terminal, code snippets, and component previews
+- [@wrikka/agent-capture](/docs/rust-packages/apps-cli-agent-capture-package-npm.md): Multi-platform agent capture CLI for browser, terminal, code snippets, and component previews
+- [agent-computer](/docs/rust-packages/apps-cli-agent-computer-Cargo-rust.md): Main orchestration for computer automation with Clean Architecture
+- [@wrikka/rust-agent-computer](/docs/rust-packages/apps-cli-agent-computer-package-npm.md): Computer automation agent with Clean Architecture
+- [wrikka-convert-web-to-desktop](/docs/rust-packages/apps-cli-convert-web-to-desktop-Cargo-rust.md): CLI tool to convert web applications to desktop using Tauri + WebView
+- [@wrikka/rust-convert-web-to-desktop](/docs/rust-packages/apps-cli-convert-web-to-desktop-package-npm.md): Convert web apps to desktop with Clean Architecture
+- [wrikka-file-ops](/docs/rust-packages/apps-cli-file-ops-Cargo-rust.md): wrikka-file-ops Rust workspace at apps/cli/file-ops/Cargo.toml
+- [wmonorepo](/docs/rust-packages/apps-cli-monorepo-Cargo-rust.md): Advanced monorepo management tool - Better than Moonrepo and Turborepo
+- [@wrikka/rust-wmonorepo](/docs/rust-packages/apps-cli-monorepo-package-npm.md): Monorepo management tool with Clean Architecture
+- [@wrikka/files-desktop](/docs/rust-packages/apps-desktop-files-desktop-package-npm.md): Wrikka Desktop Explorer — custom-column, agent-driven file explorer
+- [wrikka-files-desktop](/docs/rust-packages/apps-desktop-files-desktop-src-tauri-Cargo-rust.md): Wrikka Desktop Explorer — custom-column, agent-driven file explorer
+- [@wrikka/terminal](/docs/rust-packages/apps-desktop-terminal-desktop-package-npm.md): Wrikka Terminal - GPU-accelerated terminal emulator
+- [wrikka-terminal](/docs/rust-packages/apps-desktop-terminal-desktop-src-tauri-Cargo-rust.md): Wrikka Terminal - GUI Terminal Emulator with GPU-accelerated Rendering
+- [agent-tui](/docs/rust-packages/apps-tui-agent-tui-Cargo-rust.md): Terminal-based AI assistant interface with clean architecture
+- [api-tui](/docs/rust-packages/apps-tui-api-tui-Cargo-rust.md): API client TUI app with clean architecture
+- [database-tui](/docs/rust-packages/apps-tui-database-tui-Cargo-rust.md): Database explorer TUI app with clean architecture
+- [wrikka-editor-tui](/docs/rust-packages/apps-tui-editor-tui-Cargo-rust.md): Modal TUI text editor with clean architecture
+- [files-tui](/docs/rust-packages/apps-tui-files-tui-Cargo-rust.md): File explorer TUI app with clean architecture
+- [git-tui](/docs/rust-packages/apps-tui-git-tui-Cargo-rust.md): Git manager TUI app with clean architecture
+- [system-tui](/docs/rust-packages/apps-tui-system-tui-Cargo-rust.md): System monitor TUI app with clean architecture
+- [task-tui](/docs/rust-packages/apps-tui-task-tui-Cargo-rust.md): Tasks manager TUI app with clean architecture
+- [terminal-tui](/docs/rust-packages/apps-tui-terminal-tui-Cargo-rust.md): Terminal emulator TUI app with clean architecture
+- [wcanvas-native-rust](/docs/rust-packages/apps-wasm-canvas-native-rust-Cargo-rust.md): Native Rust implementation for wcanvas with storage, AI, and canvas core features
+- [@wrikka/wwhiteboard](/docs/rust-packages/apps-wasm-canvas-package-npm.md): Whiteboard application with Rust WASM and SolidJS
+- [@wrikka/wwhiteboard-web](/docs/rust-packages/apps-wasm-canvas-web-package-npm.md): @wrikka/wwhiteboard-web npm workspace at apps/wasm/canvas/web/package.json
+- [agent-sdk-channels](/docs/rust-packages/packages-domain-agent-sdk-channels-Cargo-rust.md): Communication channels for agent-sdk: Slack, WhatsApp, Email, reconnection
+- [wrikka-agent-core](/docs/rust-packages/packages-domain-agent-sdk-core-Cargo-rust.md): AI agent core runtime - conversation, provider, memory, workspace
+- [agent-sdk-integrations](/docs/rust-packages/packages-domain-agent-sdk-integrations-Cargo-rust.md): Integrations for agent-sdk: MCP OAuth, computer-use, web search/fetch
+- [agent-sdk-security](/docs/rust-packages/packages-domain-agent-sdk-security-Cargo-rust.md): Security module for agent-sdk: audit log, crypto, RBAC, rate limiting
+- [wrikka-agent-tools](/docs/rust-packages/packages-domain-agent-sdk-tools-Cargo-rust.md): Agent tools - shell, browser, review, git
+- [wrikka-terminal-sdk](/docs/rust-packages/packages-domain-terminal-sdk-Cargo-rust.md): Shared terminal SDK - core domain logic, ports, and adapters for terminal applications
+- [wrikka-caching](/docs/rust-packages/packages-infra-caching-Cargo-rust.md): High-performance concurrent caching with KV cache compression
+- [wrikka-filesystem](/docs/rust-packages/packages-infra-filesystem-Cargo-rust.md): Filesystem utilities and operations with Clean Architecture
+- [wrikka-networking](/docs/rust-packages/packages-infra-networking-Cargo-rust.md): Network communication utilities with Clean Architecture
+- [wrikka-observability](/docs/rust-packages/packages-infra-observability-Cargo-rust.md): Monitoring and telemetry tools with Clean Architecture
+- [wrikka-storage](/docs/rust-packages/packages-infra-storage-Cargo-rust.md): Storage abstractions with Clean Architecture
+- [wrikka-effect](/docs/rust-packages/packages-lib-effect-Cargo-rust.md): Merged effect system - core, HTTP and CLI bindings
+- [wrikka-error](/docs/rust-packages/packages-lib-error-Cargo-rust.md): Error handling library with Clean Architecture and functional programming principles
+- [wrikka-fp](/docs/rust-packages/packages-lib-fp-Cargo-rust.md): Functional Programming library with Clean Architecture
+- [ratatui-ui](/docs/rust-packages/packages-lib-ratatui-ui-Cargo-rust.md): A shadcn/ui-style design system for ratatui TUI apps
+- [tauri-plugin-wrikka-fs](/docs/rust-packages/packages-lib-tauri-plugin-wrikka-fs-Cargo-rust.md): High-performance file system plugin for Wrikka Desktop Explorer
+- [app](/docs/rust-packages/packages-lib-tauri-plugin-wrikka-fs-examples-vanilla-package-npm.md): app npm workspace at packages/lib/tauri-plugin-wrikka-fs/examples/vanilla/package.json
+- [tauri-app](/docs/rust-packages/packages-lib-tauri-plugin-wrikka-fs-examples-vanilla-src-tauri-Cargo-rust.md): A Tauri App
+- [wrikka-utils](/docs/rust-packages/packages-lib-utils-Cargo-rust.md): Utility library with Clean Architecture and functional programming principles
+- [wrikka-code-metrics](/docs/rust-packages/packages-tools-code-metrics-Cargo-rust.md): Code analysis metrics and quality measures
+- [wrikka-code-translation](/docs/rust-packages/packages-tools-code-translation-Cargo-rust.md): AI-powered code translation
+- [wrikka-create-cli](/docs/rust-packages/packages-tools-create-cli-Cargo-rust.md): A clean architecture CLI builder library
+- [@wrikka/create-cli](/docs/rust-packages/packages-tools-create-cli-package-npm.md): CLI builder utilities with Clean Architecture
+- [wrikka-lsp](/docs/rust-packages/packages-tools-lsp-Cargo-rust.md): LSP integration - completion, diagnostics, and go-to-definition
+- [wrikka-parser-engine](/docs/rust-packages/packages-tools-parser-engine-Cargo-rust.md): Advanced parser utilities with multiple language support and Clean Architecture
+- [@wrikka/rust-parser](/docs/rust-packages/packages-tools-parser-engine-package-npm.md): Advanced parser utilities with multiple language support and Clean Architecture
+- [wrikka-perf](/docs/rust-packages/packages-tools-perf-Cargo-rust.md): Performance monitoring and benchmarking tools
+- [wrikka-repo-mapping](/docs/rust-packages/packages-tools-repo-mapping-Cargo-rust.md): Repository map generation and analysis
+- [wrikka-reporting](/docs/rust-packages/packages-tools-reporter-Cargo-rust.md): Generic reporting library with multiple formats, exporters, and Clean Architecture
+- [wrikka-rules-engine](/docs/rust-packages/packages-tools-rules-engine-Cargo-rust.md): Flexible and customizable rules engine for code analysis, linting, and rewriting - Clean Architecture
+- [wrikka-search-engine](/docs/rust-packages/packages-tools-search-engine-Cargo-rust.md): AI-friendly semantic search engine with AST parsing, following Clean Architecture principles
+- [wrikka-template-engine](/docs/rust-packages/packages-tools-template-engine-Cargo-rust.md): General-purpose template engine for project generation
+- [@wrikka/rust-template-engine](/docs/rust-packages/packages-tools-template-engine-package-npm.md): Template engine with Clean Architecture
+- [opensource-wrikka-com](/docs/rust-packages/opensource-wrikka-com-package-npm.md): opensource-wrikka-com npm workspace at opensource-wrikka-com/package.json
+
+## Bun Packages
+
+- [@wrikka/bun-packages](/docs/bun-packages/root-package-json.md): Bun packages monorepo for Wrikka
+- [@wrikka/bench-deps](/docs/bun-packages/apps-cli-bench-deps-package-npm.md): Benchmark and compare dependencies with detailed metrics
+- [@wrikka/check-quality](/docs/bun-packages/apps-cli-check-quality-package-npm.md): Comprehensive code quality toolkit - linting, formatting, analysis, and unused file detection
+- [@wrikka/create-skills](/docs/bun-packages/apps-cli-create-skills-package-npm.md): Devin skill orchestration CLI - run, call, spawn, delegate, and invoke
+- [@wrikka/dotfile-manager](/docs/bun-packages/apps-cli-dotfile-manager-package-npm.md): A simple dotfiles manager inspired by chezmoi
+- [@wrikka/generate](/docs/bun-packages/apps-cli-generate-package-npm.md): Generate and improve features — template generator and improve tools
+- [@wrikka/release](/docs/bun-packages/apps-cli-release-package-npm.md): Modern release automation tool with integrated changelog generation
+- [@wrikka/report-cli](/docs/bun-packages/apps-cli-report-cli-package-npm.md): Universal report generator CLI with pluggable templates and output formats
+- [@wrikka/task-manager](/docs/bun-packages/apps-cli-task-manager-package-npm.md): Task management tool for development workflows
+- [@wrikka/template-generator](/docs/bun-packages/apps-cli-template-generator-package-npm.md): Fast, type-safe template generator with Bun native template engine
+- [@wrikka/test](/docs/bun-packages/apps-cli-test-package-npm.md): Fast test framework with Bun native performance and Clean Architecture
+- [@wrikka/use-scripts](/docs/bun-packages/apps-cli-use-scripts-package-npm.md): Functional script generation library with AST manipulation and beautiful reporting
+- [@wrikka/github-bot](/docs/bun-packages/apps-services-github-bot-package-npm.md): GitHub App bot for dependency/version review - extracted from wgithub-bot app
+- [@wrikka/bench](/docs/bun-packages/apps-toolkits-bench-package-npm.md): High-performance benchmarking library - extracted from wbench app
+- [@wrikka/create-cli](/docs/bun-packages/apps-toolkits-create-cli-package-npm.md): Create CLI - Unified terminal prompt, UI, TUI framework, CLI framework, and data display utilities
+- [@wrikka/cloud](/docs/bun-packages/apps-web-cloud-package-npm.md): Wrikka cloud platform dashboard
+- [@wrikka/create-docs](/docs/bun-packages/apps-web-create-docs-package-npm.md): Vite plugin for documentation sites built on Functional Clean Architecture with SolidJS support
+- [web-inspector-example](/docs/bun-packages/apps-web-web-inspector-examples-vite-package-npm.md): web-inspector-example npm workspace at apps/web/web-inspector/examples/vite/package.json
+- [@wrikka/web-inspector](/docs/bun-packages/apps-web-web-inspector-package-npm.md): @wrikka/web-inspector npm workspace at apps/web/web-inspector/package.json
+- [@wrikka/analytics](/docs/bun-packages/packages-analytics-package-npm.md): Product and usage analytics
+- [@wrikka/animation](/docs/bun-packages/packages-animation-package-npm.md): Fast, lightweight JavaScript animation library with Clean Architecture
+- [@wrikka/app-router](/docs/bun-packages/packages-app-router-package-npm.md): @wrikka/app-router npm workspace at packages/app-router/package.json
+- [@wrikka/chart](/docs/bun-packages/packages-chart-package-npm.md): Modern visualization library for SolidJS with Clean Architecture - Production-ready chart components
+- [@wrikka/composables](/docs/bun-packages/packages-composables-package-npm.md): Wrikka Composables - SolidJS composables with Clean Architecture
+- [@wrikka/create-design-system](/docs/bun-packages/packages-create-design-system-package-npm.md): Design token compiler and design system creator that beats Style Dictionary - DTCG-native, multi-platform, type-safe
+- [@solidjs/devtools](/docs/bun-packages/packages-devtools-package-npm.md): @solidjs/devtools npm workspace at packages/devtools/package.json
+- [@wrikka/graph](/docs/bun-packages/packages-graph-package-npm.md): A graph visualization module with Clean Architecture for SolidJS
+- [@wrikka/integrations](/docs/bun-packages/packages-integrations-package-npm.md): Integration adapters for Wrikka (Stripe, GitHub, Supabase, Cloudflare)
+- [@wrikka/notification](/docs/bun-packages/packages-notification-package-npm.md): Notification infrastructure inspired by Novu
+- [@wrikka/query](/docs/bun-packages/packages-query-package-npm.md): Fine-grained reactive data fetching and cache management for SolidJS with Clean Architecture
+- [@wrikka/stores](/docs/bun-packages/packages-stores-package-npm.md): Clean Architecture state management for SolidJS with time-travel, persistence, and validation
+- [@wrikka/utils](/docs/bun-packages/packages-utils-package-npm.md): Consolidated utility packages for Wrikka projects

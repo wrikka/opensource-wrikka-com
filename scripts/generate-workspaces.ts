@@ -9,6 +9,7 @@ interface CollectionConfig {
 	label: string;
 	icon: string;
 	description: string;
+	repoUrl: string;
 	repoRoot: string | null;
 	scanRoots: string[];
 }
@@ -20,6 +21,7 @@ const collectionsConfig: CollectionConfig[] = [
 		icon: "i-mdi:language-rust",
 		description:
 			"Rust crates, CLIs, TUIs, desktop and WASM apps in the wrikka monorepo",
+		repoUrl: "https://github.com/wrikka/rust-packages",
 		repoRoot: "..",
 		scanRoots: ["apps", "packages", "opensource-wrikka-com"],
 	},
@@ -28,6 +30,7 @@ const collectionsConfig: CollectionConfig[] = [
 		label: "Bun Packages",
 		icon: "i-mdi:nodejs",
 		description: "TypeScript/Bun CLIs, services, toolkits and web apps",
+		repoUrl: "https://github.com/wrikka/bun-packages",
 		repoRoot: join("..", "..", "bun-packages"),
 		scanRoots: ["apps", "packages"],
 	},
@@ -36,6 +39,7 @@ const collectionsConfig: CollectionConfig[] = [
 		label: "wframework",
 		icon: "i-mdi:hexagon-outline",
 		description: "wframework documentation (coming soon)",
+		repoUrl: "https://github.com/wrikka/wframework",
 		repoRoot: null,
 		scanRoots: [],
 	},
@@ -44,6 +48,7 @@ const collectionsConfig: CollectionConfig[] = [
 		label: "Content",
 		icon: "i-mdi:text-box-multiple-outline",
 		description: "Content collection (coming soon)",
+		repoUrl: "https://github.com/wrikka/content",
 		repoRoot: null,
 		scanRoots: [],
 	},
@@ -962,10 +967,39 @@ async function scanCollection(col: CollectionConfig): Promise<Workspace[]> {
 	return workspaces;
 }
 
+function stripMarkdown(md: string): string {
+	return md
+		.replace(/```[\s\S]*?```/g, " ")
+		.replace(/`[^`]*`/g, " ")
+		.replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
+		.replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")
+		.replace(/^#{1,6}\s+/gm, "")
+		.replace(/[*_~|>-]/g, " ")
+		.replace(/\s+/g, " ")
+		.trim();
+}
+
+function extractHeadings(md: string): string[] {
+	const out: string[] = [];
+	const regex = /^#{1,3}\s+(.+)$/gm;
+	let match = regex.exec(md);
+	while (match !== null) {
+		out.push((match[1] ?? "").trim());
+		match = regex.exec(md);
+	}
+	return out;
+}
+
 async function main() {
 	const manifest = {
 		collections: collectionsConfig.map(
-			({ id, label, icon, description }) => ({ id, label, icon, description }),
+			({ id, label, icon, description, repoUrl }) => ({
+				id,
+				label,
+				icon,
+				description,
+				repoUrl,
+			}),
 		),
 		docs: {} as Record<string, Workspace[]>,
 	};
@@ -977,11 +1011,65 @@ async function main() {
 	await mkdir(dirname(manifestFile), { recursive: true });
 	await writeFile(manifestFile, JSON.stringify(manifest, null, 2), "utf-8");
 
+	const searchIndex: {
+		c: string;
+		id: string;
+		t: string;
+		h: string[];
+		x: string;
+	}[] = [];
+	const llmsLines: string[] = [
+		"# opensource.wrikka.com",
+		"",
+		"> Documentation hub for all wrikka collections.",
+		"",
+	];
+	const llmsFullParts: string[] = [];
+
+	for (const col of collectionsConfig) {
+		const entries = manifest.docs[col.id] ?? [];
+		if (entries.length === 0) continue;
+		llmsLines.push(`## ${col.label}`, "");
+		for (const w of entries) {
+			const url = `/docs/${col.id}/${w.id}.md`;
+			llmsLines.push(`- [${w.label}](${url}): ${w.description}`);
+			let md = "";
+			try {
+				md = await readFile(join(docsDir, col.id, `${w.id}.md`), "utf-8");
+			} catch {
+				continue;
+			}
+			searchIndex.push({
+				c: col.id,
+				id: w.id,
+				t: w.label,
+				h: extractHeadings(md),
+				x: stripMarkdown(md).slice(0, 4000),
+			});
+			llmsFullParts.push(`\n\n---\n# [${col.id}] ${w.label}\n\n${md}`);
+		}
+		llmsLines.push("");
+	}
+
+	await writeFile(
+		join("public", "search-index.json"),
+		JSON.stringify(searchIndex),
+		"utf-8",
+	);
+	await writeFile(join("public", "llms.txt"), llmsLines.join("\n"), "utf-8");
+	await writeFile(
+		join("public", "llms-full.txt"),
+		llmsLines.join("\n") + llmsFullParts.join(""),
+		"utf-8",
+	);
+
 	const total = Object.values(manifest.docs).reduce(
 		(n, list) => n + list.length,
 		0,
 	);
-	console.log(`Generated ${manifestFile} with ${total} docs`);
+	console.log(
+		`Generated ${manifestFile}, search index (${searchIndex.length} entries), llms.txt — ${total} docs`,
+	);
 }
 
 main().catch((err) => {
