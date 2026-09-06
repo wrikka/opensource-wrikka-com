@@ -4,7 +4,7 @@ import { basename, dirname, extname, join, relative } from "node:path";
 const repoRoot = "..";
 const scanRoots = ["apps", "packages", "opensource-wrikka-com"];
 const outFile = "src/workspaces.ts";
-const docsDir = "docs";
+const docsDir = join("public", "docs");
 const docsOutFile = "src/docs.ts";
 
 interface Workspace {
@@ -125,10 +125,6 @@ function makeId(rel: string, type: "rust" | "npm"): string {
 		.replace(/\//g, "-")
 		.replace(/\.\w+$/, "");
 	return `${clean}-${type}`;
-}
-
-function safeIdentifier(id: string): string {
-	return id.replace(/[^a-zA-Z0-9_$]/g, "_");
 }
 
 function escapeCell(text: string): string {
@@ -894,21 +890,13 @@ export const categories = Array.from(new Set(workspaces.map((w) => w.category)))
 	await writeFile(outFile, output, "utf-8");
 	console.log(`Generated ${outFile} with ${workspaces.length} workspaces`);
 
-	const imports: string[] = [];
 	const mapEntries: string[] = [];
 
-	for (let i = 0; i < workspaces.length; i++) {
-		const w = workspaces[i];
-		const ident = `doc_${i}`;
-		imports.push(
-			`import ${safeIdentifier(ident)} from "../docs/${w.id}.md?raw";`,
-		);
-		mapEntries.push(`  "${w.id}": ${safeIdentifier(ident)},`);
+	for (const w of workspaces) {
+		mapEntries.push(`  "${w.id}": "/docs/${w.id}.md",`);
 	}
 
-	const docsOutput = `${imports.join("\n")}
-
-export const docs: Record<string, string> = {
+	const docsOutput = `export const docs: Record<string, string> = {
 ${mapEntries.join("\n")}
 };
 `;

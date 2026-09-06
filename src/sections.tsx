@@ -1,8 +1,8 @@
-import { marked } from "marked";
 import type { JSX } from "solid-js";
 import {
 	createEffect,
 	createMemo,
+	createResource,
 	createSignal,
 	For,
 	onCleanup,
@@ -90,9 +90,10 @@ function enhanceMarkdown(el: HTMLDivElement) {
 function MarkdownDoc(props: { source: string }) {
 	let el: HTMLDivElement | undefined;
 
-	const renderMarkdown = () => {
+	const renderMarkdown = async () => {
 		if (!el) return;
 		try {
+			const { marked } = await import("marked");
 			const str = marked.parse(props.source) as string;
 			el.innerHTML = str;
 			queueMicrotask(() => enhanceMarkdown(el as HTMLDivElement));
@@ -174,7 +175,11 @@ function WorkspaceView(props: {
 	path: string;
 	type: "rust" | "npm";
 }) {
-	const source = () => docs[props.id] ?? "";
+	const [source] = createResource(async () => {
+		const res = await fetch(docs[props.id] ?? `/docs/${props.id}.md`);
+		if (!res.ok) throw new Error(`Failed to load doc: ${res.status}`);
+		return res.text();
+	});
 
 	return (
 		<div class="rt-workspace">
@@ -198,10 +203,21 @@ function WorkspaceView(props: {
 			</div>
 			<div class="rt-workspace__body">
 				<div class="rt-workspace__docs">
-					<MarkdownDoc source={source()} />
+					<Show
+						when={source()}
+						fallback={
+							<Text as="p" variant="dim">
+								{source.error ? "Failed to load docs." : "Loading docs…"}
+							</Text>
+						}
+					>
+						{(s) => <MarkdownDoc source={s()} />}
+					</Show>
 				</div>
 				<aside class="rt-workspace__toc">
-					<TableOfContents source={source()} />
+					<Show when={source()}>
+						{(s) => <TableOfContents source={s()} />}
+					</Show>
 				</aside>
 			</div>
 		</div>
