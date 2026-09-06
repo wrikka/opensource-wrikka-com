@@ -124,6 +124,13 @@ export const docsAppConfig: DocsAppConfig = {
 		title: "opensource.wrikka.com",
 		description: "Documentation hub for all wrikka collections",
 		repoUrl: "https://github.com/wrikka/opensource-wrikka-com",
+		url: "https://opensource-wrikka-com.newkubise.workers.dev",
+	},
+	github: {
+		owner: "wrikka",
+		repo: "opensource-wrikka-com",
+		stats: true,
+		releases: true,
 	},
 	dataSource: orpcDataSource,
 	defaultCollection: "rust-packages",
@@ -171,6 +178,9 @@ export const docsAppConfig: DocsAppConfig = {
 		search: true,
 		askAi: true,
 		editLink: true,
+		lastUpdated: true,
 		themeToggle: true,
+		breadcrumbs: true,
+		reportIssue: true,
 	},
 };
