@@ -129,6 +129,7 @@ export const docsAppConfig: DocsAppConfig = {
 		stats: true,
 		releases: true,
 		contributors: true,
+		issues: true,
 	},
 	dataSource: orpcDataSource,
 	defaultCollection: "rust-packages",
