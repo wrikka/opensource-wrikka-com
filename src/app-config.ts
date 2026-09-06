@@ -8,6 +8,7 @@ const siteRpc: ApiCollection = {
 	icon: "i-mdi:api",
 	description: "API reference for this documentation site",
 	type: "api",
+	style: "rpc",
 	endpoints: [
 		{
 			id: "rpc-collections",
@@ -138,6 +139,7 @@ export const docsAppConfig: DocsAppConfig = {
 		hero: {
 			name: "opensource",
 			text: "wrikka.com",
+			badge: "Docs · API · MCP · Ask AI",
 			tagline: "Documentation hub for all open-source packages.",
 			actions: [
 				{
@@ -190,9 +192,63 @@ export const docsAppConfig: DocsAppConfig = {
 				link: "/plugins",
 			},
 		],
+		slides: [
+			{
+				icon: "i-mdi:console",
+				title: "Search everything",
+				details:
+					"Ctrl+K opens a two-column command palette with live document preview — search docs and run commands.",
+			},
+			{
+				icon: "i-mdi:robot-outline",
+				title: "Ask AI & MCP",
+				details:
+					"Ask AI answers grounded in docs via Workers AI, and LLMs can consume /llms.txt plus the /mcp JSON-RPC endpoint.",
+				link: "/plugins",
+			},
+			{
+				icon: "i-mdi:palette-outline",
+				title: "Daily accent themes",
+				details:
+					"A different accent color every day of the week — pick your own from the palette in the top bar.",
+			},
+			{
+				icon: "i-mdi:github",
+				title: "GitHub powered",
+				details:
+					"Live releases, issues, commits, contributors, tags, and branches — straight from the GitHub API.",
+				link: "/changelog",
+			},
+			{
+				icon: "i-mdi:cellphone",
+				title: "Mobile first",
+				details:
+					"Bottom navigation, safe-area spacing, and touch-friendly targets on small screens.",
+			},
+		],
 	},
 	apiCollections: [siteRpc],
 	plugins: [
+		{
+			name: "MCP server",
+			description:
+				"Model Context Protocol JSON-RPC endpoint at /mcp (tools: search_docs, get_doc) so LLMs can query this documentation.",
+			icon: "i-mdi:robot-outline",
+			url: "/mcp",
+		},
+		{
+			name: "LLM documentation",
+			description:
+				"Machine-readable docs for LLMs: /llms.txt index plus /llms-plugins.txt for plugin docs.",
+			icon: "i-mdi:text-box-outline",
+			url: "/llms.txt",
+		},
+		{
+			name: "GitHub OAuth",
+			description:
+				"Sign in with GitHub via OAuth (worker-side token exchange) or a personal access token — create repos and save docs to GitHub.",
+			icon: "i-mdi:github",
+		},
 		{
 			name: "oRPC integration",
 			description:
@@ -285,5 +341,6 @@ export const docsAppConfig: DocsAppConfig = {
 		sitemap: true,
 		pwa: true,
 		analytics: true,
+		mcp: true,
 	},
 };
