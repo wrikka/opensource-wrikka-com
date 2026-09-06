@@ -1,5 +1,8 @@
+import { RouterProvider } from "@tanstack/solid-router";
 import { render } from "solid-js/web";
-import { App } from "./App";
+import "virtual:uno.css";
+import "./theme.css";
+import { router } from "./router";
 
 const rootEl = document.getElementById("root");
 if (!rootEl) throw new Error("root element not found");
@@ -27,7 +30,7 @@ window.addEventListener("unhandledrejection", (event) => {
 });
 
 try {
-	render(() => <App />, root);
+	render(() => <RouterProvider router={router} />, root);
 } catch (error) {
 	showError(error);
 }

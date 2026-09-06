@@ -1,3 +1,4 @@
+import UnoCSS from "unocss/vite";
 import { defineConfig } from "vite";
 import solid from "vite-plugin-solid";
 
@@ -12,7 +13,7 @@ function removeCrossorigin() {
 }
 
 export default defineConfig({
-	plugins: [solid(), removeCrossorigin()],
+	plugins: [UnoCSS(), solid(), removeCrossorigin()],
 	server: {
 		port: 5173,
 	},

@@ -1,0 +1,172 @@
+# wrikka-terminal-sdk
+
+## Overview
+
+Shared terminal SDK - core domain logic, ports, and adapters for terminal applications
+
+## Metadata
+
+| Field | Value |
+| --- | --- |
+| Type | RUST |
+| Category | Domain |
+| Path | `packages/domain/terminal-sdk/Cargo.toml` |
+| Version | `0.1.0` |
+| Edition | `2021` |
+| Rust Version | `>= 1.70` |
+| License | `MIT` |
+| Repository | <https://github.com/wrikka/opensource-wrikka-com> |
+| Homepage | <https://github.com/wrikka/opensource-wrikka-com> |
+| Authors | Wrikka Team |
+| Keywords | terminal, sdk, pty, tui, cross-platform |
+
+## Directory Structure
+
+- 📄 `Cargo.toml`
+- 📄 `README.md`
+- 📁 `src`
+- 📁 `src/adapters`
+- 📄 `src/lib.rs`
+- 📁 `src/modules`
+- 📄 `src/pty.rs`
+- 📁 `src/shared`
+
+## Source Files
+
+- `src/adapters/buffer/mod.rs`
+- `src/adapters/config/mod.rs`
+- `src/adapters/mock_repositories.rs`
+- `src/adapters/mod.rs`
+- `src/adapters/process/mod.rs`
+- `src/adapters/session/mod.rs`
+- `src/lib.rs`
+- `src/modules/buffer/application/mod.rs`
+- `src/modules/buffer/application/usecases/mod.rs`
+- `src/modules/buffer/domain/events/mod.rs`
+- `src/modules/buffer/domain/mod.rs`
+- `src/modules/buffer/domain/models/buffer.rs`
+- `src/modules/buffer/domain/models/cell.rs`
+- `src/modules/buffer/domain/models/mod.rs`
+- `src/modules/buffer/domain/operations/buffer_ops.rs`
+- `src/modules/buffer/domain/operations/mod.rs`
+- `src/modules/buffer/domain/validators/mod.rs`
+- `src/modules/buffer/index.rs`
+- `src/modules/buffer/mod.rs`
+- `src/modules/buffer/ports/mod.rs`
+- `src/modules/buffer/types/mod.rs`
+- `src/modules/config/application/mod.rs`
+- `src/modules/config/application/usecases/mod.rs`
+- `src/modules/config/domain/mod.rs`
+- `src/modules/config/domain/models/config.rs`
+- `src/modules/config/domain/models/mod.rs`
+- `src/modules/config/domain/operations/mod.rs`
+- `src/modules/config/domain/validators/mod.rs`
+- `src/modules/config/index.rs`
+- `src/modules/config/mod.rs`
+- `src/modules/config/ports/mod.rs`
+- `src/modules/config/types/mod.rs`
+- `src/modules/mod.rs`
+- `src/modules/process/application/mod.rs`
+- `src/modules/process/application/usecases/mod.rs`
+- `src/modules/process/domain/mod.rs`
+- `src/modules/process/domain/models/mod.rs`
+- `src/modules/process/domain/models/process.rs`
+- `src/modules/process/domain/operations/mod.rs`
+- `src/modules/process/domain/validators/mod.rs`
+
+## Quick Start
+
+### Build
+
+```bash
+cargo build -p wrikka-terminal-sdk
+```
+
+### Test
+
+```bash
+cargo test -p wrikka-terminal-sdk
+```
+
+### Run
+
+```bash
+cargo run -p wrikka-terminal-sdk
+```
+
+### Lint
+
+```bash
+cargo clippy -p wrikka-terminal-sdk
+```
+
+### Documentation
+
+```bash
+cargo doc -p wrikka-terminal-sdk --no-deps
+```
+
+## Environment
+
+| Field | Value |
+| --- | --- |
+| Edition | `2021` |
+| Rust Version | `>= 1.70` |
+
+## README
+
+> ![Status](https://img.shields.io/badge/status-in_development-red)
+
+# wrikka-terminal-sdk
+
+Shared terminal SDK — core domain logic, ports, and adapters for terminal applications. Production-ready Clean Architecture core used by `terminal-desktop` and `terminal-tui`.
+
+[![Rust](https://img.shields.io/badge/Rust-1.75%2B-orange)](https://www.rust-lang.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│                     wrikka-terminal-sdk                         │
+├──────────────┬──────────────────────────────────────────────────┤
+│  modules     │  Core domain modules                             │
+├──────────────┼──────────────────────────────────────────────────┤
+│  adapters    │  Ports · adapters                                │
+├──────────────┼──────────────────────────────────────────────────┤
+│  pty         │  PTY handling                                    │
+├──────────────┼──────────────────────────────────────────────────┤
+│  shared      │  Shared kernel · types                           │
+└──────────────┴──────────────────────────────────────────────────┘
+```
+
+## Get Started
+
+1. Add to your `Cargo.toml`
+
+   ```toml
+   [dependencies]
+   wrikka-terminal-sdk = { path = "packages/domain/terminal-sdk" }
+   ```
+
+2. Use the library — `Rust`
+
+   ```rust
+   use wrikka_terminal_sdk::*;
+   ```
+
+## Features
+
+| Icon | Feature | Description |
+|:---:|---------|-------------|
+| ![icon](https://api.iconify.design/mdi:console.svg?color=%231976d2&width=16) | Terminal Core | Shared domain logic for terminal apps |
+| ![icon](https://api.iconify.design/mdi:power-plug.svg?color=%23388e3c&width=16) | Ports & Adapters | Clean ports/adapters boundary |
+| ![icon](https://api.iconify.design/mdi:monitor.svg?color=%23f57c00&width=16) | PTY Support | Pseudo-terminal handling |
+
+## License
+
+MIT License - see [LICENSE](../../../LICENSE) for details.
+
+## Links
+
+- Repository: <https://github.com/wrikka/opensource-wrikka-com>
+- Homepage: <https://github.com/wrikka/opensource-wrikka-com>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/domain/terminal-sdk/Cargo.toml>

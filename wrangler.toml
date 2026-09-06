@@ -1,5 +1,5 @@
 name = "opensource-wrikka-com"
-main = "src/worker.js"
+main = "src/worker.ts"
 compatibility_date = "2026-08-30"
 
 # Serve static files from the Vite build output using Workers Assets
