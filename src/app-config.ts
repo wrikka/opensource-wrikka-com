@@ -130,6 +130,7 @@ export const docsAppConfig: DocsAppConfig = {
 		releases: true,
 		contributors: true,
 		issues: true,
+		oauth: { scope: "repo" },
 	},
 	dataSource: orpcDataSource,
 	defaultCollection: "rust-packages",

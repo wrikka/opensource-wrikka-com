@@ -1,0 +1,15 @@
+# opensource.wrikka.com — Plugins
+
+Available plugins and integrations.
+
+## Plugins
+- **oRPC integration**
+  - Docs content, search, and Ask AI served over oRPC endpoints.
+- **OpenAPI adapter**
+  - Turn an OpenAPI spec into a Scalar-style API reference collection.
+- **Workers AI**
+  - Ask AI answers grounded in docs, powered by Cloudflare Workers AI.
+- **@wrikka/create-docs**
+  - The documentation framework powering this site — search, SEO, GitHub, PWA, and more.
+  - URL: https://github.com/wrikka/bun-packages
+  - Install: `bun add @wrikka/create-docs`
