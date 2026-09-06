@@ -722,14 +722,6 @@
         "type": "npm"
       },
       {
-        "id": "packages-create-design-system-package-npm",
-        "label": "@wrikka/create-design-system",
-        "category": "Create-design-system",
-        "description": "Design token compiler and design system creator that beats Style Dictionary - DTCG-native, multi-platform, type-safe",
-        "path": "packages/create-design-system/package.json",
-        "type": "npm"
-      },
-      {
         "id": "packages-devtools-package-npm",
         "label": "@solidjs/devtools",
         "category": "Devtools",
@@ -783,6 +775,14 @@
         "category": "Utils",
         "description": "Consolidated utility packages for Wrikka projects",
         "path": "packages/utils/package.json",
+        "type": "npm"
+      },
+      {
+        "id": "packages-web-server-package-npm",
+        "label": "@wrikka/web-server",
+        "category": "Web-server",
+        "description": "Production-ready web server library with file-system routing, AOT compilation, and universal runtime support built on Bun and Web Standards",
+        "path": "packages/web-server/package.json",
         "type": "npm"
       }
     ],

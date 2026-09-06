@@ -93,7 +93,6 @@
 - [@wrikka/app-router](/docs/bun-packages/packages-app-router-package-npm.md): @wrikka/app-router npm workspace at packages/app-router/package.json
 - [@wrikka/chart](/docs/bun-packages/packages-chart-package-npm.md): Modern visualization library for SolidJS with Clean Architecture - Production-ready chart components
 - [@wrikka/composables](/docs/bun-packages/packages-composables-package-npm.md): Wrikka Composables - SolidJS composables with Clean Architecture
-- [@wrikka/create-design-system](/docs/bun-packages/packages-create-design-system-package-npm.md): Design token compiler and design system creator that beats Style Dictionary - DTCG-native, multi-platform, type-safe
 - [@solidjs/devtools](/docs/bun-packages/packages-devtools-package-npm.md): @solidjs/devtools npm workspace at packages/devtools/package.json
 - [@wrikka/graph](/docs/bun-packages/packages-graph-package-npm.md): A graph visualization module with Clean Architecture for SolidJS
 - [@wrikka/integrations](/docs/bun-packages/packages-integrations-package-npm.md): Integration adapters for Wrikka (Stripe, GitHub, Supabase, Cloudflare)
@@ -101,6 +100,7 @@
 - [@wrikka/query](/docs/bun-packages/packages-query-package-npm.md): Fine-grained reactive data fetching and cache management for SolidJS with Clean Architecture
 - [@wrikka/stores](/docs/bun-packages/packages-stores-package-npm.md): Clean Architecture state management for SolidJS with time-travel, persistence, and validation
 - [@wrikka/utils](/docs/bun-packages/packages-utils-package-npm.md): Consolidated utility packages for Wrikka projects
+- [@wrikka/web-server](/docs/bun-packages/packages-web-server-package-npm.md): Production-ready web server library with file-system routing, AOT compilation, and universal runtime support built on Bun and Web Standards
 
 
 ---
@@ -13946,15 +13946,11 @@ opensource-wrikka-com npm workspace at opensource-wrikka-com/package.json
 - 📁 `scripts`
 - 📄 `scripts/generate-workspaces.ts`
 - 📁 `src`
-- 📁 `src/components`
+- 📄 `src/app-config.ts`
+- 📄 `src/data-source.ts`
 - 📄 `src/index.tsx`
-- 📁 `src/layouts`
 - 📁 `src/lib`
-- 📄 `src/markdown-content.css`
-- 📁 `src/pages`
-- 📄 `src/router.tsx`
 - 📁 `src/server`
-- 📄 `src/theme.css`
 - 📄 `src/worker.ts`
 - 📄 `tsconfig.json`
 - 📄 `uno.config.ts`
@@ -13963,25 +13959,10 @@ opensource-wrikka-com npm workspace at opensource-wrikka-com/package.json
 
 ## Source Files
 
-- `src/components/AskAiDialog.tsx`
-- `src/components/CollectionDropdown.tsx`
-- `src/components/DocMarkdown.tsx`
-- `src/components/DocPrevNext.tsx`
-- `src/components/DocToc.tsx`
-- `src/components/PageActions.tsx`
-- `src/components/SearchPalette.tsx`
-- `src/components/SidebarNav.tsx`
-- `src/components/ThemeToggle.tsx`
-- `src/components/TopNav.tsx`
+- `src/app-config.ts`
+- `src/data-source.ts`
 - `src/index.tsx`
-- `src/layouts/DocsLayout.tsx`
-- `src/lib/data.ts`
-- `src/lib/icons.ts`
 - `src/lib/orpc.ts`
-- `src/lib/theme.ts`
-- `src/pages/CollectionPage.tsx`
-- `src/pages/DocPage.tsx`
-- `src/router.tsx`
 - `src/server/router.ts`
 - `src/worker.ts`
 
@@ -14034,6 +14015,7 @@ bun run deploy
 | @orpc/client | `^1.15.0` |
 | @orpc/server | `^1.15.0` |
 | @tanstack/solid-router | `^1.170.30` |
+| @wrikka/create-docs | `link:@wrikka/create-docs` |
 | marked | `^18.0.11` |
 | solid-js | `^1.9.15` |
 | zod | `^4.5.4` |
@@ -18476,11 +18458,11 @@ Vite plugin for documentation sites built on Functional Clean Architecture with 
 - `src/modules/api-docs/index.ts`
 - `src/modules/api-docs/ports/api-docs-port.ts`
 - `src/modules/api-docs/types/api-docs.ts`
+- `src/modules/api-reference/openapi.ts`
+- `src/modules/api-reference/orpc.ts`
 - `src/modules/code-block-enhancements/application/usecases/index.ts`
 - `src/modules/code-block-enhancements/domain/code-operations.ts`
 - `src/modules/code-block-enhancements/domain/events/index.ts`
-- `src/modules/code-block-enhancements/domain/index.ts`
-- `src/modules/code-block-enhancements/domain/models/index.ts`
 
 ## Quick Start
 
@@ -18548,6 +18530,7 @@ bun run lint
 | @monaco-editor/react | `^4.7.0` |
 | arktype | `catalog:` |
 | js-yaml | `^5.4.1` |
+| marked | `^18.0.11` |
 | monaco-editor | `catalog:` |
 | simple-git | `^3.36.0` |
 | solid-js | `catalog:` |
@@ -18571,6 +18554,8 @@ bun run lint
 | Name | Version |
 | --- | --- |
 | vite | `catalog:` |
+| solid-js | `^1.9.0` |
+| @tanstack/solid-router | `^1.170.30` |
 
 ## Environment
 
@@ -20880,244 +20865,6 @@ const { data, error, loading } = useFetch("https://api.example.com/data");
 
 
 ---
-# [bun-packages] @wrikka/create-design-system
-
-# @wrikka/create-design-system
-
-## Overview
-
-Design token compiler and design system creator that beats Style Dictionary - DTCG-native, multi-platform, type-safe
-
-## Metadata
-
-| Field | Value |
-| --- | --- |
-| Type | NPM |
-| Category | Create-design-system |
-| Path | `packages/create-design-system/package.json` |
-| Version | `0.1.0` |
-| License | `MIT` |
-| Repository | <https://github.com/wrikka/bun-packages> |
-| Keywords | design-system, design-tokens, dtcg, style-dictionary, css, scss, tailwind, ios, android, bun, typescript |
-| Main | `./dist/index.cjs` |
-| Module | `./dist/index.js` |
-| Types | `./dist/index.d.ts` |
-
-## Directory Structure
-
-- 📄 `AGENTS.md`
-- 📄 `bunup.config.ts`
-- 📁 `coverage`
-- 📄 `coverage/base.css`
-- 📄 `coverage/block-navigation.js`
-- 📄 `coverage/clover.xml`
-- 📄 `coverage/coverage-final.json`
-- 📄 `coverage/favicon.png`
-- 📄 `coverage/index.html`
-- 📄 `coverage/prettify.css`
-- 📄 `coverage/prettify.js`
-- 📄 `coverage/sort-arrow-sprite.png`
-- 📄 `coverage/sorter.js`
-- 📁 `coverage/src`
-- 📄 `moon.yml`
-- 📄 `package.json`
-- 📄 `README.md`
-- 📁 `src`
-- 📁 `src/adapters`
-- 📄 `src/index.ts`
-- 📁 `src/modules`
-- 📁 `src/shared`
-- 📁 `tests`
-- 📄 `tests/index.test.ts`
-- 📄 `tsconfig.cjs.json`
-- 📄 `tsconfig.json`
-- 📄 `tsconfig.tsbuildinfo`
-
-## Source Files
-
-- `src/adapters/formats/css.ts`
-- `src/adapters/formats/index.ts`
-- `src/adapters/formats/js.ts`
-- `src/adapters/formats/json.ts`
-- `src/adapters/formats/scss.ts`
-- `src/adapters/formats/tailwind.ts`
-- `src/adapters/types.ts`
-- `src/index.ts`
-- `src/modules/design-tokens/application/builder.ts`
-- `src/modules/design-tokens/application/index.ts`
-- `src/modules/design-tokens/domain/operations/index.ts`
-- `src/modules/design-tokens/domain/operations/parser.ts`
-- `src/modules/design-tokens/domain/operations/transformer.ts`
-- `src/modules/design-tokens/domain/types.ts`
-- `src/modules/design-tokens/domain/validators/guards.ts`
-- `src/modules/design-tokens/domain/validators/index.ts`
-- `src/modules/design-tokens/index.ts`
-- `src/shared/types/design-tokens.ts`
-
-## Quick Start
-
-### Install
-
-```bash
-bun install
-```
-
-### Build
-
-```bash
-bun run build
-```
-
-### Develop
-
-```bash
-bun run dev
-```
-
-### Test
-
-```bash
-bun run test
-```
-
-### Lint
-
-```bash
-bun run lint
-```
-
-## Scripts
-
-| Script | Command |
-| --- | --- |
-| dev | `bun run src/index.ts` |
-| build | `bunup` |
-| build:watch | `bunup --watch` |
-| typecheck | `tsc --noEmit` |
-| typecheck:watch | `tsc --noEmit --watch` |
-| lint | `biome check` |
-| lint:fix | `biome check --write` |
-| format | `biome check --write` |
-| test | `vitest run` |
-| test:watch | `vitest` |
-| test:coverage | `vitest run --coverage` |
-| scan | `ast-grep scan` |
-| check | `bun run lint && bun run typecheck && bun run scan` |
-| verify | `bun run check && bun run test && bun run build` |
-| deps:analyze | `bunx depcheck` |
-| clean | `bunx rimraf dist node_modules` |
-| security | `bunx audit` |
-
-## Dev Dependencies
-
-| Name | Version |
-| --- | --- |
-| @types/bun | `catalog:` |
-| @types/node | `catalog:` |
-| bunup | `catalog:` |
-| typescript | `catalog:` |
-| vitest | `catalog:` |
-
-## README
-
-> ![Status](https://img.shields.io/badge/status-in_development-red)
-
-# @wrikka/create-design-system
-
-Design token compiler and design system creator — DTCG-native, multi-platform, type-safe. Compiles design tokens to CSS, SCSS, Tailwind, JS, and JSON output formats.
-
-![Bun](https://img.shields.io/badge/Bun-1.4-1976d2)
-![TypeScript](https://img.shields.io/badge/TypeScript-7.0-3178c6)
-![MIT](https://img.shields.io/badge/license-MIT-388e3c)
-
-```text
-┌──────────────────────────────────────────────────────────┐
-│  @wrikka/create-design-system                            │
-│  Design Token Compiler — DTCG Native                     │
-│                                                          │
-│  ┌────────────────────────────────────────────────────┐  │
-│  │  Input: DesignSystemInput                          │  │
-│  │    color  spacing  typography  border  shadow       │  │
-│  │                                                    │  │
-│  │  buildTokens() ──► PlatformOutput                  │  │
-│  │    css  scss  tailwind  js  json                   │  │
-│  └────────────────────────────────────────────────────┘  │
-└──────────────────────────────────────────────────────────┘
-```
-
-## Get Started
-
-1. Install — `bun add @wrikka/create-design-system`
-   ```bash
-   bun add @wrikka/create-design-system
-   ```
-2. Build tokens — compile design tokens to target formats
-   ```ts
-   import { buildTokens, toCss, toTailwind } from "@wrikka/create-design-system";
-   ```
-3. Build — `bun run build`
-   ```bash
-   bun run build
-   ```
-
-## Features
-
-| Icon | Feature | Description |
-|:---:|---------|-------------|
-| ![icon](https://api.iconify.design/mdi:palette.svg?color=%231976d2&width=16) | DTCG Native | Follows W3C Design Tokens Community Group spec |
-| ![icon](https://api.iconify.design/mdi:format-paint.svg?color=%237b1fa2&width=16) | Multi-Platform | CSS, SCSS, Tailwind, JS, JSON output formats |
-| ![icon](https://api.iconify.design/mdi:shield-check.svg?color=%23388e3c&width=16) | Type-Safe | Full TypeScript types for tokens and outputs |
-| ![icon](https://api.iconify.design/mdi:token.svg?color=%23c2185b&width=16) | Token Builder | `buildTokens()` compiles raw tokens to platform output |
-| ![icon](https://api.iconify.design/mdi:tailwind.svg?color=%230097a7&width=16) | Tailwind Config | Generate Tailwind theme from design tokens |
-| ![icon](https://api.iconify.design/mdi:code-json.svg?color=%23f57c00&width=16) | Format Adapters | `toCss`, `toScss`, `toJs`, `toJson`, `toTailwind` |
-
-## Usage
-
-### Usage via SDK
-
-Compile design tokens into platform-specific output formats.
-
-```ts
-import { buildTokens, toCss, toTailwind } from "@wrikka/create-design-system";
-
-const output = buildTokens({
-  color: { primary: { value: "#1976d2" } },
-  spacing: { md: { value: "16px" } },
-});
-
-const css = toCss(output);
-const tailwind = toTailwind(output);
-```
-
-```text
-┌──────────────────────────────────────────────────────────┐
-│  $ bun run src/index.ts                                  │
-│  @wrikka/create-design-system                            │
-│                                                          │
-│  Tokens compiled: 42                                     │
-│  Platforms: css, scss, tailwind, js, json                │
-│                                                          │
-│  ✓ DTCG compliant                                        │
-│  ✓ Type-safe outputs                                     │
-└──────────────────────────────────────────────────────────┘
-```
-
-| api | description | options | default |
-|-----|-------------|---------|---------|
-| `buildTokens(input)` | Compile design tokens to platform output | `DesignSystemInput`, `PlatformConfig` | all platforms |
-| `toCss(output)` | Convert tokens to CSS variables | `PlatformOutput`, `FormatOptions` | — |
-| `toScss(output)` | Convert tokens to SCSS variables | `PlatformOutput`, `FormatOptions` | — |
-| `toTailwind(output)` | Convert tokens to Tailwind config | `PlatformOutput`, `FormatOptions` | — |
-| `toJs(output)` | Convert tokens to JS module | `PlatformOutput`, `FormatOptions` | — |
-| `toJson(output)` | Convert tokens to JSON | `PlatformOutput`, `FormatOptions` | — |
-
-## Links
-
-- Repository: <https://github.com/wrikka/bun-packages>
-- Source: <https://github.com/wrikka/bun-packages/blob/main/packages/create-design-system/package.json>
-
-
----
 # [bun-packages] @solidjs/devtools
 
 # @solidjs/devtools
@@ -22912,3 +22659,374 @@ bun run lint
 
 - Repository: <https://github.com/wrikka/bun-packages>
 - Source: <https://github.com/wrikka/bun-packages/blob/main/packages/utils/package.json>
+
+
+---
+# [bun-packages] @wrikka/web-server
+
+# @wrikka/web-server
+
+## Overview
+
+Production-ready web server library with file-system routing, AOT compilation, and universal runtime support built on Bun and Web Standards
+
+## Metadata
+
+| Field | Value |
+| --- | --- |
+| Type | NPM |
+| Category | Web-server |
+| Path | `packages/web-server/package.json` |
+| Version | `0.1.0` |
+| License | `MIT` |
+| Repository | <https://github.com/wrikka/bun-packages> |
+| Keywords | web-server, http, file-system-routing, middleware, websocket, aot, bun, typescript, clean-architecture |
+| Main | `./dist/index.js` |
+| Module | `./dist/index.js` |
+| Types | `./dist/index.d.ts` |
+
+## Directory Structure
+
+- 📄 `AGENTS.md`
+- 📁 `examples`
+- 📄 `examples/aot-compilation.ts`
+- 📄 `examples/api-docs.ts`
+- 📄 `examples/basic-server.ts`
+- 📄 `examples/bundle-analyzer.ts`
+- 📄 `examples/bundle-optimization.ts`
+- 📄 `examples/cache-headers.ts`
+- 📄 `examples/cli-scaffold.ts`
+- 📄 `examples/compression.ts`
+- 📄 `examples/cors.ts`
+- 📄 `examples/database.ts`
+- 📄 `examples/edge-deployment.ts`
+- 📄 `examples/edge-optimization-v2.ts`
+- 📄 `examples/edge-optimization.ts`
+- 📄 `examples/env-validation.ts`
+- 📄 `examples/error-formatter.ts`
+- 📄 `examples/error-pages.ts`
+- 📄 `examples/file-system-routing.ts`
+- 📄 `examples/graphql.ts`
+- 📄 `examples/health-check.ts`
+- 📄 `examples/hmr-fast-refresh.ts`
+- 📄 `examples/hmr.ts`
+- 📄 `examples/hot-reload.ts`
+- 📄 `examples/incremental-aot.ts`
+- 📄 `examples/logging.ts`
+- 📄 `examples/middleware.ts`
+- 📄 `examples/performance-benchmark.ts`
+- 📄 `examples/performance-profiler.ts`
+- 📄 `examples/plugin-system.ts`
+
+## Source Files
+
+- `src/adapters/cache/memory.ts`
+- `src/adapters/database/sqlite.ts`
+- `src/adapters/file-system/bun-extended.ts`
+- `src/adapters/file-system/bun.ts`
+- `src/adapters/http/server.ts`
+- `src/adapters/session/memory.ts`
+- `src/adapters/storage/memory.ts`
+- `src/adapters/vite/index.ts`
+- `src/adapters/vite/plugin.ts`
+- `src/adapters/vite/types/index.ts`
+- `src/index.ts`
+- `src/modules/aot/application/usecases/compile-routes.ts`
+- `src/modules/aot/domain/analyzer/handler-analyzer.ts`
+- `src/modules/aot/index.ts`
+- `src/modules/aot/types/index.ts`
+- `src/modules/api-docs/application/usecases/generate-docs.ts`
+- `src/modules/api-docs/index.ts`
+- `src/modules/api-docs/types/index.ts`
+- `src/modules/bundle-analyzer/application/usecases/analyze.ts`
+- `src/modules/bundle-analyzer/index.ts`
+- `src/modules/bundle-analyzer/types/index.ts`
+- `src/modules/bundle-optimization/application/usecases/optimize.ts`
+- `src/modules/bundle-optimization/domain/analyzer/dependency-analyzer.ts`
+- `src/modules/bundle-optimization/index.ts`
+- `src/modules/bundle-optimization/types/index.ts`
+- `src/modules/cache-headers/domain/models/cache-control.ts`
+- `src/modules/cache-headers/index.ts`
+- `src/modules/cache-headers/types/index.ts`
+- `src/modules/cli-scaffold/application/usecases/scaffold.ts`
+- `src/modules/cli-scaffold/index.ts`
+- `src/modules/cli-scaffold/types/index.ts`
+- `src/modules/compression/application/usecases/compress.ts`
+- `src/modules/compression/index.ts`
+- `src/modules/compression/types/index.ts`
+- `src/modules/cors/application/usecases/cors-middleware.ts`
+- `src/modules/cors/domain/models/cors.ts`
+- `src/modules/cors/index.ts`
+- `src/modules/cors/types/index.ts`
+- `src/modules/database/application/usecases/database-manager.ts`
+- `src/modules/database/domain/models/query-builder.ts`
+
+## Quick Start
+
+### Install
+
+```bash
+bun install
+```
+
+### Build
+
+```bash
+bun run build
+```
+
+### Develop
+
+```bash
+bun run dev
+```
+
+### Test
+
+```bash
+bun run test
+```
+
+### Lint
+
+```bash
+bun run lint
+```
+
+## Scripts
+
+| Script | Command |
+| --- | --- |
+| build | `tsdown` |
+| dev | `tsdown --watch` |
+| build:watch | `tsdown --watch` |
+| typecheck | `tsc --noEmit` |
+| typecheck:watch | `tsc --noEmit --watch` |
+| lint | `biome check src` |
+| lint:fix | `biome check --write src` |
+| format | `biome format --write src` |
+| test | `bun test` |
+| test:watch | `bun test --watch` |
+| test:coverage | `bun test --coverage` |
+| scan | `ast-grep scan` |
+| check | `bun run lint && bun run typecheck && bun run scan` |
+| verify | `bun run check && bun run test && bun run build` |
+| clean | `bunx rimraf dist node_modules` |
+
+## Dependencies
+
+| Name | Version |
+| --- | --- |
+| arktype | `catalog:` |
+
+## Dev Dependencies
+
+| Name | Version |
+| --- | --- |
+| @biomejs/biome | `catalog:` |
+| @types/bun | `catalog:` |
+| tsdown | `catalog:` |
+| typescript | `catalog:` |
+| vite | `catalog:` |
+
+## README
+
+# @wrikka/web-server
+
+> 🚀 Production-ready web server with 37 features, surpassing Nitro & Elysia
+
+High-performance web server built with Bun native APIs and Functional Clean Architecture. Features AOT compilation, Sucrose-like dependency inference, universal runtime support, and comprehensive DX tools.
+
+![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Bun](https://img.shields.io/badge/Bun-1.3.14-white.svg)
+![TypeScript](https://img.shields.io/badge/TypeScript-6.0.3-blue.svg)
+![SolidJS](https://img.shields.io/badge/SolidJS-1.9.13-cyan.svg)
+
+## Features
+
+| Icon | Feature | Description | Benefit |
+|------|---------|-------------|---------|
+| 🏗️ | Clean Architecture | Domain, Application, Ports, Adapters separation with pure functions | Maintainable codebase with clear boundaries and testable business logic |
+| ⚡ | AOT Compilation | Advanced AOT with AST transformation and inlining | Optimized handlers with dead code elimination and property inlining |
+| 🔍 | Sucrose-like Analysis | Static dependency inference for context properties | Skip parsing unused components, better performance |
+| ✅ | Schema Validation | End-to-end type safety with runtime validation | Catch errors at compile time and runtime |
+| 🌐 | Universal Runtime | Support for Bun, Node, Deno, and Edge runtimes | Deploy anywhere with single codebase |
+| 📦 | Tree-shaking | Modular imports for optimal bundle size | Import only needed modules, ~5-15KB tree-shaken bundles |
+| 🔌 | Plugin System | Extensible architecture with lifecycle hooks | Community extensions, modular development |
+| 📊 | Performance Profiler | Built-in profiling with flame graph generation | Identify bottlenecks, optimize performance |
+| 🔄 | Hot Reload | State preservation during development | Faster development cycles without losing state |
+| ⚡ | Edge Optimizations | Edge-native optimizations for edge runtimes | Better performance on Cloudflare Workers, Vercel Edge |
+| 🛠️ | CLI Scaffold | Quick project setup with template selection | Get started in minutes with best practices |
+| ❌ | Error Formatter | Clear, actionable error messages with suggestions | Faster debugging with context and suggestions |
+| 📈 | Bundle Analyzer | Visualize bundle composition and optimization opportunities | Identify large modules, optimize bundle size |
+| 🚀 | Fast Refresh | Instant UI updates without losing state | Better DX during development |
+
+## Quick Start
+
+1. **Install dependencies**
+   ```bash
+   bun install
+   ```
+
+2. **Build the package**
+   ```bash
+   bun run build
+   ```
+
+3. **Run tests**
+   ```bash
+   bun run test
+   ```
+
+## Usage
+
+### Basic Server
+
+```ts
+import { createRoute, createServer } from '@wrikka/web-server'
+
+const server = createServer({
+  port: 3000,
+  routes: [
+    createRoute('GET', '/health', async () => new Response('OK')),
+  ],
+})
+
+await server.start()
+```
+
+### File-System Routing
+
+```ts
+import { createBunFileSystemAdapter, discoverRoutes } from '@wrikka/web-server'
+
+const result = await discoverRoutes(
+  { routesDir: './routes' },
+  createBunFileSystemAdapter(),
+)
+```
+
+### Middleware Pipeline
+
+```ts
+import { composeMiddlewares, createCORSMiddleware } from '@wrikka/web-server'
+
+const pipeline = composeMiddlewares([
+  createCORSMiddleware({ origin: '*' }),
+])
+```
+
+### Schema Validation
+
+```ts
+import { schemaBuilder } from '@wrikka/web-server'
+
+const userSchema = schemaBuilder.object({
+  name: schemaBuilder.string(),
+  age: schemaBuilder.number(),
+})
+
+const result = userSchema.parse(data)
+```
+
+## Architecture
+
+```
+src/
+├── modules/                      # Feature modules (Vertical Slice)
+│   ├── routing/                 # File-system routing
+│   ├── middleware/              # Middleware pipeline
+│   ├── validation/              # Request validation
+│   ├── static-files/            # Static file serving
+│   ├── env-validation/          # Environment validation
+│   ├── logging/                 # Logging & observability
+│   ├── session/                 # Session management
+│   ├── compression/             # Compression middleware
+│   ├── cache-headers/            # Cache headers auto-config
+│   ├── health-check/            # Health check endpoint
+│   ├── request-logging/         # Request/response logging
+│   ├── edge-deployment/          # Edge deployment adapter
+│   ├── hmr/                     # Hot module replacement
+│   ├── websocket/               # WebSocket support
+│   ├── rate-limiting/            # Rate limiting middleware
+│   ├── cors/                    # CORS configuration
+│   ├── error-pages/              # Error page templates
+│   ├── database/                # Database ORM integration
+│   ├── api-docs/                 # API documentation generator
+│   ├── graphql/                 # GraphQL integration
+│   ├── aot/                     # AOT compilation
+│   ├── static-analysis/         # Static code analysis
+│   ├── universal-runtime/        # Universal runtime support
+│   ├── schema-validation/        # Schema validation
+│   ├── sucrose/                 # Dependency inference
+│   ├── runtime-optimization/    # Runtime optimization
+│   ├── incremental-aot/          # Incremental AOT
+│   ├── plugin-system/            # Plugin system
+│   ├── performance-profiler/     # Performance profiler
+│   ├── hot-reload/              # Hot reload
+│   ├── edge-optimization/       # Edge optimizations
+│   ├── cli-scaffold/            # CLI scaffold generator
+│   ├── error-formatter/          # Error formatter
+│   ├── bundle-analyzer/         # Bundle analyzer
+│   ├── hmr-fast-refresh/         # HMR with fast refresh
+│   ├── bundle-optimization/      # Bundle size optimization
+│   ├── performance-benchmark/     # Performance benchmarking
+│   ├── standard-schema/          # Standard Schema compliance
+│   └── edge-optimization-v2/     # Edge runtime optimization v2
+├── adapters/                     # External systems
+│   ├── http/                     # HTTP layer
+│   ├── storage/                  # Storage adapters
+│   ├── cache/                    # Cache adapters
+│   ├── file-system/              # File system adapters
+│   ├── session/                  # Session adapters
+│   └── database/                # Database adapters
+├── presentation/                 # Entry points
+│   └── server/                   # Server entry
+└── shared/                       # Shared kernel
+    ├── types/                    # Result, Option, Either
+    ├── utils/                    # Pure utilities
+    ├── errors/                   # Error types
+    └── constants/                # Constants
+```
+
+## Performance
+
+- **Bundle Size**: 101.81 kB (59.95 kB minified, 15.70 kB gzipped)
+- **Tree-shaken**: ~5-15KB for modular imports
+- **Runtime**: Bun native APIs (<1ms cold start)
+- **AOT**: Ahead-of-time compilation for optimized handlers
+- **Sucrose**: Static analysis for dependency inference
+
+## Comparison
+
+### vs Nitro
+
+- ⭐ File-system routing (Nitro has it)
+- ⭐ Environment validation (Nitro lacks it)
+- ⭐ AOT compilation (Nitro lacks it)
+- ⭐ Static analysis (Nitro limited)
+- ⭐ Clean architecture (Nitro lacks it)
+- ✅ Better tree-shaking
+
+### vs Elysia
+
+- ⭐ File-system routing (Elysia lacks it)
+- ⭐ Environment validation (Elysia lacks it)
+- ⭐ Clean architecture (Elysia lacks it)
+- ⭐ Built-in features (39 vs plugins)
+- ✅ Better testability
+- 🚧 Equal AOT compilation
+- ❌ Slower runtime (Elysia is fastest)
+
+## License
+
+This project is licensed under the <a href="https://choosealicense.com/licenses/mit/" target="_blank" rel="noopener noreferrer">MIT License</a>.
+
+- ✓ Commercial use, Distribution, Modification, Private use
+- ⓘ License and copyright notice
+- ✕ Liability, Warranty
+
+## Links
+
+- Repository: <https://github.com/wrikka/bun-packages>
+- Source: <https://github.com/wrikka/bun-packages/blob/main/packages/web-server/package.json>

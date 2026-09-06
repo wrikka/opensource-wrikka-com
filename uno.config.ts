@@ -49,6 +49,10 @@ export default defineConfig({
 		},
 	},
 	content: {
-		filesystem: ["./index.html", "./src/**/*.{ts,tsx,html}"],
+		filesystem: [
+			"./index.html",
+			"./src/**/*.{ts,tsx,html}",
+			"./node_modules/@wrikka/create-docs/src/runtime/**/*.{ts,tsx}",
+		],
 	},
 });

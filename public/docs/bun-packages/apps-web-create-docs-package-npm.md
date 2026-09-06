@@ -90,11 +90,11 @@ Vite plugin for documentation sites built on Functional Clean Architecture with 
 - `src/modules/api-docs/index.ts`
 - `src/modules/api-docs/ports/api-docs-port.ts`
 - `src/modules/api-docs/types/api-docs.ts`
+- `src/modules/api-reference/openapi.ts`
+- `src/modules/api-reference/orpc.ts`
 - `src/modules/code-block-enhancements/application/usecases/index.ts`
 - `src/modules/code-block-enhancements/domain/code-operations.ts`
 - `src/modules/code-block-enhancements/domain/events/index.ts`
-- `src/modules/code-block-enhancements/domain/index.ts`
-- `src/modules/code-block-enhancements/domain/models/index.ts`
 
 ## Quick Start
 
@@ -162,6 +162,7 @@ bun run lint
 | @monaco-editor/react | `^4.7.0` |
 | arktype | `catalog:` |
 | js-yaml | `^5.4.1` |
+| marked | `^18.0.11` |
 | monaco-editor | `catalog:` |
 | simple-git | `^3.36.0` |
 | solid-js | `catalog:` |
@@ -185,6 +186,8 @@ bun run lint
 | Name | Version |
 | --- | --- |
 | vite | `catalog:` |
+| solid-js | `^1.9.0` |
+| @tanstack/solid-router | `^1.170.30` |
 
 ## Environment
 

@@ -93,7 +93,6 @@
 - [@wrikka/app-router](/docs/bun-packages/packages-app-router-package-npm.md): @wrikka/app-router npm workspace at packages/app-router/package.json
 - [@wrikka/chart](/docs/bun-packages/packages-chart-package-npm.md): Modern visualization library for SolidJS with Clean Architecture - Production-ready chart components
 - [@wrikka/composables](/docs/bun-packages/packages-composables-package-npm.md): Wrikka Composables - SolidJS composables with Clean Architecture
-- [@wrikka/create-design-system](/docs/bun-packages/packages-create-design-system-package-npm.md): Design token compiler and design system creator that beats Style Dictionary - DTCG-native, multi-platform, type-safe
 - [@solidjs/devtools](/docs/bun-packages/packages-devtools-package-npm.md): @solidjs/devtools npm workspace at packages/devtools/package.json
 - [@wrikka/graph](/docs/bun-packages/packages-graph-package-npm.md): A graph visualization module with Clean Architecture for SolidJS
 - [@wrikka/integrations](/docs/bun-packages/packages-integrations-package-npm.md): Integration adapters for Wrikka (Stripe, GitHub, Supabase, Cloudflare)
@@ -101,3 +100,4 @@
 - [@wrikka/query](/docs/bun-packages/packages-query-package-npm.md): Fine-grained reactive data fetching and cache management for SolidJS with Clean Architecture
 - [@wrikka/stores](/docs/bun-packages/packages-stores-package-npm.md): Clean Architecture state management for SolidJS with time-travel, persistence, and validation
 - [@wrikka/utils](/docs/bun-packages/packages-utils-package-npm.md): Consolidated utility packages for Wrikka projects
+- [@wrikka/web-server](/docs/bun-packages/packages-web-server-package-npm.md): Production-ready web server library with file-system routing, AOT compilation, and universal runtime support built on Bun and Web Standards

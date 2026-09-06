@@ -27,15 +27,11 @@ opensource-wrikka-com npm workspace at opensource-wrikka-com/package.json
 - 📁 `scripts`
 - 📄 `scripts/generate-workspaces.ts`
 - 📁 `src`
-- 📁 `src/components`
+- 📄 `src/app-config.ts`
+- 📄 `src/data-source.ts`
 - 📄 `src/index.tsx`
-- 📁 `src/layouts`
 - 📁 `src/lib`
-- 📄 `src/markdown-content.css`
-- 📁 `src/pages`
-- 📄 `src/router.tsx`
 - 📁 `src/server`
-- 📄 `src/theme.css`
 - 📄 `src/worker.ts`
 - 📄 `tsconfig.json`
 - 📄 `uno.config.ts`
@@ -44,25 +40,10 @@ opensource-wrikka-com npm workspace at opensource-wrikka-com/package.json
 
 ## Source Files
 
-- `src/components/AskAiDialog.tsx`
-- `src/components/CollectionDropdown.tsx`
-- `src/components/DocMarkdown.tsx`
-- `src/components/DocPrevNext.tsx`
-- `src/components/DocToc.tsx`
-- `src/components/PageActions.tsx`
-- `src/components/SearchPalette.tsx`
-- `src/components/SidebarNav.tsx`
-- `src/components/ThemeToggle.tsx`
-- `src/components/TopNav.tsx`
+- `src/app-config.ts`
+- `src/data-source.ts`
 - `src/index.tsx`
-- `src/layouts/DocsLayout.tsx`
-- `src/lib/data.ts`
-- `src/lib/icons.ts`
 - `src/lib/orpc.ts`
-- `src/lib/theme.ts`
-- `src/pages/CollectionPage.tsx`
-- `src/pages/DocPage.tsx`
-- `src/router.tsx`
 - `src/server/router.ts`
 - `src/worker.ts`
 
@@ -115,6 +96,7 @@ bun run deploy
 | @orpc/client | `^1.15.0` |
 | @orpc/server | `^1.15.0` |
 | @tanstack/solid-router | `^1.170.30` |
+| @wrikka/create-docs | `link:@wrikka/create-docs` |
 | marked | `^18.0.11` |
 | solid-js | `^1.9.15` |
 | zod | `^4.5.4` |
