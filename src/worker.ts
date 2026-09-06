@@ -5,6 +5,7 @@ import { type AiBinding, type AssetsBinding, router } from "./server/router";
 interface Env {
 	ASSETS: AssetsBinding;
 	AI?: AiBinding;
+	GITHUB_TOKEN?: string;
 }
 
 const handler = new RPCHandler(router, {
@@ -35,6 +36,22 @@ export default {
 		}
 
 		const url = new URL(request.url);
+
+		if (url.pathname.startsWith("/api/github/")) {
+			const upstream =
+				"https://api.github.com" +
+				url.pathname.slice("/api/github".length) +
+				url.search;
+			const headers = new Headers({
+				Accept: "application/vnd.github+json",
+				"User-Agent": "opensource-wrikka-com/1.0",
+			});
+			if (env.GITHUB_TOKEN) {
+				headers.set("Authorization", `Bearer ${env.GITHUB_TOKEN}`);
+			}
+			const res = await fetch(upstream, { headers });
+			return corsHeaders(res);
+		}
 
 		if (url.pathname.startsWith("/rpc/")) {
 			const { matched, response } = await handler.handle(request, {
