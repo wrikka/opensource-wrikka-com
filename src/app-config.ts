@@ -218,6 +218,53 @@ export const docsAppConfig: DocsAppConfig = {
 			install: "bun add @wrikka/create-docs",
 		},
 	],
+	showcase: [
+		{
+			id: "agent-browser",
+			label: "agent-browser",
+			description:
+				"Browser automation agent built with Rust — supports Chrome, Firefox, Safari, Edge.",
+			icon: "i-mdi:web",
+			link: "/rust-packages/apps-cli-agent-browser-Cargo-rust",
+			tags: ["Rust", "CLI", "Browser"],
+		},
+		{
+			id: "agent-capture",
+			label: "agent-capture",
+			description:
+				"Multi-platform capture CLI for browser, terminal, code snippets, and component previews.",
+			icon: "i-mdi:camera",
+			link: "/rust-packages/apps-cli-agent-capture-Cargo-rust",
+			tags: ["Rust", "CLI", "Capture"],
+		},
+		{
+			id: "wrikka-files-desktop",
+			label: "wrikka-files-desktop",
+			description:
+				"Wrikka Desktop Explorer — custom-column, agent-driven file explorer.",
+			icon: "i-mdi:folder-open",
+			link: "/rust-packages/apps-desktop-files-desktop-src-tauri-Cargo-rust",
+			tags: ["Rust", "Tauri", "Desktop"],
+		},
+		{
+			id: "wrikka-terminal",
+			label: "wrikka-terminal",
+			description: "Wrikka Terminal — GPU-accelerated terminal emulator.",
+			icon: "i-mdi:console",
+			link: "/rust-packages/apps-desktop-terminal-desktop-src-tauri-Cargo-rust",
+			tags: ["Rust", "Tauri", "Terminal"],
+		},
+		{
+			id: "create-docs",
+			label: "@wrikka/create-docs",
+			description:
+				"The documentation framework powering this site — search, SEO, GitHub, PWA, and more.",
+			icon: "i-mdi:book-open-page-variant",
+			link: "/bun-packages/root-package-json",
+			badge: "Framework",
+			tags: ["TypeScript", "SolidJS", "Vite"],
+		},
+	],
 	i18n: {
 		current: "en",
 		list: [{ id: "en", label: "English" }],

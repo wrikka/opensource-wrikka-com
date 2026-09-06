@@ -4,10 +4,13 @@
  */
 import { readFile, writeFile } from "node:fs/promises";
 import {
+	generateLlmsTxt,
+	generatePluginsLlmsTxt,
 	generateRobots,
 	generateRss,
 	generateSitemap,
 } from "@wrikka/create-docs/seo";
+import { docsAppConfig } from "../src/app-config";
 import { site } from "../src/site";
 
 interface Manifest {
@@ -46,11 +49,20 @@ async function main() {
 	await writeFile("public/robots.txt", generateRobots(site.url), "utf-8");
 	await writeFile("public/rss.xml", generateRss(input), "utf-8");
 
+	const llms = generateLlmsTxt(input);
+	await writeFile("public/llm.txt", llms, "utf-8");
+	await writeFile("public/llms.txt", llms, "utf-8");
+	await writeFile(
+		"public/llms-plugins.txt",
+		generatePluginsLlmsTxt(docsAppConfig.plugins ?? [], site.title),
+		"utf-8",
+	);
+
 	const urlCount = 1 + Object.values(manifest.docs).reduce(
 		(n, list) => n + list.length,
 		0,
 	) + manifest.collections.length;
-	console.log(`Generated sitemap.xml (~${urlCount} urls), robots.txt, rss.xml`);
+	console.log(`Generated sitemap.xml (~${urlCount} urls), robots.txt, rss.xml, llm.txt, llms.txt, llms-plugins.txt`);
 }
 
 main().catch((err) => {
