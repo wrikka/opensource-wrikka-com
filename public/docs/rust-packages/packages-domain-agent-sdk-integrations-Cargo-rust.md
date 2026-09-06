@@ -10,7 +10,7 @@ Integrations for agent-sdk: MCP OAuth, computer-use, web search/fetch
 | --- | --- |
 | Type | RUST |
 | Category | Domain |
-| Path | `packages/domain/agent-sdk/integrations/Cargo.toml` |
+| Path | `packages/sdk/agents-sdk/integrations/Cargo.toml` |
 | Version | `0.1.0` |
 | Edition | `2021` |
 | License | `MIT` |
@@ -146,7 +146,7 @@ Integrations for agent-sdk — MCP OAuth flow, computer-use tool, web search/fet
 
    ```toml
    [dependencies]
-   agent-sdk-integrations = { path = "packages/domain/agent-sdk/integrations" }
+   agent-sdk-integrations = { path = "packages/sdk/agents-sdk/integrations" }
    ```
 
 2. Use the library — `Rust`
@@ -171,4 +171,4 @@ MIT License - see [LICENSE](../../../../LICENSE) for details.
 ## Links
 
 - Repository: <https://github.com/wrikka/opensource-wrikka-com>
-- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/domain/agent-sdk/integrations/Cargo.toml>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/sdk/agents-sdk/integrations/Cargo.toml>

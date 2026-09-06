@@ -40,7 +40,7 @@ No description available.
 - 📄 `opensource-wrikka-com/wrangler.toml`
 - 📄 `package.json`
 - 📁 `packages`
-- 📁 `packages/domain`
+- 📁 `packages/sdk`
 - 📁 `packages/infra`
 - 📁 `packages/lib`
 - 📁 `packages/tools`
@@ -127,7 +127,6 @@ Open-source Rust workspace for Wrikka — CLI agents, TUI apps, libraries, and S
 | ![icon](https://api.iconify.design/mdi:code-braces.svg?color=%237b1fa2&width=16) | Parser Engine | Code parsing and analysis utilities | Analyze source code across languages | `wrikka-parser-engine` crate |
 | ![icon](https://api.iconify.design/mdi:search-web.svg?color=%231976d2&width=16) | Search Engine | Repo indexing and search | Find code patterns fast | `wrikka-search-engine` crate |
 | ![icon](https://api.iconify.design/mdi:translate.svg?color=%23388e3c&width=16) | Code Translation | Source-to-source translation helpers | Migrate code between languages | `wrikka-code-translation` crate |
-| ![icon](https://api.iconify.design/mdi:chart-bar.svg?color=%23f57c00&width=16) | Code Metrics | Static analysis and metrics | Measure code quality and size | `wrikka-code-metrics` crate |
 | ![icon](https://api.iconify.design/mdi:database.svg?color=%2300796b&width=16) | Storage & Caching | Infrastructure crates for storage and caching | Reusable persistence layer | `wrikka-storage` / `wrikka-caching` |
 | ![icon](https://api.iconify.design/mdi:robot.svg?color=%23d32f2f&width=16) | Agent SDK | Core, security, integrations, channels, tools | Build agents with shared domain model | `wrikka-agent-*` crates |
 | ![icon](https://api.iconify.design/mdi:desktop-tower-monitor.svg?color=%23303f9f&width=16) | TUI Apps | Terminal UI components and apps | Rich terminal interfaces | `cargo run -p files-tui` |

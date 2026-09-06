@@ -10,7 +10,7 @@ Security module for agent-sdk: audit log, crypto, RBAC, rate limiting
 | --- | --- |
 | Type | RUST |
 | Category | Domain |
-| Path | `packages/domain/agent-sdk/security/Cargo.toml` |
+| Path | `packages/sdk/agents-sdk/security/Cargo.toml` |
 | Version | `0.1.0` |
 | Edition | `2021` |
 | License | `MIT` |
@@ -124,7 +124,7 @@ Security module for agent-sdk — audit log, crypto/encryption, RBAC middleware,
 
    ```toml
    [dependencies]
-   agent-sdk-security = { path = "packages/domain/agent-sdk/security" }
+   agent-sdk-security = { path = "packages/sdk/agents-sdk/security" }
    ```
 
 2. Use the library — `Rust`
@@ -149,4 +149,4 @@ MIT License - see [LICENSE](../../../../LICENSE) for details.
 ## Links
 
 - Repository: <https://github.com/wrikka/opensource-wrikka-com>
-- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/domain/agent-sdk/security/Cargo.toml>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/sdk/agents-sdk/security/Cargo.toml>

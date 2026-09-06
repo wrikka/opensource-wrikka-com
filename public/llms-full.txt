@@ -51,7 +51,6 @@
 - [app](/docs/rust-packages/packages-lib-tauri-plugin-wrikka-fs-examples-vanilla-package-npm.md): app npm workspace at packages/lib/tauri-plugin-wrikka-fs/examples/vanilla/package.json
 - [tauri-app](/docs/rust-packages/packages-lib-tauri-plugin-wrikka-fs-examples-vanilla-src-tauri-Cargo-rust.md): A Tauri App
 - [wrikka-utils](/docs/rust-packages/packages-lib-utils-Cargo-rust.md): Utility library with Clean Architecture and functional programming principles
-- [wrikka-code-metrics](/docs/rust-packages/packages-tools-code-metrics-Cargo-rust.md): Code analysis metrics and quality measures
 - [wrikka-code-translation](/docs/rust-packages/packages-tools-code-translation-Cargo-rust.md): AI-powered code translation
 - [wrikka-create-cli](/docs/rust-packages/packages-tools-create-cli-Cargo-rust.md): A clean architecture CLI builder library
 - [@wrikka/create-cli](/docs/rust-packages/packages-tools-create-cli-package-npm.md): CLI builder utilities with Clean Architecture
@@ -148,7 +147,7 @@ No description available.
 - 📄 `opensource-wrikka-com/wrangler.toml`
 - 📄 `package.json`
 - 📁 `packages`
-- 📁 `packages/domain`
+- 📁 `packages/sdk`
 - 📁 `packages/infra`
 - 📁 `packages/lib`
 - 📁 `packages/tools`
@@ -235,7 +234,6 @@ Open-source Rust workspace for Wrikka — CLI agents, TUI apps, libraries, and S
 | ![icon](https://api.iconify.design/mdi:code-braces.svg?color=%237b1fa2&width=16) | Parser Engine | Code parsing and analysis utilities | Analyze source code across languages | `wrikka-parser-engine` crate |
 | ![icon](https://api.iconify.design/mdi:search-web.svg?color=%231976d2&width=16) | Search Engine | Repo indexing and search | Find code patterns fast | `wrikka-search-engine` crate |
 | ![icon](https://api.iconify.design/mdi:translate.svg?color=%23388e3c&width=16) | Code Translation | Source-to-source translation helpers | Migrate code between languages | `wrikka-code-translation` crate |
-| ![icon](https://api.iconify.design/mdi:chart-bar.svg?color=%23f57c00&width=16) | Code Metrics | Static analysis and metrics | Measure code quality and size | `wrikka-code-metrics` crate |
 | ![icon](https://api.iconify.design/mdi:database.svg?color=%2300796b&width=16) | Storage & Caching | Infrastructure crates for storage and caching | Reusable persistence layer | `wrikka-storage` / `wrikka-caching` |
 | ![icon](https://api.iconify.design/mdi:robot.svg?color=%23d32f2f&width=16) | Agent SDK | Core, security, integrations, channels, tools | Build agents with shared domain model | `wrikka-agent-*` crates |
 | ![icon](https://api.iconify.design/mdi:desktop-tower-monitor.svg?color=%23303f9f&width=16) | TUI Apps | Terminal UI components and apps | Rich terminal interfaces | `cargo run -p files-tui` |
@@ -368,7 +366,7 @@ Cargo workspace root for rust-packages
 - 📄 `opensource-wrikka-com/wrangler.toml`
 - 📄 `package.json`
 - 📁 `packages`
-- 📁 `packages/domain`
+- 📁 `packages/sdk`
 - 📁 `packages/infra`
 - 📁 `packages/lib`
 - 📁 `packages/tools`
@@ -376,7 +374,6 @@ Cargo workspace root for rust-packages
 
 ## Workspace Members
 
-- `packages/tools/code-metrics`
 - `packages/tools/repo-mapping`
 - `packages/tools/code-translation`
 - `packages/lib/effect`
@@ -402,13 +399,13 @@ Cargo workspace root for rust-packages
 - `packages/tools/template-engine`
 - `apps/cli/file-ops`
 - `packages/lib/ratatui-ui`
-- `packages/domain/terminal-sdk`
+- `packages/sdk/terminal-sdk`
 - `# Agent SDK packages
-    "packages/domain/agent-sdk/core`
-- `packages/domain/agent-sdk/security`
-- `packages/domain/agent-sdk/integrations`
-- `packages/domain/agent-sdk/channels`
-- `packages/domain/agent-sdk/tools`
+    "packages/sdk/agents-sdk/core`
+- `packages/sdk/agents-sdk/security`
+- `packages/sdk/agents-sdk/integrations`
+- `packages/sdk/agents-sdk/channels`
+- `packages/sdk/agents-sdk/tools`
 - `apps/desktop/files-desktop/src-tauri`
 - `apps/tui/files-tui`
 
@@ -490,7 +487,6 @@ Open-source Rust workspace for Wrikka — CLI agents, TUI apps, libraries, and S
 | ![icon](https://api.iconify.design/mdi:code-braces.svg?color=%237b1fa2&width=16) | Parser Engine | Code parsing and analysis utilities | Analyze source code across languages | `wrikka-parser-engine` crate |
 | ![icon](https://api.iconify.design/mdi:search-web.svg?color=%231976d2&width=16) | Search Engine | Repo indexing and search | Find code patterns fast | `wrikka-search-engine` crate |
 | ![icon](https://api.iconify.design/mdi:translate.svg?color=%23388e3c&width=16) | Code Translation | Source-to-source translation helpers | Migrate code between languages | `wrikka-code-translation` crate |
-| ![icon](https://api.iconify.design/mdi:chart-bar.svg?color=%23f57c00&width=16) | Code Metrics | Static analysis and metrics | Measure code quality and size | `wrikka-code-metrics` crate |
 | ![icon](https://api.iconify.design/mdi:database.svg?color=%2300796b&width=16) | Storage & Caching | Infrastructure crates for storage and caching | Reusable persistence layer | `wrikka-storage` / `wrikka-caching` |
 | ![icon](https://api.iconify.design/mdi:robot.svg?color=%23d32f2f&width=16) | Agent SDK | Core, security, integrations, channels, tools | Build agents with shared domain model | `wrikka-agent-*` crates |
 | ![icon](https://api.iconify.design/mdi:desktop-tower-monitor.svg?color=%23303f9f&width=16) | TUI Apps | Terminal UI components and apps | Rich terminal interfaces | `cargo run -p files-tui` |
@@ -6942,7 +6938,7 @@ Communication channels for agent-sdk: Slack, WhatsApp, Email, reconnection
 | --- | --- |
 | Type | RUST |
 | Category | Domain |
-| Path | `packages/domain/agent-sdk/channels/Cargo.toml` |
+| Path | `packages/sdk/agents-sdk/channels/Cargo.toml` |
 | Version | `0.1.0` |
 | Edition | `2021` |
 | License | `MIT` |
@@ -7072,7 +7068,7 @@ Communication channels for agent-sdk — channel abstraction with reconnection l
 
    ```toml
    [dependencies]
-   agent-sdk-channels = { path = "packages/domain/agent-sdk/channels" }
+   agent-sdk-channels = { path = "packages/sdk/agents-sdk/channels" }
    ```
 
 2. Use the library — `Rust`
@@ -7097,7 +7093,7 @@ MIT License - see [LICENSE](../../../../LICENSE) for details.
 ## Links
 
 - Repository: <https://github.com/wrikka/opensource-wrikka-com>
-- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/domain/agent-sdk/channels/Cargo.toml>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/sdk/agents-sdk/channels/Cargo.toml>
 
 
 ---
@@ -7115,7 +7111,7 @@ AI agent core runtime - conversation, provider, memory, workspace
 | --- | --- |
 | Type | RUST |
 | Category | Domain |
-| Path | `packages/domain/agent-sdk/core/Cargo.toml` |
+| Path | `packages/sdk/agents-sdk/core/Cargo.toml` |
 | Version | `0.1.0` |
 | Edition | `2021` |
 | License | `MIT` |
@@ -7393,7 +7389,7 @@ cargo run -p wrikka-agent-core -- mcp serve
 ## Links
 
 - Repository: <https://github.com/wrikka/opensource-wrikka-com>
-- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/domain/agent-sdk/core/Cargo.toml>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/sdk/agents-sdk/core/Cargo.toml>
 
 
 ---
@@ -7411,7 +7407,7 @@ Integrations for agent-sdk: MCP OAuth, computer-use, web search/fetch
 | --- | --- |
 | Type | RUST |
 | Category | Domain |
-| Path | `packages/domain/agent-sdk/integrations/Cargo.toml` |
+| Path | `packages/sdk/agents-sdk/integrations/Cargo.toml` |
 | Version | `0.1.0` |
 | Edition | `2021` |
 | License | `MIT` |
@@ -7547,7 +7543,7 @@ Integrations for agent-sdk — MCP OAuth flow, computer-use tool, web search/fet
 
    ```toml
    [dependencies]
-   agent-sdk-integrations = { path = "packages/domain/agent-sdk/integrations" }
+   agent-sdk-integrations = { path = "packages/sdk/agents-sdk/integrations" }
    ```
 
 2. Use the library — `Rust`
@@ -7572,7 +7568,7 @@ MIT License - see [LICENSE](../../../../LICENSE) for details.
 ## Links
 
 - Repository: <https://github.com/wrikka/opensource-wrikka-com>
-- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/domain/agent-sdk/integrations/Cargo.toml>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/sdk/agents-sdk/integrations/Cargo.toml>
 
 
 ---
@@ -7590,7 +7586,7 @@ Security module for agent-sdk: audit log, crypto, RBAC, rate limiting
 | --- | --- |
 | Type | RUST |
 | Category | Domain |
-| Path | `packages/domain/agent-sdk/security/Cargo.toml` |
+| Path | `packages/sdk/agents-sdk/security/Cargo.toml` |
 | Version | `0.1.0` |
 | Edition | `2021` |
 | License | `MIT` |
@@ -7704,7 +7700,7 @@ Security module for agent-sdk — audit log, crypto/encryption, RBAC middleware,
 
    ```toml
    [dependencies]
-   agent-sdk-security = { path = "packages/domain/agent-sdk/security" }
+   agent-sdk-security = { path = "packages/sdk/agents-sdk/security" }
    ```
 
 2. Use the library — `Rust`
@@ -7729,7 +7725,7 @@ MIT License - see [LICENSE](../../../../LICENSE) for details.
 ## Links
 
 - Repository: <https://github.com/wrikka/opensource-wrikka-com>
-- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/domain/agent-sdk/security/Cargo.toml>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/sdk/agents-sdk/security/Cargo.toml>
 
 
 ---
@@ -7747,7 +7743,7 @@ Agent tools - shell, browser, review, git
 | --- | --- |
 | Type | RUST |
 | Category | Domain |
-| Path | `packages/domain/agent-sdk/tools/Cargo.toml` |
+| Path | `packages/sdk/agents-sdk/tools/Cargo.toml` |
 | Version | `0.1.0` |
 | Edition | `2021` |
 
@@ -7855,7 +7851,7 @@ Agent tools — shell, browser, review, and git tool implementations.
 
    ```toml
    [dependencies]
-   wrikka-agent-tools = { path = "packages/domain/agent-sdk/tools" }
+   wrikka-agent-tools = { path = "packages/sdk/agents-sdk/tools" }
    ```
 
 2. Use the library — `Rust`
@@ -7893,7 +7889,7 @@ Shared terminal SDK - core domain logic, ports, and adapters for terminal applic
 | --- | --- |
 | Type | RUST |
 | Category | Domain |
-| Path | `packages/domain/terminal-sdk/Cargo.toml` |
+| Path | `packages/sdk/terminal-sdk/Cargo.toml` |
 | Version | `0.1.0` |
 | Edition | `2021` |
 | Rust Version | `>= 1.70` |
@@ -8027,7 +8023,7 @@ Shared terminal SDK — core domain logic, ports, and adapters for terminal appl
 
    ```toml
    [dependencies]
-   wrikka-terminal-sdk = { path = "packages/domain/terminal-sdk" }
+   wrikka-terminal-sdk = { path = "packages/sdk/terminal-sdk" }
    ```
 
 2. Use the library — `Rust`
@@ -8052,7 +8048,7 @@ MIT License - see [LICENSE](../../../LICENSE) for details.
 
 - Repository: <https://github.com/wrikka/opensource-wrikka-com>
 - Homepage: <https://github.com/wrikka/opensource-wrikka-com>
-- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/domain/terminal-sdk/Cargo.toml>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/sdk/terminal-sdk/Cargo.toml>
 
 
 ---
@@ -10284,9 +10280,7 @@ wrikka-utils = { version = "0.1.0", features = ["full"] }
 
 
 ---
-# [rust-packages] wrikka-code-metrics
 
-# wrikka-code-metrics
 
 ## Overview
 
@@ -10298,7 +10292,6 @@ Code analysis metrics and quality measures
 | --- | --- |
 | Type | RUST |
 | Category | Tools |
-| Path | `packages/tools/code-metrics/Cargo.toml` |
 | Version | `0.1.0` |
 | Edition | `2021` |
 
@@ -10349,31 +10342,26 @@ Code analysis metrics and quality measures
 ### Build
 
 ```bash
-cargo build -p wrikka-code-metrics
 ```
 
 ### Test
 
 ```bash
-cargo test -p wrikka-code-metrics
 ```
 
 ### Run
 
 ```bash
-cargo run -p wrikka-code-metrics
 ```
 
 ### Lint
 
 ```bash
-cargo clippy -p wrikka-code-metrics
 ```
 
 ### Documentation
 
 ```bash
-cargo doc -p wrikka-code-metrics --no-deps
 ```
 
 ## Environment
@@ -10386,7 +10374,6 @@ cargo doc -p wrikka-code-metrics --no-deps
 
 > ![Status](https://img.shields.io/badge/status-in_development-red)
 
-# wrikka-code-metrics
 
 Code analysis metrics and quality measures for source code.
 
@@ -10395,7 +10382,6 @@ Code analysis metrics and quality measures for source code.
 
 ```text
 ┌─────────────────────────────────────────────────────────────────┐
-│                     wrikka-code-metrics                         │
 ├──────────────┬──────────────────────────────────────────────────┤
 │  modules     │  Metrics domain modules                          │
 ├──────────────┼──────────────────────────────────────────────────┤
@@ -10411,7 +10397,6 @@ Code analysis metrics and quality measures for source code.
 
    ```toml
    [dependencies]
-   wrikka-code-metrics = { path = "packages/tools/code-metrics" }
    ```
 
 2. Use the library — `Rust`

@@ -10,7 +10,7 @@ Communication channels for agent-sdk: Slack, WhatsApp, Email, reconnection
 | --- | --- |
 | Type | RUST |
 | Category | Domain |
-| Path | `packages/domain/agent-sdk/channels/Cargo.toml` |
+| Path | `packages/sdk/agents-sdk/channels/Cargo.toml` |
 | Version | `0.1.0` |
 | Edition | `2021` |
 | License | `MIT` |
@@ -140,7 +140,7 @@ Communication channels for agent-sdk — channel abstraction with reconnection l
 
    ```toml
    [dependencies]
-   agent-sdk-channels = { path = "packages/domain/agent-sdk/channels" }
+   agent-sdk-channels = { path = "packages/sdk/agents-sdk/channels" }
    ```
 
 2. Use the library — `Rust`
@@ -165,4 +165,4 @@ MIT License - see [LICENSE](../../../../LICENSE) for details.
 ## Links
 
 - Repository: <https://github.com/wrikka/opensource-wrikka-com>
-- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/domain/agent-sdk/channels/Cargo.toml>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/sdk/agents-sdk/channels/Cargo.toml>

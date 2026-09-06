@@ -10,7 +10,7 @@ Agent tools - shell, browser, review, git
 | --- | --- |
 | Type | RUST |
 | Category | Domain |
-| Path | `packages/domain/agent-sdk/tools/Cargo.toml` |
+| Path | `packages/sdk/agents-sdk/tools/Cargo.toml` |
 | Version | `0.1.0` |
 | Edition | `2021` |
 
@@ -118,7 +118,7 @@ Agent tools — shell, browser, review, and git tool implementations.
 
    ```toml
    [dependencies]
-   wrikka-agent-tools = { path = "packages/domain/agent-sdk/tools" }
+   wrikka-agent-tools = { path = "packages/sdk/agents-sdk/tools" }
    ```
 
 2. Use the library — `Rust`

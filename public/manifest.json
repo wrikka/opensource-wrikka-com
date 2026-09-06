@@ -260,7 +260,7 @@
         "label": "agent-sdk-channels",
         "category": "Domain",
         "description": "Communication channels for agent-sdk: Slack, WhatsApp, Email, reconnection",
-        "path": "packages/domain/agent-sdk/channels/Cargo.toml",
+        "path": "packages/sdk/agents-sdk/channels/Cargo.toml",
         "type": "rust"
       },
       {
@@ -268,7 +268,7 @@
         "label": "wrikka-agent-core",
         "category": "Domain",
         "description": "AI agent core runtime - conversation, provider, memory, workspace",
-        "path": "packages/domain/agent-sdk/core/Cargo.toml",
+        "path": "packages/sdk/agents-sdk/core/Cargo.toml",
         "type": "rust"
       },
       {
@@ -276,7 +276,7 @@
         "label": "agent-sdk-integrations",
         "category": "Domain",
         "description": "Integrations for agent-sdk: MCP OAuth, computer-use, web search/fetch",
-        "path": "packages/domain/agent-sdk/integrations/Cargo.toml",
+        "path": "packages/sdk/agents-sdk/integrations/Cargo.toml",
         "type": "rust"
       },
       {
@@ -284,7 +284,7 @@
         "label": "agent-sdk-security",
         "category": "Domain",
         "description": "Security module for agent-sdk: audit log, crypto, RBAC, rate limiting",
-        "path": "packages/domain/agent-sdk/security/Cargo.toml",
+        "path": "packages/sdk/agents-sdk/security/Cargo.toml",
         "type": "rust"
       },
       {
@@ -292,7 +292,7 @@
         "label": "wrikka-agent-tools",
         "category": "Domain",
         "description": "Agent tools - shell, browser, review, git",
-        "path": "packages/domain/agent-sdk/tools/Cargo.toml",
+        "path": "packages/sdk/agents-sdk/tools/Cargo.toml",
         "type": "rust"
       },
       {
@@ -300,7 +300,7 @@
         "label": "wrikka-terminal-sdk",
         "category": "Domain",
         "description": "Shared terminal SDK - core domain logic, ports, and adapters for terminal applications",
-        "path": "packages/domain/terminal-sdk/Cargo.toml",
+        "path": "packages/sdk/terminal-sdk/Cargo.toml",
         "type": "rust"
       },
       {
@@ -409,10 +409,8 @@
       },
       {
         "id": "packages-tools-code-metrics-Cargo-rust",
-        "label": "wrikka-code-metrics",
         "category": "Tools",
         "description": "Code analysis metrics and quality measures",
-        "path": "packages/tools/code-metrics/Cargo.toml",
         "type": "rust"
       },
       {

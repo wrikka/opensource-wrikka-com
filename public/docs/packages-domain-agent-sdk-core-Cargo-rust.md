@@ -10,7 +10,7 @@ AI agent core runtime - conversation, provider, memory, workspace
 | --- | --- |
 | Type | RUST |
 | Category | Domain |
-| Path | `packages/domain/agent-sdk/core/Cargo.toml` |
+| Path | `packages/sdk/agents-sdk/core/Cargo.toml` |
 | Version | `0.1.0` |
 | Edition | `2021` |
 | License | `MIT` |
@@ -288,4 +288,4 @@ cargo run -p wrikka-agent-core -- mcp serve
 ## Links
 
 - Repository: <https://github.com/wrikka/opensource-wrikka-com>
-- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/domain/agent-sdk/core/Cargo.toml>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/sdk/agents-sdk/core/Cargo.toml>

@@ -51,7 +51,7 @@ Documentation hub for all wrikka collections
   - [app](https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-lib-tauri-plugin-wrikka-fs-examples-vanilla-package-npm): app npm workspace at packages/lib/tauri-plugin-wrikka-fs/examples/vanilla/package.json
   - [tauri-app](https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-lib-tauri-plugin-wrikka-fs-examples-vanilla-src-tauri-Cargo-rust): A Tauri App
   - [wrikka-utils](https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-lib-utils-Cargo-rust): Utility library with Clean Architecture and functional programming principles
-  - [wrikka-code-metrics](https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-code-metrics-Cargo-rust): Code analysis metrics and quality measures
+  - [undefined](https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-code-metrics-Cargo-rust): Code analysis metrics and quality measures
   - [wrikka-code-translation](https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-code-translation-Cargo-rust): AI-powered code translation
   - [wrikka-create-cli](https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-create-cli-Cargo-rust): A clean architecture CLI builder library
   - [@wrikka/create-cli](https://opensource-wrikka-com.newkubise.workers.dev/rust-packages/packages-tools-create-cli-package-npm): CLI builder utilities with Clean Architecture

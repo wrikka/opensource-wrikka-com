@@ -10,7 +10,7 @@ Shared terminal SDK - core domain logic, ports, and adapters for terminal applic
 | --- | --- |
 | Type | RUST |
 | Category | Domain |
-| Path | `packages/domain/terminal-sdk/Cargo.toml` |
+| Path | `packages/sdk/terminal-sdk/Cargo.toml` |
 | Version | `0.1.0` |
 | Edition | `2021` |
 | Rust Version | `>= 1.70` |
@@ -144,7 +144,7 @@ Shared terminal SDK — core domain logic, ports, and adapters for terminal appl
 
    ```toml
    [dependencies]
-   wrikka-terminal-sdk = { path = "packages/domain/terminal-sdk" }
+   wrikka-terminal-sdk = { path = "packages/sdk/terminal-sdk" }
    ```
 
 2. Use the library — `Rust`
@@ -169,4 +169,4 @@ MIT License - see [LICENSE](../../../LICENSE) for details.
 
 - Repository: <https://github.com/wrikka/opensource-wrikka-com>
 - Homepage: <https://github.com/wrikka/opensource-wrikka-com>
-- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/domain/terminal-sdk/Cargo.toml>
+- Source: <https://github.com/wrikka/opensource-wrikka-com/blob/main/packages/sdk/terminal-sdk/Cargo.toml>
