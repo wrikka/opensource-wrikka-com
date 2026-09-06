@@ -22,8 +22,8 @@ Maintain and ship the `opensource.wrikka.com` documentation site — a SolidJS s
 ## Scope
 
 - SolidJS SPA source in `src/` (components, sections, theme)
-- Doc/code generation via `scripts/generate-workspaces.ts` (writes `src/workspaces.ts`, `src/docs.ts`, `docs/*.md`)
-- Cloudflare Worker entry `src/worker.js` and `wrangler.toml`
+- Build-time docs pulled by `bun run pull-docs` (configured in `create-docs.config.ts`)
+- Cloudflare Worker entry `src/worker.ts` and `wrangler.toml`
 - Build config: `vite.config.ts`, `tsconfig.json`, `package.json`
 - Does NOT include editing the parent monorepo workspaces being documented
 
@@ -38,15 +38,16 @@ Maintain and ship the `opensource.wrikka.com` documentation site — a SolidJS s
 ### 2. Develop
 
 1. Install dependencies with `bun install` (or `npm install` if Bun is unavailable).
-2. Start the dev server with `bun run dev` (Vite on port `5173`).
-3. Regenerate workspace docs after parent-repo changes with `bun scripts/generate-workspaces.ts`.
-4. Keep changes minimal and follow the existing component + co-located CSS pattern (`src/components/<Name>.tsx` + `<name>.css`).
-5. Use `/<skill-name>` for each major workflow.
+2. Link the local `@wrikka/create-docs` package with `bun link @wrikka/create-docs`.
+3. Start the dev server with `bun run dev` (Vite on port `5173`).
+4. Pull docs from configured GitHub sources with `bun run pull-docs`.
+5. Keep changes minimal and follow the existing component + co-located CSS pattern (`src/components/<Name>.tsx` + `<name>.css`).
+6. Use `/<skill-name>` for each major workflow.
 
 ### 3. Validate
 
 1. Run `bun run typecheck` (`tsc --noEmit`) — must pass with zero errors.
-2. Run `bun run build` (`vite build`) — must produce `dist/` without errors.
+2. Run `bun run build` (`vite build`) — must pull docs, generate SEO, and produce `dist/` without errors.
 3. Run `/deep-validate` before shipping.
 
 ### 4. Ship
@@ -101,7 +102,7 @@ Core:
 ### 6. Safety
 
 - Do not edit source code outside the task scope.
-- Do not edit generated files (`src/workspaces.ts`, `src/docs.ts`, `docs/*.md`) by hand — rerun `scripts/generate-workspaces.ts` instead.
+- Do not edit generated files (`docs/*.json`, `public/*.xml`, `src/data-source.ts` output) by hand — rerun `bun run pull-docs` or `bun run build` instead.
 - Dry run before destructive actions.
 
 ### 7. Ship

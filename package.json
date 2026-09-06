@@ -5,22 +5,19 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
-		"prebuild": "bun scripts/generate-seo.ts",
+		"prebuild": "bun run pull-docs && bun scripts/generate-seo.ts",
 		"build": "vite build",
 		"preview": "vite preview",
 		"typecheck": "tsc --noEmit",
 		"verify": "bun run typecheck && bun run build",
-		"gen": "bun scripts/generate-workspaces.ts && bun scripts/generate-seo.ts && bun scripts/generate-og-image.ts",
-		"gen:workspaces": "bun scripts/generate-workspaces.ts",
-		"gen:seo": "bun scripts/generate-seo.ts",
-		"gen:og": "bun scripts/generate-og-image.ts",
-		"deploy": "wrangler deploy"
+		"deploy": "wrangler deploy",
+		"pull-docs": "bun node_modules/@wrikka/create-docs/scripts/github-pull.ts --config create-docs.config.ts"
 	},
 	"dependencies": {
 		"@orpc/client": "^1.15.0",
 		"@orpc/server": "^1.15.0",
 		"@tanstack/solid-router": "^1.170.30",
-		"@wrikka/create-docs": "link:@wrikka/create-docs",
+		"@wrikka/create-docs": "^0.1.0",
 		"marked": "^18.0.11",
 		"solid-js": "^1.9.15",
 		"zod": "^4.5.4"

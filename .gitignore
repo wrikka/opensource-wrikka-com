@@ -3,3 +3,13 @@ node_modules/
 .wrangler/
 .DS_Store
 .env
+docs/
+public/manifest.json
+public/search-index.json
+public/sitemap.xml
+public/robots.txt
+public/rss.xml
+public/llm.txt
+public/llms.txt
+public/llms-plugins.txt
+public/docs/

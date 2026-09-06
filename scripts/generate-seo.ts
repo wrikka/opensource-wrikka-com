@@ -1,6 +1,6 @@
 /**
- * Generates sitemap.xml, robots.txt, and rss.xml into public/
- * from public/manifest.json (produced by generate-workspaces.ts).
+ * Generates sitemap.xml, robots.txt, rss.xml, and llms.txt into public/
+ * from docs/manifest.json (produced by pull-docs).
  */
 import { readFile, writeFile } from "node:fs/promises";
 import {
@@ -10,7 +10,6 @@ import {
 	generateRss,
 	generateSitemap,
 } from "@wrikka/create-docs/seo";
-import { docsAppConfig } from "../src/app-config";
 import { site } from "../src/site";
 
 interface Manifest {
@@ -36,7 +35,7 @@ interface Manifest {
 
 async function main() {
 	const manifest = JSON.parse(
-		await readFile("public/manifest.json", "utf-8"),
+		await readFile("docs/manifest.json", "utf-8"),
 	) as Manifest;
 
 	const input = {
@@ -54,15 +53,20 @@ async function main() {
 	await writeFile("public/llms.txt", llms, "utf-8");
 	await writeFile(
 		"public/llms-plugins.txt",
-		generatePluginsLlmsTxt(docsAppConfig.plugins ?? [], site.title),
+		generatePluginsLlmsTxt([], site.title),
 		"utf-8",
 	);
 
-	const urlCount = 1 + Object.values(manifest.docs).reduce(
-		(n, list) => n + list.length,
-		0,
-	) + manifest.collections.length;
-	console.log(`Generated sitemap.xml (~${urlCount} urls), robots.txt, rss.xml, llm.txt, llms.txt, llms-plugins.txt`);
+	const urlCount =
+		1 +
+		Object.values(manifest.docs).reduce(
+			(n, list) => n + list.length,
+			0,
+		) +
+		manifest.collections.length;
+	console.log(
+		`Generated sitemap.xml (~${urlCount} urls), robots.txt, rss.xml, llm.txt, llms.txt, llms-plugins.txt`,
+	);
 }
 
 main().catch((err) => {
