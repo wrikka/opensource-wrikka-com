@@ -1,0 +1,17 @@
+{
+	"name": "opensource.wrikka.com",
+	"short_name": "wrikka docs",
+	"description": "Documentation hub for all wrikka open-source packages",
+	"start_url": "/",
+	"scope": "/",
+	"display": "standalone",
+	"background_color": "#0b0d12",
+	"theme_color": "#0b0d12",
+	"icons": [
+		{
+			"src": "/favicon.ico",
+			"sizes": "48x48",
+			"type": "image/x-icon"
+		}
+	]
+}

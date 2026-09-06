@@ -131,6 +131,7 @@ export const docsAppConfig: DocsAppConfig = {
 		repo: "opensource-wrikka-com",
 		stats: true,
 		releases: true,
+		contributors: true,
 	},
 	dataSource: orpcDataSource,
 	defaultCollection: "rust-packages",
@@ -174,6 +175,34 @@ export const docsAppConfig: DocsAppConfig = {
 		],
 	},
 	apiCollections: [siteRpc],
+	plugins: [
+		{
+			name: "oRPC integration",
+			description:
+				"Docs content, search, and Ask AI served over oRPC endpoints.",
+			icon: "i-mdi:api",
+		},
+		{
+			name: "OpenAPI adapter",
+			description:
+				"Turn an OpenAPI spec into a Scalar-style API reference collection.",
+			icon: "i-mdi:file-document-outline",
+		},
+		{
+			name: "Workers AI",
+			description:
+				"Ask AI answers grounded in docs, powered by Cloudflare Workers AI.",
+			icon: "i-mdi:robot-outline",
+		},
+		{
+			name: "@wrikka/create-docs",
+			description:
+				"The documentation framework powering this site — search, SEO, GitHub, PWA, and more.",
+			icon: "i-mdi:book-open-page-variant",
+			url: "https://github.com/wrikka/bun-packages",
+			install: "bun add @wrikka/create-docs",
+		},
+	],
 	features: {
 		search: true,
 		askAi: true,
@@ -182,5 +211,7 @@ export const docsAppConfig: DocsAppConfig = {
 		themeToggle: true,
 		breadcrumbs: true,
 		reportIssue: true,
+		pwa: true,
+		analytics: true,
 	},
 };
