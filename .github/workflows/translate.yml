@@ -1,8 +1,15 @@
 name: translate-docs
 
-# AI translation pipeline (preview). Computes which docs still need
-# translations per locale and uploads a translation plan as an artifact.
-# A future step can feed the plan to an AI provider and commit the output.
+# AI translation pipeline. Computes which docs still need translations per
+# locale and, when `apply` is requested and provider secrets are configured,
+# runs the translations and commits the results back to main.
+#
+# Required secrets for real translation:
+#   TRANSLATE_API_KEY (or OPENAI_API_KEY) — provider API key
+# Optional vars/secrets:
+#   TRANSLATE_PROVIDER  e.g. "openai" (default when apply is used)
+#   TRANSLATE_BASE_URL  OpenAI-compatible endpoint
+#   TRANSLATE_MODEL     e.g. gpt-4o-mini
 
 on:
   workflow_dispatch:
@@ -11,12 +18,21 @@ on:
         description: "Comma-separated target locales (e.g. th,ja)"
         required: true
         default: "th"
+      apply:
+        description: "Run real translations via the configured provider"
+        required: false
+        type: boolean
+        default: false
+      limit:
+        description: "Max files to translate in this run (0 = all)"
+        required: false
+        default: "20"
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  plan:
+  translate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -25,13 +41,58 @@ jobs:
 
       - run: bun install --frozen-lockfile
 
+      - name: Pull docs
+        run: bun run pull-docs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+
       - name: Generate translation plan
         run: |
           LOCALES="${{ inputs.locales }}"
-          bun node_modules/@wrikka/create-docs/scripts/translate.ts \
-            --docs docs \
-            --locales "$LOCALES" \
-            --out translation-plan.json
+          for d in docs/docs/*/; do
+            [ -d "$d" ] || continue
+            id=$(basename "$d")
+            bun node_modules/@wrikka/create-docs/scripts/translate.ts \
+              --docs "$d" \
+              --i18n "i18n/$id" \
+              --locales "$LOCALES" \
+              --out "translation-plan.$id.json"
+          done
+          jq -s '{generatedAt: now | todate, collections: [.[] | {collection: .docsDir, tasks: .tasks}]}' translation-plan.*.json > translation-plan.json || cat translation-plan.*.json > translation-plan.json
+
+      - name: Run translations
+        if: ${{ inputs.apply }}
+        run: |
+          LOCALES="${{ inputs.locales }}"
+          LIMIT="${{ inputs.limit }}"
+          for d in docs/docs/*/; do
+            [ -d "$d" ] || continue
+            id=$(basename "$d")
+            bun node_modules/@wrikka/create-docs/scripts/translate.ts \
+              --docs "$d" \
+              --i18n "i18n/$id" \
+              --locales "$LOCALES" \
+              --out "translation-plan.$id.json" \
+              --apply ${LIMIT:+--limit "$LIMIT"}
+          done
+        env:
+          TRANSLATE_PROVIDER: ${{ vars.TRANSLATE_PROVIDER || 'openai' }}
+          TRANSLATE_API_KEY: ${{ secrets.TRANSLATE_API_KEY || secrets.OPENAI_API_KEY }}
+          TRANSLATE_BASE_URL: ${{ vars.TRANSLATE_BASE_URL }}
+          TRANSLATE_MODEL: ${{ vars.TRANSLATE_MODEL || 'gpt-4o-mini' }}
+
+      - name: Commit translations
+        if: ${{ inputs.apply }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add i18n
+          if git diff --cached --quiet; then
+            echo "No translation changes to commit"
+          else
+            git commit -m "docs: translate to ${{ inputs.locales }} via create-docs translate"
+            git push
+          fi
 
       - uses: actions/upload-artifact@v4
         with:

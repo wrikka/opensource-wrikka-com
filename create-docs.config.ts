@@ -15,13 +15,13 @@ const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 const useGitHub = !!process.env.GITHUB_TOKEN;
 
-function findBunPackagesDocs(): string | undefined {
+function findLocal(...parts: string[]): string | undefined {
 	const candidates = [
-		// Local: opensource-wrikka-com and bun-packages live under D:\newkub.
-		resolve(__dirname, "..", "wpackages", "bun-packages", "docs"),
+		// Local: opensource-wrikka-com and the monorepos live under D:\newkub.
+		resolve(__dirname, "..", "wpackages", ...parts),
 		// CI legacy / monorepo layouts.
-		resolve(__dirname, "..", "bun-packages", "docs"),
-		resolve(__dirname, "..", "..", "bun-packages", "docs"),
+		resolve(__dirname, "..", ...parts),
+		resolve(__dirname, "..", "..", ...parts),
 	];
 	return candidates.find((p) => existsSync(p));
 }
@@ -37,18 +37,31 @@ export default {
 			branch: "main",
 			docsDir: "docs",
 			icon: "i-mdi:nodejs",
-			localDir: useGitHub ? undefined : findBunPackagesDocs(),
+			localDir: useGitHub ? undefined : findLocal("bun-packages", "docs"),
+		},
+		{
+			// rust-packages is a private monorepo without a root docs/ dir;
+			// docs live under apps/*/docs — pull that subtree (needs GH_PAT in CI).
+			id: "rust-apps",
+			label: "Rust Apps",
+			description: "Rust CLI, desktop, TUI, and WASM apps from rust-packages.",
+			repo: "https://github.com/wrikka/rust-packages",
+			branch: "main",
+			docsDir: "apps",
+			icon: "i-mdi:console",
+			optional: true,
+			localDir: useGitHub ? undefined : findLocal("rust-packages", "apps"),
 		},
 		{
 			id: "rust-packages",
 			label: "Rust Packages",
-			description: "Rust CLI agents, TUI apps, libraries, and SDKs.",
+			description: "Rust libraries, SDKs, and tooling from rust-packages.",
 			repo: "https://github.com/wrikka/rust-packages",
 			branch: "main",
-			docsDir: "docs",
+			docsDir: "packages",
 			icon: "i-mdi:language-rust",
-			// rust-packages has no docs/ root yet; keep optional until docs are added.
 			optional: true,
+			localDir: useGitHub ? undefined : findLocal("rust-packages", "packages"),
 		},
 	],
 };
