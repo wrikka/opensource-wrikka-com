@@ -1,0 +1,40 @@
+name: translate-docs
+
+# AI translation pipeline (preview). Computes which docs still need
+# translations per locale and uploads a translation plan as an artifact.
+# A future step can feed the plan to an AI provider and commit the output.
+
+on:
+  workflow_dispatch:
+    inputs:
+      locales:
+        description: "Comma-separated target locales (e.g. th,ja)"
+        required: true
+        default: "th"
+
+permissions:
+  contents: read
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+
+      - run: bun install --frozen-lockfile
+
+      - name: Generate translation plan
+        run: |
+          LOCALES="${{ inputs.locales }}"
+          bun node_modules/@wrikka/create-docs/scripts/translate.ts \
+            --docs docs \
+            --locales "$LOCALES" \
+            --out translation-plan.json
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: translation-plan
+          path: translation-plan.json
+          retention-days: 14

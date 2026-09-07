@@ -1,4 +1,7 @@
-import type { DocsAppConfig } from "@wrikka/create-docs/solid";
+import {
+	type DocsAppConfig,
+	officialPlugins,
+} from "@wrikka/create-docs/solid";
 import { dataSource } from "./data-source";
 import { site } from "./site";
 
@@ -44,6 +47,8 @@ export const docsAppConfig: DocsAppConfig = {
 	},
 	features: {
 		search: true,
+		searchPage: true,
+		translate: true,
 		themeToggle: true,
 		breadcrumbs: true,
 		lastUpdated: true,
@@ -54,4 +59,17 @@ export const docsAppConfig: DocsAppConfig = {
 		sitemap: true,
 		pwa: true,
 	},
+	translate: {
+		provider: "ai",
+		workflow: "translate.yml",
+		locales: [{ id: "th", label: "ไทย" }],
+	},
+	i18n: {
+		current: "en",
+		list: [
+			{ id: "en", label: "English" },
+			{ id: "th", label: "ไทย" },
+		],
+	},
+	plugins: officialPlugins,
 };

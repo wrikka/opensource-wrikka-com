@@ -8,9 +8,13 @@ const allFiles = import.meta.glob("../docs/**/*.{md,yml,yaml}", {
 }) as Record<string, string>;
 
 const collections = sources.map((meta) => {
-	const prefix = `../${meta.id}/`;
+	// Pulled files live under docs/docs/<id>/; remap glob keys to the
+	// `../<id>/…` shape that createStaticDataSource expects so doc ids stay clean.
+	const prefix = `../docs/docs/${meta.id}/`;
 	const files = Object.fromEntries(
-		Object.entries(allFiles).filter(([p]) => p.startsWith(prefix)),
+		Object.entries(allFiles)
+			.filter(([p]) => p.startsWith(prefix))
+			.map(([p, v]) => [`../${meta.id}/${p.slice(prefix.length)}`, v]),
 	);
 	return { meta, files };
 });
