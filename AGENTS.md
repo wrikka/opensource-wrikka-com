@@ -2,17 +2,17 @@
 name: opensource-wrikka-com
 description: SolidJS documentation site for the wrikka open-source monorepo, deployed on Cloudflare Workers
 related:
-  - update-agents-md
+  - set-secret-github
   - follow-agents-md
   - follow-framework-solidjs
   - follow-tool-vite
   - follow-lang-typescript
   - follow-service-cloudflare
+  - follow-tool-wrangler
   - follow-runtime-bun
-  - deep-validate
-  - review-rules
-  - ship
-  - report
+  - ship-to-production
+  - watch-github-actions
+  - update-agents-md
 ---
 
 ## Goal
