@@ -17,9 +17,10 @@ const useGitHub = !!process.env.GITHUB_TOKEN;
 
 function findBunPackagesDocs(): string | undefined {
 	const candidates = [
-		// CI: bun-packages is checked out next to the consumer within rust-packages.
+		// Local: opensource-wrikka-com and bun-packages live under D:\newkub.
+		resolve(__dirname, "..", "wpackages", "bun-packages", "docs"),
+		// CI legacy / monorepo layouts.
 		resolve(__dirname, "..", "bun-packages", "docs"),
-		// Local: bun-packages is next to rust-packages.
 		resolve(__dirname, "..", "..", "bun-packages", "docs"),
 	];
 	return candidates.find((p) => existsSync(p));
