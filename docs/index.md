@@ -16,6 +16,7 @@ SolidJS documentation site for the wrikka open-source monorepo, deployed on Clou
 
 ## Getting Started
 
+- [Quickstart](getting-started/quickstart.md)
 - [Installation](getting-started/installation.md)
 - [Usage](getting-started/usage.md)
 
