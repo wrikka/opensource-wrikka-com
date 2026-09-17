@@ -65,3 +65,28 @@ Add an entry to `sources` in `create-docs.config.ts`:
 	localDir: findLocal("my-repo", "docs"), // offline fallback
 }
 ```
+
+## Examples From The Codebase
+
+The `bun-packages` collection in `create-docs.config.ts`:
+
+```ts
+{
+	id: "bun-packages",
+	label: "Bun Packages",
+	description: "TypeScript tooling, web apps, and the create-docs framework.",
+	repo: "https://github.com/wrikka/bun-packages",
+	branch: "main",
+	docsDir: "docs",
+	icon: "i-mdi:nodejs",
+	localDir: useGitHub ? undefined : findLocal("bun-packages", "docs"),
+}
+```
+
+And the Worker's dual routing in `src/worker.ts` — oRPC first, static assets as fallback:
+
+```ts
+const handler = new RPCHandler(router, {
+	interceptors: [onError((error) => console.error(error))],
+});
+```

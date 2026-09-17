@@ -9,7 +9,6 @@ docs/*
 !docs/getting-started/
 !docs/development/
 !docs/references/
-!docs/roadmap/
 public/manifest.json
 public/search-index.json
 public/sitemap.xml

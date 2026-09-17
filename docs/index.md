@@ -30,7 +30,3 @@ SolidJS documentation site for the wrikka open-source monorepo, deployed on Clou
 
 - [Configuration](references/configuration.md)
 - [Contributing](references/contributing.md)
-
-## Roadmap
-
-- [Roadmap](roadmap/index.md)

@@ -1,38 +1,34 @@
 ---
 title: Configuration
-description: Config files and environment variables for opensource-wrikka-com
+description: All configuration options and environment variables
 ---
 
 # Configuration
 
-## `wrangler.toml`
-
-| No. | Key | Value | Purpose |
-|-----|-----|-------|---------|
-| 1 | `name` | `opensource-wrikka-com` | Worker name |
-| 2 | `main` | `src/worker.ts` | Worker entry |
-| 3 | `compatibility_date` | `2026-08-30` | workerd compat |
-| 4 | `[assets] directory` | `./dist` | Vite build output |
-| 5 | `[assets] binding` | `ASSETS` | static file binding |
-| 6 | `[assets] not_found_handling` | `single-page-application` | SPA fallback |
-| 7 | `[ai] binding` | `AI` | Workers AI (translate) |
-
 ## Environment Variables
 
-| No. | Var | Where | Purpose |
-|-----|-----|-------|---------|
-| 1 | `GITHUB_TOKEN` | CI / `.env` | `pull-docs` GitHub API auth |
-| 2 | `GITHUB_CLIENT_ID` | `.env` / Worker secret | OAuth (optional) |
-| 3 | `GITHUB_CLIENT_SECRET` | `.env` / Worker secret | OAuth (optional) |
+| No. | Name | Required | Default | Description |
+|-----|------|----------|---------|-------------|
+| 1 | `GITHUB_TOKEN` | no (CI sets it) | — | `pull-docs` GitHub API auth; without it, `localDir` fallback is used |
+| 2 | `GITHUB_CLIENT_ID` | no | — | GitHub OAuth app id (Worker env) |
+| 3 | `GITHUB_CLIENT_SECRET` | no | — | GitHub OAuth secret (Worker env) |
 
-## `create-docs.config.ts`
+## Config Files
 
-Per-source fields: `id`, `label`, `description`, `repo`, `branch`, `docsDir`, `icon`, `optional`, `localDir`. `localDir` resolves `../wpackages/...` → `../...` → `../../...` for offline pulls.
+| No. | File | Purpose |
+|-----|------|---------|
+| 1 | `wrangler.toml` | Worker name, `compatibility_date`, `ASSETS` binding (`./dist` + SPA fallback), `AI` binding |
+| 2 | `create-docs.config.ts` | doc `sources` — repo, branch, `docsDir`, icon, `optional`, `localDir` |
+| 3 | `vite.config.ts` | Vite + `vite-plugin-solid` |
+| 4 | `uno.config.ts` | UnoCSS presets — Wind + `presetIcons` (mdi) |
+| 5 | `tsconfig.json` | TS strict, JSX for SolidJS |
+| 6 | `.gitignore` | `docs/*` ignored except project-owned doc paths |
 
-## `uno.config.ts`
+## Example
 
-UnoCSS presets — Wind utilities + `presetIcons` with `@iconify-json/mdi` (`i-mdi:*` classes).
-
-## `.gitignore` Notes
-
-`docs/*` is ignored (generated content) except project-owned paths: `docs/index.md`, `docs/project/`, `docs/getting-started/`, `docs/development/`, `docs/references/`, `docs/roadmap/`. Generated SEO artifacts under `public/` are ignored too.
+```bash
+# .env
+GITHUB_TOKEN=ghp_...           # pull docs from GitHub (CI path)
+GITHUB_CLIENT_ID=...           # optional OAuth
+GITHUB_CLIENT_SECRET=...       # optional OAuth
+```
