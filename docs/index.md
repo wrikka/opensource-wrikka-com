@@ -25,8 +25,13 @@ SolidJS documentation site for the wrikka open-source monorepo, deployed on Clou
 - [Architecture](development/architecture.md)
 - [Workflows](development/workflows.md)
 - [Testing](development/testing.md)
+- [Deployment](development/deployment.md)
+- [Troubleshooting](development/troubleshooting.md)
 
 ## References
 
+- [API Reference](references/api.md)
 - [Configuration](references/configuration.md)
+- [Changelog](references/changelog.md)
+- [FAQ](references/faq.md)
 - [Contributing](references/contributing.md)
